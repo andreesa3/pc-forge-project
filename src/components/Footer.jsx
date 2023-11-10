@@ -2,6 +2,12 @@ import { Link } from "react-router-dom"
 
 /* Images */
 import logo from '../assets/icons/logo.svg'
+import mail from '../assets/icons/mail.svg'
+import telephone from '../assets/icons/telephone.svg'
+import location from '../assets/icons/location.svg'
+import facebook from '../assets/icons/facebook.svg'
+import instagram from '../assets/icons/instagram.svg'
+import twitter from '../assets/icons/twitter.svg'
 
 import '../style/nav.css'
 import '../style/footer.css'
@@ -21,57 +27,41 @@ const Footer = () => {
                 <h3><span className="purple">PC</span>FORGE</h3>
               </div>
             </Link>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fuga eligendi laboriosam repudiandae blanditiis autem inventore minima hic aut doloremque.</p>
           </div>
           {/* Links Box */}
           <div className="footer-info-box">
             {/* Info Box */}
-            <div className="nav-links">
-              <Link to='#recommended'>HOME</Link>
-              <Link to='/products'>STORE</Link>
-              <Link to='/products'>PC BUILDER</Link>
-              <Link to='/products'>CONTACT US</Link>
+            <div className="footer-links-nav footer-info-card">
+              <h3>Sitemap</h3>
+              <Link to='#recommended'>Home</Link>
+              <Link to='/products'>Store</Link>
+              <Link to='/products'>Pc Builder</Link>
+              <Link to='/products'>Contact Us</Link>
             </div>
-            {/* Services Box */}
-            <div className="footer-links-location">
+            {/* Info Box */}
+            <div className="footer-contacts-box footer-info-card">
+              <h3>Info</h3>
               <div className="footer-contact">
-                <img src="" alt="email icon" />
+                <img src={mail} alt="email icon" />
                 <p>pcforge@gmail.com</p>
               </div>
               <div className="footer-contact">
-                <img src="" alt="tel icon" />
+                <img src={telephone} alt="tel icon" />
                 <p>+39 333 1234567</p>
               </div>
               <div className="footer-contact">
-                <img src="" alt="map icon" />
-                <p>Via Roma 1, Palermo(PA)</p>
+                <img src={location} alt="map icon" />
+                <p>Via Roma 16, 90146 CL</p>
               </div>
             </div>
-            {/* Components Box */}
-            <div className="footer-links-components">
-              <div className='footer-links-card'>
-                <Link to='#'>Processors</Link>
-              </div>
-              <div className='footer-links-card'>
-                <Link to='#'>Graphics Cards</Link>
-              </div>
-              <div className='footer-links-card'>
-                <Link to='#'>Motherboards</Link>
-              </div>
-              <div className='footer-links-card'>
-                <Link to='#'>Memory (RAM)</Link>
-              </div>
-              <div className='footer-links-card'>
-                <Link to='#'>Storage</Link>
-              </div>
+            {/* Social */}
+            <div className="footer-social-box footer-info-card">
+              <h3>Social</h3>
+              <img src={facebook} alt="facebook icon" />
+              <img src={instagram} alt="twitter icon" />
+              <img src={twitter} alt="instagram icon" />
             </div>
-          </div>
-          {/* Social */}
-          <div className="footer-social">
-            <img src="" alt="facebook icon" />
-            <img src="" alt="twitter icon" />
-            <img src="" alt="instagram icon" />
-            <img src="" alt="linkedin icon" />
-            <img src="" alt="youtube icon" />
           </div>
         </div>
         <div className="copyright">
