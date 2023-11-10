@@ -1,0 +1,36 @@
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-purple);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.footer-top .logo h3 span {
+  color: var(--clr-black);
+  font-weight: 700;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-links-card {
+  padding-bottom: .75rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}

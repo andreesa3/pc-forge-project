@@ -1,0 +1,63 @@
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logo img {
+  height: 2rem;
+}
+
+.logo h3 {
+  color: var(--clr-black);
+  font-weight: 500;
+}
+
+.logo h3 span {
+  color: var(--clr-purple);
+  font-weight: 700;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user {
+  height: 1.5rem;
+}
+
+.cart {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 708px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+    flex: 1;
+  }
+  .nav-links a:hover {
+    color: var(--clr-purple);
+  }
+}
+

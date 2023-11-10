@@ -1,0 +1,35 @@
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-purple: #8A00FC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-black);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 1.5rem;
+}

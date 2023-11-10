@@ -1,0 +1,23 @@
+.btn {
+  padding: .5rem .8rem;  
+  border: 1px solid var(--clr-purple);
+}
+
+.light {
+  background-color: transparent;
+}
+
+.light:hover {
+  background-color: var(--clr-purple);
+  color: var(--clr-white);
+}
+
+.dark {
+  background-color: var(--clr-purple);
+  color: var(--clr-white);
+}
+
+.dark:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-purple);
+}
