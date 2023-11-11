@@ -28,14 +28,15 @@ nav {
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links {
   display: none;
-  margin-right: 4rem;
+  transition: all .3s ease;
 }
 
-.nav-right {
+.nav-right, .nav-right a {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -50,7 +51,7 @@ nav {
   height: 20px;
 }
 
-@media screen and (min-width: 708px) {
+@media screen and (min-width: 768px) {
   .nav-links {
     display: flex;
     align-items: center;
@@ -63,3 +64,8 @@ nav {
   }
 }
 
+@media screen and (min-width: 1020px) {
+  .nav-links {
+    margin-right: 4rem;
+  }
+}

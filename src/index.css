@@ -31,6 +31,12 @@ main {
 
 .wrapper {
   width: 100%;
-  max-width: 1600px;
-  padding: 0 4rem;
+  max-width: 1300px;
+  padding: 0 2rem;
+}
+
+@media screen and (min-width: 1300px) {
+  .wrapper {
+    padding: 0;
+  }
 }

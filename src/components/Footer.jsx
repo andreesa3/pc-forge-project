@@ -58,9 +58,11 @@ const Footer = () => {
             {/* Social */}
             <div className="footer-social-box footer-info-card">
               <h3>Social</h3>
-              <img src={facebook} alt="facebook icon" />
-              <img src={instagram} alt="twitter icon" />
-              <img src={twitter} alt="instagram icon" />
+              <div className="social-icon-box">
+                <img src={facebook} alt="facebook icon" />
+                <img src={instagram} alt="twitter icon" />
+                <img src={twitter} alt="instagram icon" />
+              </div>
             </div>
           </div>
         </div>
