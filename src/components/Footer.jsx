@@ -9,12 +9,9 @@ import facebook from '../assets/icons/facebook.svg'
 import instagram from '../assets/icons/instagram.svg'
 import twitter from '../assets/icons/twitter.svg'
 
-import '../style/nav.css'
-import '../style/footer.css'
-
 const Footer = () => {
   return (
-    <footer>
+    <footer className="center-wrapper">
       <div className="footer-wrapper wrapper">
         {/* Footer Top */}
         {/* Contacts */}

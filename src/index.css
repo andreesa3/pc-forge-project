@@ -1,7 +1,14 @@
+@import url(./style/btn.css);
+@import url(./style/nav.css);
+@import url(./style/footer.css);
+@import url(./style/hero.css);
+@import url(./style/services.css);
+@import url(./style/faq.css);
+
 :root {
   --clr-white: #fff;
   --clr-black: #000;
-  --clr-purple: #8A00FC;
+  --clr-purple: #8a00fc;
 }
 
 * {
@@ -29,10 +36,19 @@ main {
   justify-content: center;
 }
 
+section {
+  padding: 4rem 0;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1300px;
   padding: 0 2rem;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 1300px) {

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import '../style/nav.css'
 
 /* Components */
 import Button from "./Button";
@@ -11,7 +10,7 @@ import user from '../assets/icons/user.svg'
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="center-wrapper">
       <div className="nav-wrapper wrapper">
         <Link to='/'>
           <div className="logo">

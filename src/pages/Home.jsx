@@ -1,12 +1,23 @@
+// import FAQ from "../components/FAQ";
+import Hero from "../components/Hero"
+import Services from "../components/Services";
+import FAQ from "../components/FAQ";
+
 const Home = () => {
   return (
     <>
       {/* Hero */}
-      <h1>Home</h1>
+      <Hero />
+
+      {/* Slider */}
 
       {/* PC */}
 
-      {/* Slider */}
+      {/* Services */}
+      <Services />
+
+      {/* FAQ */}
+      <FAQ />
     </>
   )
 }

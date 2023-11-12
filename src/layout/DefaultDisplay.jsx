@@ -7,7 +7,7 @@ const DefaultDisplay = () => {
     <>
       <Navbar />
 
-      <main>
+      <main className="center-wrapper">
         <div className="wrapper">
           <Outlet />
         </div>
