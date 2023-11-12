@@ -24,6 +24,10 @@
   font-size: 1.2rem;
 }
 
+.service-card a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 650px) {
   .services-box {
     flex-direction: row;
