@@ -53,9 +53,10 @@ nav {
   display: flex;
   align-items: center;
   z-index: 10;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .nav-links {
     display: flex;
     align-items: center;

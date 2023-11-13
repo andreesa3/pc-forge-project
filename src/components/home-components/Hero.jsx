@@ -1,8 +1,10 @@
-import Button from "../components/Button";
+import Button from "../home-components/Button";
+
+import pcHero from '../../assets/images/pc.jpg'
 
 const Hero = () => {
   return (
-    <section>
+    <section className="hero-section">
       <div className="hero-box">
         <div className="hero-left">
           <h1>Lorem Ipsum Dolor</h1>
@@ -13,7 +15,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-right">
-          <div className="img"></div>
+          <img src={pcHero} alt="" />
         </div>
       </div>
     </section>

@@ -1,0 +1,14 @@
+.sidebar {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 80%;
+  z-index: 11;
+}
+
+.sidebar-link-card a {
+  display: flex;
+  align-items: center;
+}

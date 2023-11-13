@@ -1,7 +1,7 @@
 // import FAQ from "../components/FAQ";
-import Hero from "../components/Hero"
-import Services from "../components/Services";
-import FAQ from "../components/FAQ";
+import Hero from "../components/home-components/Hero"
+import Services from "../components/home-components/Services";
+import FAQ from "../components/home-components/FAQ";
 
 const Home = () => {
   return (

@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
 
 /* Images */
-import logo from '../assets/icons/logo.svg'
-import mail from '../assets/icons/mail.svg'
-import telephone from '../assets/icons/telephone.svg'
-import location from '../assets/icons/location.svg'
-import facebook from '../assets/icons/facebook.svg'
-import instagram from '../assets/icons/instagram.svg'
-import twitter from '../assets/icons/twitter.svg'
+import logo from '../../assets/icons/logo.svg'
+import mail from '../../assets/icons/mail.svg'
+import telephone from '../../assets/icons/telephone.svg'
+import location from '../../assets/icons/location.svg'
+import facebook from '../../assets/icons/facebook.svg'
+import instagram from '../../assets/icons/instagram.svg'
+import twitter from '../../assets/icons/twitter.svg'
 
 const Footer = () => {
   return (

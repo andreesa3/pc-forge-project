@@ -4,6 +4,7 @@
 @import url(./style/hero.css);
 @import url(./style/services.css);
 @import url(./style/faq.css);
+@import url(./style/sidebar.css);
 
 :root {
   --clr-white: #fff;
@@ -37,7 +38,7 @@ main {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 .wrapper {

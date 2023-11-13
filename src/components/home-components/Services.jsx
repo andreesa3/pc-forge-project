@@ -1,5 +1,5 @@
-import box from '../assets/icons/box.svg'
-import Anchor from '../components/Anchor';
+import box from '../../assets/icons/box.svg'
+import Anchor from '../home-components/Anchor';
 
 const Services = () => {
   return (

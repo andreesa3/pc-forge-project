@@ -3,22 +3,12 @@ import { Link } from "react-router-dom"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-/* Components */
-import Button from "./Button";
-
 /* Images */
-import cart from '../assets/icons/shopping-cart.svg'
-import logo from '../assets/icons/logo.svg'
-import user from '../assets/icons/user.svg'
-import { useState } from "react";
+import cart from '../../assets/icons/shopping-cart.svg'
+import logo from '../../assets/icons/logo.svg'
+import user from '../../assets/icons/user.svg'
 
-const Navbar = () => {
-  const [hamburger, setHamburger] = useState(false);
-
-  const handleHamburger = () => {
-    setHamburger(h => !h);
-  }
-
+const Navbar = ({ hamburger, event }) => {
   return (
     <nav className="center-wrapper">
       <div className="nav-wrapper wrapper">
@@ -42,7 +32,7 @@ const Navbar = () => {
             <img src={cart} className="cart" alt="cart img" />
           </Link>
           <div className="hamburger">
-            {!hamburger ? <MenuIcon onClick={handleHamburger} /> : <CloseIcon onClick={handleHamburger} />}
+            {!hamburger ? <MenuIcon onClick={event} /> : <CloseIcon onClick={event} />}
           </div>
         </div>
       </div>
