@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  gap: 4rem;
+  gap: 2.5rem;
 }
 
 .service-card {
@@ -22,6 +22,10 @@
 }
 .service-card p {
   font-size: 1.2rem;
+}
+
+.service-card img {
+  margin-top: .2rem;
 }
 
 .service-card a:hover {

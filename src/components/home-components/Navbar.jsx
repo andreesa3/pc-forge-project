@@ -20,7 +20,7 @@ const Navbar = ({ hamburger, event }) => {
           </div>
         </Link>
         <div className="nav-links">
-          <Link to='#recommended'>HOME</Link>
+          <Link to='/'>HOME</Link>
           <Link to='/products'>STORE</Link>
           <Link to='/products'>PC BUILDER</Link>
           <Link to='/products'>CONTACT US</Link>
@@ -33,7 +33,12 @@ const Navbar = ({ hamburger, event }) => {
             <ShoppingCartIcon />
           </Link>
           <div className="hamburger">
-            {!hamburger ? <MenuIcon onClick={event} /> : <CloseIcon onClick={event} />}
+            <input type="checkbox" id="checkbox" onClick={event}/>
+            <label for="checkbox" class="toggle">
+              <div class="bars" id="bar1"></div>
+              <div class="bars" id="bar2"></div>
+              <div class="bars" id="bar3"></div>
+            </label>
           </div>
         </div>
       </div>

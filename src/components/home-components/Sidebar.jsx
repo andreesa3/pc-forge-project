@@ -29,19 +29,19 @@ const Sidebar = ({ hamburger }) => {
               </Link>
             </div>
             <div className="sidebar-link-card">
-              <Link to='/'>
+              <Link to='/products'>
                 <LaptopChromebookSharpIcon />
                 <p>Store</p>
               </Link>
             </div>
             <div className="sidebar-link-card">
-              <Link to='/'>
+              <Link to='/builder'>
                 <ConstructionSharpIcon />
                 <p>Build your PC</p>
               </Link>
             </div>
             <div className="sidebar-link-card">
-              <Link to='/'>
+              <Link to='/contact'>
                 <PhoneIcon />
                 <p>Contact Us</p>
               </Link>
