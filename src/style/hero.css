@@ -21,7 +21,8 @@
 }
 .hero-left p {
   font-size: 1.2rem;
-  line-height: 130%;
+  line-height: 150%;
+  font-weight: 300;
 }
 
 .hero-left .btns-box {

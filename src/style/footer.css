@@ -3,6 +3,10 @@ footer {
   padding: 2.5rem 0 2rem;
 }
 
+footer * {
+  color: var(--clr-white) !important;
+}
+
 /* Footer Text Box */
 .footer-text-box {
   margin-bottom: 2rem;
@@ -14,18 +18,20 @@ footer {
 .footer-text-box p {
   line-height: 150%;
   font-size: 1.1rem;
-}
-
-.footer-text-box .logo h3 span {
-  color: var(--clr-black);
-  font-weight: 700;
+  font-weight: 300;
 }
 
 /* Footer Info Box */
 .footer-links-nav a,
 .footer-contact,
-.footer-social-box img {
+.footer-social-box svg {
   margin-bottom: 0.5rem;
+}
+
+.footer-links-nav a,
+.footer-contact {
+  font-weight: 300;
+  letter-spacing: .5px;
 }
 
 .footer-info-box {
@@ -40,6 +46,7 @@ footer {
 }
 .footer-info-card h3 {
   margin-bottom: 1.5rem;
+  letter-spacing: .5px;
   font-size: 1.5rem;
 }
 
@@ -47,14 +54,16 @@ footer {
   display: flex;
   align-items: center;
 }
-.footer-contact img {
-  height: 1.75rem;
+.footer-contact svg {
+  height: 1.8rem;
+  width: 1.8rem;
   margin-right: 0.75rem;
 }
 
 /* Social */
-.social-icon-box img {
-  height: 2.2rem;
+.social-icon-box svg {
+  height: 1.8rem;
+  width: 1.8rem;
   margin-right: auto;
 }
 
@@ -63,9 +72,10 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
   text-align: center;
   margin-top: 3.5rem;
+  font-size: .8rem;
 }
 
 @media screen and (min-width: 768px) {

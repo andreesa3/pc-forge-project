@@ -2,12 +2,13 @@ import { Link } from "react-router-dom"
 
 /* Images */
 import logo from '../../assets/icons/logo.svg'
-import mail from '../../assets/icons/mail.svg'
-import telephone from '../../assets/icons/telephone.svg'
-import location from '../../assets/icons/location.svg'
-import facebook from '../../assets/icons/facebook.svg'
-import instagram from '../../assets/icons/instagram.svg'
-import twitter from '../../assets/icons/twitter.svg'
+
+import CallIcon from '@mui/icons-material/Call';
+import PlaceIcon from '@mui/icons-material/Place';
+import EmailIcon from '@mui/icons-material/Email';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 const Footer = () => {
   return (
@@ -40,15 +41,15 @@ const Footer = () => {
             <div className="footer-contacts-box footer-info-card">
               <h3>Info</h3>
               <div className="footer-contact">
-                <img src={mail} alt="email icon" />
+                <EmailIcon />
                 <p>pcforge@gmail.com</p>
               </div>
               <div className="footer-contact">
-                <img src={telephone} alt="tel icon" />
+                <CallIcon />
                 <p>+39 333 1234567</p>
               </div>
               <div className="footer-contact">
-                <img src={location} alt="map icon" />
+                <PlaceIcon />
                 <p>Via Roma 16, 90146 CL</p>
               </div>
             </div>
@@ -56,9 +57,9 @@ const Footer = () => {
             <div className="footer-social-box footer-info-card">
               <h3>Social</h3>
               <div className="social-icon-box">
-                <img src={facebook} alt="facebook icon" />
-                <img src={instagram} alt="twitter icon" />
-                <img src={twitter} alt="instagram icon" />
+                <FacebookIcon sx={{ color: '#fff' }} />
+                <InstagramIcon sx={{ color: '#fff' }} />
+                <TwitterIcon sx={{ color: '#fff' }} />
               </div>
             </div>
           </div>

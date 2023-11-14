@@ -13,6 +13,7 @@
   font-size: 1rem;
   margin-top: 1.2rem;
   color: var(--clr-purple);
+  font-weight: 400;
 }
 
 /* Faq */
@@ -36,16 +37,20 @@
 /* Faq question and answer */
 .faq-question p {
   font-size: 1rem;
-  margin-right: 0.1rem;
+  margin-right: 0.3rem;
+  font-weight: 500;
+  font-family: "Lexend", sans-serif;
 }
 
 .faq-answer p {
   font-size: .85rem;
+  font-weight: 300;
+  font-family: "Lexend", sans-serif;
 }
 
 @media screen and (min-width: 768px) {
   .faq-cards-box {
-    max-width: 600px;
+    max-width: 700px;
   }
 
   .faq-title-box h3 {
