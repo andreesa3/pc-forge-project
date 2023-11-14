@@ -4,11 +4,17 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { createSvgIcon } from '@mui/material/utils';
+import { useState } from 'react';
 
 
 export default function BasicAccordion() {
 
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
+
+  const handleRotate = (e) => {
+    setIsRotated(r => !r);
+  }
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -31,7 +37,10 @@ export default function BasicAccordion() {
   return (
     <section>
       <div className="faq-container">
-        <h2>Frequently Asked Question</h2>
+        <div className="faq-title-box">
+          <h2>Frequently Asked Question</h2>
+          <h3>Le domande più frequenti in un unico posto.</h3>
+        </div>
         <div className='faq-cards-box'>
           <div className="faq-card">
             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -40,13 +49,18 @@ export default function BasicAccordion() {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>Accordion 1</Typography>
+                <div className="faq-question">
+                  <Typography>
+                    Posso costruire il mio PC personalizzato all'interno del vostro sito?
+                  </Typography>
+                </div>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                  malesuada lacus ex, sit amet blandit leo lobortis eget.
-                </Typography>
+                <div className="faq-answer">
+                  <Typography>
+                    Certo! Assolutamente! Su PCForge offriamo una gran varietà di componenti che puoi usare per creare il tuo PC personalizzato.
+                  </Typography>
+                </div>
               </AccordionDetails>
             </Accordion>
           </div>
@@ -57,13 +71,18 @@ export default function BasicAccordion() {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography>Accordion 2</Typography>
+                <div className="faq-question">
+                  <Typography>
+                    Quali sono i costi ed i tempi di spedizione per il mio ordine?
+                  </Typography>
+                </div>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                  malesuada lacus ex, sit amet blandit leo lobortis eget.
-                </Typography>
+                <div className="faq-answer">
+                  <Typography>
+                    La spedizione è gratuita all'interno del territorio italiano e di solito impiega 2-5 giornate lavorative.
+                  </Typography>
+                </div>
               </AccordionDetails>
             </Accordion>
           </div>
@@ -74,13 +93,18 @@ export default function BasicAccordion() {
                 aria-controls="panel3a-content"
                 id="panel3a-header"
               >
-                <Typography>Accordion 3</Typography>
+                <div className="faq-question">
+                  <Typography>
+                    Il vostro sito offre sconti o promozioni?
+                  </Typography>
+                </div>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                  malesuada lacus ex, sit amet blandit leo lobortis eget.
-                </Typography>
+                <div className="faq-answer">
+                  <Typography>
+                    Assolutamente! PCForge offre periodicamente sconti e promozioni per i nostri clienti ma soprattutto, mette a disposizione un prodotto top che potete trovare nella Home del nostro sito!
+                  </Typography>
+                </div>
               </AccordionDetails>
             </Accordion>
           </div>
@@ -91,13 +115,18 @@ export default function BasicAccordion() {
                 aria-controls="panel4a-content"
                 id="panel4a-header"
               >
-                <Typography>Accordion 4</Typography>
+                <div className="faq-question">
+                  <Typography>
+                    Di quali componenti ho bisogno per costruire un PC?
+                  </Typography>
+                </div>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                  malesuada lacus ex, sit amet blandit leo lobortis eget.
-                </Typography>
+                <div className="faq-answer">
+                  <Typography>
+                    I componenti essenziali che non devono mancare ad un PC di qualità sono: Il Processore (CPU), Scheda madre, Memoria (RAM), Scheda grafica (GPU), disco rigido (HDD) e un'Unità di raffreddamento.
+                  </Typography>
+                </div>
               </AccordionDetails>
             </Accordion>
           </div>

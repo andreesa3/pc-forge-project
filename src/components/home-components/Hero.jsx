@@ -15,7 +15,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-right">
-          <img src={pcHero} alt="" />
+          <img src={pcHero} alt="pc image" />
         </div>
       </div>
     </section>

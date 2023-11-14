@@ -38,6 +38,16 @@ nav {
   display: flex;
   align-items: center;
   gap: 1rem;
+  z-index: 999;
+}
+
+.nav-right, .nav-right svg {
+  font-size: 1.8rem;
+  color: var(--clr-black);
+}
+
+.nav-right, .nav-right svg:hover {
+  color: var(--clr-purple);
 }
 
 .user {

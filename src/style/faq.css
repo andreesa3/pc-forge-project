@@ -2,13 +2,22 @@
   text-align: center;
 }
 
-.faq-container h2 {
+/* FAQ Title */
+.faq-title-box {
   margin-bottom: 3rem;
+}
+.faq-title-box h2 {
   font-size: 2.25rem;
 }
+.faq-title-box h3 {
+  font-size: 1rem;
+  margin-top: 0.7rem;
+  color: var(--clr-purple);
+}
 
+/* Faq */
 .faq-cards-box {
-  max-width: 90%;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -20,12 +29,30 @@
   background-color: none !important;
   border: none !important;
   box-shadow: none !important;
-  padding: .6rem 0;
+  padding: 0.5rem 0;
   text-align: left;
+}
+
+/* Faq question and answer */
+.faq-question p {
+  font-size: 1rem;
+  margin-right: 0.1rem;
+}
+
+.faq-answer p {
+  font-size: .85rem;
 }
 
 @media screen and (min-width: 768px) {
   .faq-cards-box {
-    max-width: 70%;
+    max-width: 600px;
+  }
+
+  /* Faq question and answer */
+  .faq-questionp {
+    font-size: 1.2rem;
+  }
+  .faq-answer {
+    font-size: .95rem;
   }
 }

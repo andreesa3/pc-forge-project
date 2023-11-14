@@ -31,9 +31,10 @@
 
 /* Hero-Right */
 .hero-right {
-  display: none;
+  margin-top: 4rem;
 }
-.hero-right div {
+.hero-right img {
+  max-width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -46,7 +47,7 @@
   .hero-box {
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 2rem;
   }

@@ -4,9 +4,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 /* Images */
-import cart from '../../assets/icons/shopping-cart.svg'
 import logo from '../../assets/icons/logo.svg'
-import user from '../../assets/icons/user.svg'
+
+import PersonIcon from '@mui/icons-material/Person';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Navbar = ({ hamburger, event }) => {
   return (
@@ -26,10 +27,10 @@ const Navbar = ({ hamburger, event }) => {
         </div>
         <div className="nav-right">
           <Link to='/login'>
-            <img src={user} className="user" alt="user icon" />
+            <PersonIcon />
           </Link>
           <Link to='/cart'>
-            <img src={cart} className="cart" alt="cart img" />
+            <ShoppingCartIcon />
           </Link>
           <div className="hamburger">
             {!hamburger ? <MenuIcon onClick={event} /> : <CloseIcon onClick={event} />}
