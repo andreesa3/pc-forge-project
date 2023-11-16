@@ -6,35 +6,40 @@
       "price": 510,
       "description": "Processore Intel di fascia alta con 12 core e 20 thread, frequenza base di 3.8GHz e boost fino a 5.0GHz. Ottimizzato per gaming e carichi di lavoro intensi.",
       "socket": "Intel Socket 1700",
-      "compatibility": ["a"]
+      "compatibility": ["a"],
+      "img": "https://m.media-amazon.com/images/I/61m0zH-NiTL._AC_SX522_.jpg"
     },
     {
       "id": 2,
       "name": "Intel-Core i5-13600K",
       "price": 349,
       "description": "Processore Intel con 10 core e 16 thread, frequenza base di 3.5GHz e boost fino a 4.6GHz. Ideale per gaming e multitasking.",
-      "socket": "Intel Socket 1700"
+      "socket": "Intel Socket 1700",
+      "img": "https://m.media-amazon.com/images/I/41jGgn0uK4L._AC_SX522_.jpg"
     },
     {
       "id": 3,
       "name": "Intel-Core i3-13100",
       "price": 145,
       "description": "Processore Intel quad-core con 8 thread, frequenza base di 3.6GHz e boost fino a 4.2GHz. Ottimo per utilizzo quotidiano e gaming leggero.",
-      "socket": "Intel Socket 1700"
+      "socket": "Intel Socket 1700",
+      "img": "https://m.media-amazon.com/images/I/619GUXiTq6L._AC_SX522_.jpg"
     },
     {
       "id": 4,
       "name": "Ryzen 9 7950X3D",
       "price": 821,
       "description": "Processore AMD con 16 core e 32 thread, frequenza base di 3.5GHz e boost fino a 5.0GHz. Elevate prestazioni per carichi di lavoro pesanti e gaming avanzato.",
-      "socket": "AMD Socket AM5"
+      "socket": "AMD Socket AM5",
+      "img": "https://m.media-amazon.com/images/I/51qA89Dg6UL._AC_SX522_.jpg"
     },
     {
       "id": 5,
       "name": "Ryzen 5 5600X",
       "price": 232,
       "description": "Processore AMD con 6 core e 12 thread, frequenza base di 3.7GHz e boost fino a 4.6GHz. Ottime prestazioni per gaming e multitasking.",
-      "socket": "AMD Socket AM4"
+      "socket": "AMD Socket AM4",
+      "img": "https://www.pcokomegna.it/theme/default/assets/images/product/1316505900/amd-ryzen-5-5600x-6cores-12threads-370460ghz-65w-tdp-1.jpg"
     }
   ],
   "gpu": [
@@ -43,35 +48,41 @@
       "name": "Nvidia RTX 4090",
       "price": 1400,
       "description": "Scheda grafica di fascia top con architettura Ampere, 24GB di memoria GDDR6X e prestazioni eccezionali per gaming ad alta risoluzione e rendering.",
-      "socket": ""
+      "socket": "",
+      "img": "https://m.media-amazon.com/images/I/81KR0fO8WgL._AC_SL1500_.jpg"
+
     },
     {
       "id": 2,
       "name": "Nvidia RTX 4070",
       "price": 527,
       "description": "Scheda grafica con architettura Ampere, 8GB di memoria GDDR6 e prestazioni di fascia alta per gaming fluido e rendering di alta qualità.",
-      "socket": ""
+      "socket": "",
+      "img": "https://media.ldlc.com/r1600/ld/products/00/06/00/53/LD0006005314.jpg"
     },
     {
       "id": 3,
       "name": "Nvidia RTX 4060 Ti",
       "price": 350,
       "description": "Scheda grafica di fascia media con architettura Ampere, 6GB di memoria GDDR6 e ottimo rapporto prezzo-prestazioni per gaming e grafica.",
-      "socket": ""
+      "socket": "",
+      "img": "https://media.ldlc.com/r1600/ld/products/00/06/05/19/LD0006051908.jpg"
     },
     {
       "id": 4,
       "name": "RX 7900 XT",
       "price": 791,
       "description": "Scheda grafica AMD con architettura RDNA3, 16GB di memoria GDDR6X e prestazioni adatte a gaming ad alta risoluzione e carichi di lavoro intensi.",
-      "socket": ""
+      "socket": "",
+      "img": "https://media.ldlc.com/r1600/ld/products/00/06/00/12/LD0006001240.jpg"
     },
     {
       "id": 5,
       "name": "RX 6800 XT",
       "price": 570,
       "description": "Scheda grafica AMD con architettura RDNA2, 16GB di memoria GDDR6 e prestazioni elevate per gaming fluido e rendering professionale.",
-      "socket": ""
+      "socket": "",
+      "img": "https://www.romapcpoint.it/product_images/rx6800xt-pgd-16go_asrock-rx-6800-xt-pgd-16g_1.jpg"
     }
   ],
   "motherboard": [

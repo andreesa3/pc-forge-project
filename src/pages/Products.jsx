@@ -1,8 +1,13 @@
+import CpuCards from "../components/cards/CpuCards";
+import GpuCards from "../components/cards/GpuCards";
+
+
 const Products = () => {
   return (
-    <>
-      <h1>Products</h1>
-    </>
+    <div style={{display:"flex", flexDirection:"column", gap:"20px", marginTop:"100px"}}>
+      <CpuCards/>
+      <GpuCards/>
+    </div>
   )
 }
 

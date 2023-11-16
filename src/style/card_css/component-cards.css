@@ -1,0 +1,10 @@
+.componentCards{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.sortOrderSelect{
+    width: 150px;
+}
