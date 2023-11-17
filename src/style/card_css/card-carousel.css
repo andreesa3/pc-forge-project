@@ -23,17 +23,23 @@
     width: 70%;
     height: 70%;
     align-self: center;
-    transition: transform .2s; /* Animation */
+    transition: transform .2s; 
 }
 
 .imgCarouselCard:hover {
     transform: scale(1.1); 
+    cursor:pointer
   }
 
 .titleCarouselCard{
     align-self: flex-start;
     font-size: 18px;
     align-self: flex-start;
+}
+
+.titleCarouselCard:hover{
+    cursor:pointer;
+    color: rgb(7, 7, 114);
 }
 
 .infoCardCarousel{

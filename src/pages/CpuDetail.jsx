@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import mockfile from '/mockfile.json';
+import Button from '../components/home-components/Button';
 
 
 const CpuDetail = () => {
@@ -19,13 +20,18 @@ const CpuDetail = () => {
   return (
     <>
     <div className='boxDetails'>
-    <button onClick={prevPage}>Torna indietro</button>
-        <img src={cpu.img} alt="" />
+    <button className='prevPageProducts' onClick={prevPage}><img className='imgButtonPrev' src="https://cdn0.iconfinder.com/data/icons/controls-add-on/48/v-38-512.png" alt="" /></button>
+        <img className='imageComponent' src={cpu.img} alt="" />
       <div className='detailsComponent'>
-        <h2>{cpu.name}</h2>
-      <p>Prezzo: {`${cpu.price}€`}</p>
-      <p>Descrizione:{cpu.description} </p>
-      <p>Socket: {cpu.socket}</p>
+        <span className='typeComponent'>CPU</span>
+        <h2 className='nameComponent'>{cpu.name}</h2>
+      <p className='descriptionComponent'>Descrizione:{cpu.description} </p>
+      <p className='infoCompontent'>Socket: {cpu.socket}</p>
+      <p className='priceComponent'>Prezzo: {`${cpu.price}€`}</p>
+      <div className='detailsButton'>
+        <Button text='Compra ora' theme='dark'/>
+        <Button text='Aggiungi al carrello' theme='light'/>
+      </div>
       </div>
     </div>
     </>
