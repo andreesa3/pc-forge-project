@@ -1,0 +1,49 @@
+.services-box {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  column-gap: 1.5remrem;
+  row-gap: 3rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+.service-card img {
+  height: 4rem;
+}
+.service-card h3 {
+  font-size: 1.5rem;
+}
+.service-card p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.service-card img {
+  margin-top: .2rem;
+}
+
+.service-card a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .services-box {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+
+  .service-card {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

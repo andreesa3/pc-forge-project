@@ -1,10 +1,13 @@
 .btn {
   padding: .5rem .8rem;  
-  border: 1px solid var(--clr-purple);
+  border: 1.5px solid var(--clr-purple);
+  font-weight: bold;
+  border-radius: 0 !important;
 }
 
 .light {
   background-color: transparent;
+  color: var(--clr-purple);
 }
 
 .light:hover {

@@ -1,0 +1,264 @@
+{
+  "cpu": [
+    {
+      "id": 1,
+      "name": "Intel-Core i7-13700K",
+      "price": 510,
+      "description": "Processore Intel di fascia alta con 12 core e 20 thread, frequenza base di 3.8GHz e boost fino a 5.0GHz. Ottimizzato per gaming e carichi di lavoro intensi.",
+      "socket": "Intel Socket 1700",
+      "compatibility": ["a"]
+    },
+    {
+      "id": 2,
+      "name": "Intel-Core i5-13600K",
+      "price": 349,
+      "description": "Processore Intel con 10 core e 16 thread, frequenza base di 3.5GHz e boost fino a 4.6GHz. Ideale per gaming e multitasking.",
+      "socket": "Intel Socket 1700"
+    },
+    {
+      "id": 3,
+      "name": "Intel-Core i3-13100",
+      "price": 145,
+      "description": "Processore Intel quad-core con 8 thread, frequenza base di 3.6GHz e boost fino a 4.2GHz. Ottimo per utilizzo quotidiano e gaming leggero.",
+      "socket": "Intel Socket 1700"
+    },
+    {
+      "id": 4,
+      "name": "Ryzen 9 7950X3D",
+      "price": 821,
+      "description": "Processore AMD con 16 core e 32 thread, frequenza base di 3.5GHz e boost fino a 5.0GHz. Elevate prestazioni per carichi di lavoro pesanti e gaming avanzato.",
+      "socket": "AMD Socket AM5"
+    },
+    {
+      "id": 5,
+      "name": "Ryzen 5 5600X",
+      "price": 232,
+      "description": "Processore AMD con 6 core e 12 thread, frequenza base di 3.7GHz e boost fino a 4.6GHz. Ottime prestazioni per gaming e multitasking.",
+      "socket": "AMD Socket AM4"
+    }
+  ],
+  "gpu": [
+    {
+      "id": 1,
+      "name": "Nvidia RTX 4090",
+      "price": 1400,
+      "description": "Scheda grafica di fascia top con architettura Ampere, 24GB di memoria GDDR6X e prestazioni eccezionali per gaming ad alta risoluzione e rendering.",
+      "socket": ""
+    },
+    {
+      "id": 2,
+      "name": "Nvidia RTX 4070",
+      "price": 527,
+      "description": "Scheda grafica con architettura Ampere, 8GB di memoria GDDR6 e prestazioni di fascia alta per gaming fluido e rendering di alta qualità.",
+      "socket": ""
+    },
+    {
+      "id": 3,
+      "name": "Nvidia RTX 4060 Ti",
+      "price": 350,
+      "description": "Scheda grafica di fascia media con architettura Ampere, 6GB di memoria GDDR6 e ottimo rapporto prezzo-prestazioni per gaming e grafica.",
+      "socket": ""
+    },
+    {
+      "id": 4,
+      "name": "RX 7900 XT",
+      "price": 791,
+      "description": "Scheda grafica AMD con architettura RDNA3, 16GB di memoria GDDR6X e prestazioni adatte a gaming ad alta risoluzione e carichi di lavoro intensi.",
+      "socket": ""
+    },
+    {
+      "id": 5,
+      "name": "RX 6800 XT",
+      "price": 570,
+      "description": "Scheda grafica AMD con architettura RDNA2, 16GB di memoria GDDR6 e prestazioni elevate per gaming fluido e rendering professionale.",
+      "socket": ""
+    }
+  ],
+  "motherboard": [
+    {
+      "id": 1,
+      "name": "ASUS ROG Strix Z690-E Gaming WiFi",
+      "price": 349.99,
+      "description": "Scheda madre per processori Intel 1700, supporto Wi-Fi integrato, chipset Z690.",
+      "type": "a"
+    },
+    {
+      "id": 2,
+      "name": "GIGABYTE B660M DS3H",
+      "price": 119.99,
+      "description": "Scheda madre per processori Intel 1700, chipset B660, formato Micro-ATX."
+    },
+    {
+      "id": 3,
+      "name": "MSI MAG B550 TOMAHAWK",
+      "price": 189.99,
+      "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen, chipset B550."
+    },
+    {
+      "id": 4,
+      "name": "ASRock B450M PRO4",
+      "price": 79.99,
+      "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen di serie 3000, formato Micro-ATX."
+    }
+  ],
+  "ram": [
+    {
+      "id": 1,
+      "name": "Corsair DDR5 16GB",
+      "price": 120,
+      "description": "RAM DDR5 ad alta velocità per prestazioni elevate."
+    },
+    {
+      "id": 2,
+      "name": "G.Skill Trident Z Neo DDR5 32GB",
+      "price": 150,
+      "description": "Altra opzione di RAM DDR5 con velocità e affidabilità migliorate."
+    },
+    {
+      "id": 3,
+      "name": "Kingston Fury Beast DDR5 64GB",
+      "price": 180,
+      "description": "RAM DDR5 di alta fascia per prestazioni estreme e multitasking."
+    },
+    {
+      "id": 4,
+      "name": "Crucial Ballistix DDR4 8GB",
+      "price": 90,
+      "description": "Affidabile RAM DDR4 per le esigenze informatiche quotidiane."
+    },
+    {
+      "id": 5,
+      "name": "HyperX Predator DDR4 16GB",
+      "price": 110,
+      "description": "Altra opzione di RAM DDR4 con buone prestazioni ed efficienza."
+    }
+  ],
+  "power": [
+    {
+      "id": 1,
+      "name": "Corsair CX550M",
+      "price": 60,
+      "description": "Alimentatore con certificazione 80 PLUS Bronze e 550W."
+    },
+    {
+      "id": 2,
+      "name": "EVGA SuperNOVA 650 G5",
+      "price": 100,
+      "description": "Alimentatore modulare con certificazione 80 PLUS Gold e 650W."
+    },
+    {
+      "id": 3,
+      "name": "Seasonic Focus GX-750",
+      "price": 150,
+      "description": "Alimentatore con certificazione 80 PLUS Gold e 750W."
+    },
+    {
+      "id": 4,
+      "name": "be quiet! Straight Power 11 850W",
+      "price": 200,
+      "description": "Alimentatore modulare con certificazione 80 PLUS Gold e 850W."
+    },
+    {
+      "id": 5,
+      "name": "Corsair AX1600i",
+      "price": 400,
+      "description": "Alimentatore completamente modulare con certificazione 80 PLUS Titanium e 1600W."
+    }
+  ],
+  "ssd": [
+    {
+      "id": 1,
+      "name": "Samsung 860 EVO 500GB",
+      "price": 70,
+      "description": "SSD SATA con capacità di 500GB per prestazioni affidabili."
+    },
+    {
+      "id": 2,
+      "name": "Crucial MX500 1TB",
+      "price": 110,
+      "description": "SSD SATA con capacità di 1TB per archiviazione e prestazioni elevate."
+    },
+    {
+      "id": 3,
+      "name": "WD Blue SN550 500GB NVMe",
+      "price": 80,
+      "description": "SSD NVMe con velocità elevate, capacità 500GB."
+    },
+    {
+      "id": 4,
+      "name": "Samsung 970 EVO Plus 1TB NVMe",
+      "price": 180,
+      "description": "SSD NVMe ad alte prestazioni, capacità di 1TB per applicazioni intensive."
+    },
+    {
+      "id": 5,
+      "name": "Sabrent Rocket Q 2TB NVMe",
+      "price": 300,
+      "description": "SSD NVMe con capacità massiccia di 2TB per archiviazione e velocità elevate."
+    }
+  ],
+  "case": [
+    {
+      "id": 1,
+      "name": "NZXT H510",
+      "price": 70,
+      "description": "Case Mid-Tower con design elegante e buona gestione del flusso d'aria."
+    },
+    {
+      "id": 2,
+      "name": "Corsair iCUE 220T",
+      "price": 90,
+      "description": "Case Mid-Tower con pannello laterale in vetro temperato e illuminazione RGB."
+    },
+    {
+      "id": 3,
+      "name": "Fractal Design Meshify C",
+      "price": 100,
+      "description": "Case Mid-Tower con design focato sul flusso d'aria e compatibilità con dissipatori ad alte prestazioni."
+    },
+    {
+      "id": 4,
+      "name": "Lian Li Lancool II Mesh",
+      "price": 120,
+      "description": "Case Mid-Tower con pannelli in mesh per massima ventilazione e configurazione flessibile."
+    },
+    {
+      "id": 5,
+      "name": "Cooler Master MasterBox TD500 Mesh",
+      "price": 80,
+      "description": "Case Mid-Tower con ampio supporto per ventilazione e design moderno."
+    }
+  ],
+  "cooler": [
+    {
+      "id": 1,
+      "name": "Noctua NH-D15",
+      "price": 90,
+      "description": "Dissipatore ad aria premium per raffreddamento silenzioso ed efficiente."
+    },
+    {
+      "id": 2,
+      "name": "be quiet! Dark Rock Pro 4",
+      "price": 80,
+      "description": "Dissipatore ad aria di alta qualità con ventole silenziose e prestazioni elevate."
+    },
+    {
+      "id": 3,
+      "name": "Corsair H100i RGB Platinum",
+      "price": 120,
+      "description": "Sistema di raffreddamento a liquido con radiatore da 240mm e illuminazione RGB."
+    },
+    {
+      "id": 4,
+      "name": "NZXT Kraken X63",
+      "price": 150,
+      "description": "Sistema di raffreddamento a liquido con radiatore da 280mm e controlli avanzati."
+    },
+    {
+      "id": 5,
+      "name": "Cooler Master MasterLiquid ML360R",
+      "price": 180,
+      "description": "Sistema di raffreddamento a liquido con radiatore da 360mm e illuminazione personalizzabile."
+    }
+  ]
+}
