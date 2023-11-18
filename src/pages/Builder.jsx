@@ -9,6 +9,7 @@ import ssd from "../assets/icons/ssd.webp"
 import ram from "../assets/icons/ram.webp"
 import cooler from "../assets/icons/cooler.webp"
 import SelectionWrapper from '../components/builder/SelectionWrapper'
+import BubbleAssistant from '../components/builder/bubbleAssistant'
 
 
 
@@ -35,6 +36,8 @@ function Builder() {
   };
 
   return (
+    <>
+
    <div className="builder">
        <SelectionWrapper imgSrc={cpu} options={mockData.cpu} onSelectChange={handleSelectionChange("cpu")} selectedData={selectedItems.cpu} name="cpu"/>
        <SelectionWrapper imgSrc={gpu} options={mockData.gpu} onSelectChange={handleSelectionChange("gpu")} selectedData={selectedItems.gpu} name="gpu"/>
@@ -45,6 +48,8 @@ function Builder() {
        <SelectionWrapper imgSrc={cooler} options={mockData.cooler} onSelectChange={handleSelectionChange("cooler")} selectedData={selectedItems.cooler} name="cooler"/>
        <SelectionWrapper imgSrc={cases} options={mockData.case} onSelectChange={handleSelectionChange("case")} selectedData={selectedItems.case} name="case"/>
    </div>
+   <BubbleAssistant/>
+    </>
     
   )
 }
