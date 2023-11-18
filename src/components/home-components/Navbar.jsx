@@ -22,7 +22,7 @@ const Navbar = ({ hamburger, event }) => {
         <div className="nav-links">
           <Link to='/'>HOME</Link>
           <Link to='/products'>STORE</Link>
-          <Link to='/products'>PC BUILDER</Link>
+          <Link to='/builder'>PC BUILDER</Link>
           <Link to='/products'>CONTACT US</Link>
         </div>
         <div className="nav-right">
