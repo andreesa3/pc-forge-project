@@ -29,14 +29,12 @@ const DefaultDisplay = () => {
 
   return (
     <>
-      <Navbar hamburger={hamburger} event={handleHamburger}/>
+      <Navbar hamburger={hamburger} event={handleHamburger} />
 
       <Sidebar hamburger={hamburger} />
 
-      <main className="center-wrapper">
-        <div className="wrapper">
-          <Outlet />
-        </div>
+      <main>
+        <Outlet />
       </main>
 
       <Footer />

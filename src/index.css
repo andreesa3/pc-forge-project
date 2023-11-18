@@ -30,15 +30,14 @@ button {
   font-family: "Lexend", sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
   color: var(--clr-black);
   cursor: pointer !important;
-}
-
-main {
-  display: flex;
-  justify-content: center;
 }
 
 section {
