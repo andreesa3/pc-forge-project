@@ -30,6 +30,9 @@ const Navbar = ({ hamburger, event }) => {
               <div className="select-dropdown">
                 <Link to='/products/cpu'>CPU</Link>
                 <Link to='/products/gpu'>GPU</Link>
+                <Link to='/products/ssd'>SSD</Link>
+                <Link to='/products/case'>CASE</Link>
+                <Link to='/products/cooler'>COOLER</Link>
                 
               </div>
             )}
