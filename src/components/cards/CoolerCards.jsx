@@ -29,7 +29,7 @@ const CoolerCards = () => {
         <option value="desc">Decrescente</option>
       </select>
       <div className='componentCards'>
-        {sortedCoolerArray.map((gpu) => (
+        {sortedCoolerArray.map((cooler) => (
           <div key={cooler.id} onClick={() => handleCardClick(cooler.id)}>
             <CarouselCard text={cooler.name} price={`${cooler.price}€`} img={cooler.img} />
           </div>

@@ -5,7 +5,7 @@ import CarouselCard from './CarouselCard';
 
 const CaseCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
-  const caseArray = mockfile.case;
+  const caseArray = mockfile.tower;
   const navigate = useNavigate();
 
   const handleSortOrderChange = (e) => {
@@ -29,13 +29,13 @@ const CaseCards = () => {
         <option value="desc">Decrescente</option>
       </select>
       <div className='componentCards'>
-        {sortedCaseArray.map((case) => (
-          <div key={case.id} onClick={() => handleCardClick(case.id)}>
-            <CarouselCard text={case.name} price={`${case.price}€`} img={case.img} />
+        {sortedCaseArray.map((tower) => (
+          <div key={tower.id} onClick={() => handleCardClick(tower.id)}>
+            <CarouselCard text={tower.name} price={`${tower.price}€`} img={tower.img} />
           </div>
         ))}
       </div>
-      </div>
+    </div>
     </>
   );
 }

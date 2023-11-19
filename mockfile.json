@@ -209,7 +209,7 @@
       "description": "SSD NVMe con capacità massiccia di 2TB per archiviazione e velocità elevate."
     }
   ],
-  "case": [
+  "tower": [
     {
       "id": 1,
       "name": "NZXT H510",
