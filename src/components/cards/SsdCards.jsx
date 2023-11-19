@@ -13,7 +13,7 @@ const SsdCards = () => {
   };
 
   const handleCardClick = (ssdId) => {
-    navigate(`/product/gpu/${ssdId}`);
+    navigate(`/product/ssd/${ssdId}`);
   };
 
   const sortedSsdArray = [...ssdArray].sort((a, b) => {

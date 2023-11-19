@@ -13,7 +13,7 @@ const CoolerCards = () => {
   };
 
   const handleCardClick = (coolerId) => {
-    navigate(`/product/gpu/${coolerId}`);
+    navigate(`/product/cooler/${coolerId}`);
   };
 
   const sortedCoolerArray = [...coolerArray].sort((a, b) => {

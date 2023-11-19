@@ -182,31 +182,36 @@
       "id": 1,
       "name": "Samsung 860 EVO 500GB",
       "price": 70,
-      "description": "SSD SATA con capacità di 500GB per prestazioni affidabili."
+      "description": "SSD SATA con capacità di 500GB per prestazioni affidabili.",
+      "img": "https://images.samsung.com/is/image/samsung/it-860-evo-sata-3-2-5-inch-ssd-mz-76e4t0b-eu-frontblack-87135064?$650_519_PNG$"
     },
     {
       "id": 2,
       "name": "Crucial MX500 1TB",
       "price": 110,
-      "description": "SSD SATA con capacità di 1TB per archiviazione e prestazioni elevate."
+      "description": "SSD SATA con capacità di 1TB per archiviazione e prestazioni elevate.",
+      "img": "https://www.bacom.it/9202-large_default/crucialmx5001tbct1000mx500ssd11tb.jpg"
     },
     {
       "id": 3,
       "name": "WD Blue SN550 500GB NVMe",
       "price": 80,
-      "description": "SSD NVMe con velocità elevate, capacità 500GB."
+      "description": "SSD NVMe con velocità elevate, capacità 500GB.",
+      "img": "https://www.westerndigital.com/content/dam/store/en-us/assets/products/internal-storage/wd-blue-sn550-nvme-ssd/gallery/500gb/wd-blue-sn550-nvme-ssd-front-500gb.png"
     },
     {
       "id": 4,
       "name": "Samsung 970 EVO Plus 1TB NVMe",
       "price": 180,
-      "description": "SSD NVMe ad alte prestazioni, capacità di 1TB per applicazioni intensive."
+      "description": "SSD NVMe ad alte prestazioni, capacità di 1TB per applicazioni intensive.",
+      "img": "https://images.samsung.com/is/image/samsung/p6pim/it/mz-v7s1t0bw/gallery/it-970-evoplus-nvme-m2-ssd-mz-v7s1t0bw-530364432?$650_519_PNG$"
     },
     {
       "id": 5,
       "name": "Sabrent Rocket Q 2TB NVMe",
       "price": 300,
-      "description": "SSD NVMe con capacità massiccia di 2TB per archiviazione e velocità elevate."
+      "description": "SSD NVMe con capacità massiccia di 2TB per archiviazione e velocità elevate.",
+      "img": "https://www.servethehome.com/wp-content/uploads/2020/06/Sabrent-Rocket-Q-2TB-Front.jpg"
     }
   ],
   "tower": [
@@ -214,31 +219,36 @@
       "id": 1,
       "name": "NZXT H510",
       "price": 70,
-      "description": "Case Mid-Tower con design elegante e buona gestione del flusso d'aria."
+      "description": "Case Mid-Tower con design elegante e buona gestione del flusso d'aria.",
+      "img": "https://nzxt.com/assets/cms/34299/1617970872-h510-white-black-mainw-system.png?auto=format&fit=crop&h=1000&w=1000"
     },
     {
       "id": 2,
       "name": "Corsair iCUE 220T",
       "price": 90,
-      "description": "Case Mid-Tower con pannello laterale in vetro temperato e illuminazione RGB."
+      "description": "Case Mid-Tower con pannello laterale in vetro temperato e illuminazione RGB.",
+      "img": "https://pckatanaitaly.com/cdn/shop/products/Corsair_iCUE_220T_RGB_Airflow-removebg-preview.png?v=1656232554"
     },
     {
       "id": 3,
       "name": "Fractal Design Meshify C",
       "price": 100,
-      "description": "Case Mid-Tower con design focato sul flusso d'aria e compatibilità con dissipatori ad alte prestazioni."
+      "description": "Case Mid-Tower con design focato sul flusso d'aria e compatibilità con dissipatori ad alte prestazioni.",
+      "img": "https://www.fractal-design.com/app/uploads/2019/06/Meshify-C-TGL_1.jpg"
     },
     {
       "id": 4,
       "name": "Lian Li Lancool II Mesh",
       "price": 120,
-      "description": "Case Mid-Tower con pannelli in mesh per massima ventilazione e configurazione flessibile."
+      "description": "Case Mid-Tower con pannelli in mesh per massima ventilazione e configurazione flessibile.",
+      "img": "https://asset.conrad.com/media10/isa/160267/c1/-/it/002575617PI00/image.jpg?x=400&y=400&format=jpg&ex=400&ey=400&align=center"
     },
     {
       "id": 5,
       "name": "Cooler Master MasterBox TD500 Mesh",
       "price": 80,
-      "description": "Case Mid-Tower con ampio supporto per ventilazione e design moderno."
+      "description": "Case Mid-Tower con ampio supporto per ventilazione e design moderno.",
+      "img": "https://shop.akinformatica.it/wp-content/uploads/2023/02/TD500-Mesh-v2-Regular-ARGB-light-600x600.png"
     }
   ],
   "cooler": [
@@ -246,31 +256,36 @@
       "id": 1,
       "name": "Noctua NH-D15",
       "price": 90,
-      "description": "Dissipatore ad aria premium per raffreddamento silenzioso ed efficiente."
+      "description": "Dissipatore ad aria premium per raffreddamento silenzioso ed efficiente.",
+      "img": "https://www.nexthardware.com/recensioni/raffreddamento-aria/923/noctua-nh-d15/immagini/Noctua_NH_D15_prima.png"
     },
     {
       "id": 2,
       "name": "be quiet! Dark Rock Pro 4",
       "price": 80,
-      "description": "Dissipatore ad aria di alta qualità con ventole silenziose e prestazioni elevate."
+      "description": "Dissipatore ad aria di alta qualità con ventole silenziose e prestazioni elevate.",
+      "img": "https://media.ldlc.com/r1600/ld/products/00/04/88/85/LD0004888586_2.jpg"
     },
     {
       "id": 3,
       "name": "Corsair H100i RGB Platinum",
       "price": 120,
-      "description": "Sistema di raffreddamento a liquido con radiatore da 240mm e illuminazione RGB."
+      "description": "Sistema di raffreddamento a liquido con radiatore da 240mm e illuminazione RGB.",
+      "img": "https://m.media-amazon.com/images/I/614QJbe08zL.jpg"
     },
     {
       "id": 4,
       "name": "NZXT Kraken X63",
       "price": 150,
-      "description": "Sistema di raffreddamento a liquido con radiatore da 280mm e controlli avanzati."
+      "description": "Sistema di raffreddamento a liquido con radiatore da 280mm e controlli avanzati.",
+      "img": "https://nzxt.com/assets/cms/34299/1631819120-kraken-x63-rgb-white-keyshot.png?auto=format&fit=crop&h=1000&w=1000"
     },
     {
       "id": 5,
       "name": "Cooler Master MasterLiquid ML360R",
       "price": 180,
-      "description": "Sistema di raffreddamento a liquido con radiatore da 360mm e illuminazione personalizzabile."
+      "description": "Sistema di raffreddamento a liquido con radiatore da 360mm e illuminazione personalizzabile.",
+      "img": "https://cdn.coolermaster.com/media/1001/ml360rrgb_g1-zoom.png"
     }
   ]
 }
