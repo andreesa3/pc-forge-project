@@ -21,7 +21,8 @@ const CpuCards = () => {
   });
 
   return (
-    <>
+    <> 
+    <div className='cardWrapper'>
       <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
       <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
         <option value="asc">Crescente</option>
@@ -33,6 +34,7 @@ const CpuCards = () => {
             <CarouselCard text={cpu.name} price={`${cpu.price}€`} img={cpu.img} />
           </div>
         ))}
+      </div>
       </div>
     </>
   );

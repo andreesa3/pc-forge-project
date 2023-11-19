@@ -91,7 +91,8 @@
       "name": "ASUS ROG Strix Z690-E Gaming WiFi",
       "price": 349.99,
       "description": "Scheda madre per processori Intel 1700, supporto Wi-Fi integrato, chipset Z690.",
-      "type": "a"
+      "type": "a",
+      "img": "https://dlcdnwebimgs.asus.com/gain/0D73CA8E-5909-46B6-BCEF-68A83D8E04C5/w1000/h732"
     },
     {
       "id": 2,
