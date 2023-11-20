@@ -103,7 +103,7 @@
     {
       "id": 3,
       "name": "MSI MAG B550 TOMAHAWK",
-      "price": 189.99,
+      "price": 150,
       "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen, chipset B550."
     },
     {
@@ -111,6 +111,11 @@
       "name": "ASRock B450M PRO4",
       "price": 79.99,
       "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen di serie 3000, formato Micro-ATX."
+    },{
+      "id": 5,
+      "name": "ASUS ROG STRIX B550-XE GAMING WIFI",
+      "price": 330,
+      "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen di serie 5000, formato ATX."
     }
   ],
   "ram": [
@@ -276,105 +281,104 @@
   "prebuilder": [
    {
     "id": 1,
-    "name": "asda",
+    "name": "Creator 1",
     "description": "asdasdasd",
      "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
-    "price": 1500,
-    "cpu": "asdfa",
-    "gpu": "wefgw", 
-    "motherboard": "wrg", 
-    "ram": "wdqw",
-    "cooler": "qwdqw",
-    "case": "qwdqwd",
-    "ssd": "dqwd",
-    "power": "qwdqw",
-    "socket": ""
+    "price": 955,
+    "cpu": "Intel-Core i3-13100",
+    "gpu": "Nvidia RTX 4060 Ti", 
+    "motherboard": "GIGABYTE B660M DS3H", 
+    "ram": "Crucial Ballistix DDR4 8GB",
+    "cooler": "be quiet! Dark Rock Pro 4",
+    "case": "NZXT H510",
+    "ssd": "WD Blue SN550 500GB NVMe",
+    "power": "EVGA SuperNOVA 650 G5",
+    "socket": "1700"
 
   },
   {
     "id": 2,
-    "name": "asdasda",
+    "name": "Creator 2",
     "description": "asdasdasd",
     "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
-    "price": 1500,
-    "cpu": "assadasfa",
-    "gpu": "wefgasdaw", 
-    "motherboard": "wrgasd", 
-    "ram": "wdqasdw",
-    "cooler": "qwdasdqw",
-    "case": "qwdqasdwd",
-    "ssd": "dqasdwd",
-    "power": "qwasddqw",
-    "socket": ""
+    "price": 1051,
+    "cpu": "Ryzen 5 5600X",
+    "gpu": "Nvidia RTX 4060 Ti", 
+    "motherboard": "ASRock B450M PRO4", 
+    "ram": "HyperX Predator DDR4 16GB",
+    "cooler": "be quiet! Dark Rock Pro 4",
+    "case": "NZXT H510",
+    "ssd": "Samsung 860 EVO 500GB",
+    "power": "Corsair CX550M",
+    "socket": "AM4"
 
   },
   {
     "id": 3,
-    "name": "asdasda",
+    "name": "Inventor 1",
     "description": "asdasdasd",
     "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
-    "price": 1500,
-    "cpu": "assadasfa",
-    "gpu": "wefgasdaw", 
-    "motherboard": "wrgasd", 
-    "ram": "wdqasdw",
-    "cooler": "qwdasdqw",
-    "case": "qwdqasdwd",
-    "ssd": "dqasdwd",
-    "power": "qwasddqw",
-    "socket": ""
+    "price": 1496,
+    "cpu": "Intel-Core i5-13600K",
+    "gpu": "Nvidia RTX 4070", 
+    "motherboard": "GIGABYTE B660M DS3H", 
+    "ram": "HyperX Predator DDR4 16GB",
+    "cooler": "Noctua NH-D15",
+    "case": "Corsair iCUE 220T",
+    "ssd": "Crucial MX500 1TB",
+    "power": "EVGA SuperNOVA 650 G5",
+    "socket": "1700"
 
   },
   {
     "id": 4,
-    "name": "asdasda",
+    "name": "Inventor 2",
     "description": "asdasdasd",
     "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
-    "price": 1500,
-    "cpu": "assadasfa",
-    "gpu": "wefgasdaw", 
-    "motherboard": "wrgasd", 
-    "ram": "wdqasdw",
-    "cooler": "qwdasdqw",
-    "case": "qwdqasdwd",
-    "ssd": "dqasdwd",
-    "power": "qwasddqw",
-    "socket": ""
+    "price": 1669,
+    "cpu": "Intel-Core i5-13600K",
+    "gpu": "RX 6800 XT", 
+    "motherboard": "MSI MAG B550 TOMAHAWK", 
+    "ram": "Corsair DDR5 16GB",
+    "cooler": "Corsair H100i RGB Platinum",
+    "case": "Fractal Design Meshify C",
+    "ssd": "Crucial MX500 1TB",
+    "power": "Seasonic Focus GX-750",
+    "socket": "AM4"
 
   },
   {
     "id": 5,
-    "name": "asdasda",
+    "name": "Forge Master 1",
     "description": "asdasdasd",
     "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
-    "price": 1500,
-    "cpu": "assadasfa",
-    "gpu": "wefgasdaw", 
-    "motherboard": "wrgasd", 
-    "ram": "wdqasdw",
-    "cooler": "qwdasdqw",
-    "case": "qwdqasdwd",
-    "ssd": "dqasdwd",
-    "power": "qwasddqw",
-    "socket": ""
+    "price": 2999,
+    "cpu": "Intel-Core i7-13700K",
+    "gpu": "Nvidia RTX 4090", 
+    "motherboard": "ASUS ROG Strix Z690-E Gaming WiFi", 
+    "ram": "G.Skill Trident Z Neo DDR5 32GB",
+    "cooler": "NZXT Kraken X63",
+    "case": "Fractal Design Meshify C",
+    "ssd": "Samsung 970 EVO Plus 1TB NVMe",
+    "power": "be quiet! Straight Power 11 850W",
+    "socket": "1700"
 
   },
   {
     "id": 6,
-    "name": "asdasda",
+    "name": "Forge Master 2",
     "description": "asdasdasd",
     "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
-    "price": 1500,
-    "cpu": "assadasfa",
-    "gpu": "wefgasdaw", 
-    "motherboard": "wrgasd", 
-    "ram": "wdqasdw",
-    "cooler": "qwdasdqw",
-    "case": "qwdqasdwd",
-    "ssd": "dqasdwd",
-    "power": "qwasddqw",
-    "socket": ""
-
+    "price": 3510,
+    "cpu": "Ryzen 9 7950X3D",
+    "gpu": "Nvidia RTX 4090", 
+    "motherboard": "ASUS ROG STRIX B550-XE GAMING WIFI", 
+    "ram": "Kingston Fury Beast DDR5 64GB",
+    "cooler": "Cooler Master MasterLiquid ML360R",
+    "case": "Lian Li Lancool II Mesh",
+    "ssd": "Sabrent Rocket Q 2TB NVMe",
+    "power": "be quiet! Straight Power 11 850W",
+    "socket": "AM4"
   } 
   ]
 }
