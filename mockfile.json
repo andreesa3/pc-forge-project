@@ -6,35 +6,40 @@
       "price": 510,
       "description": "Processore Intel di fascia alta con 12 core e 20 thread, frequenza base di 3.8GHz e boost fino a 5.0GHz. Ottimizzato per gaming e carichi di lavoro intensi.",
       "socket": "Intel Socket 1700",
-      "compatibility": ["a"]
+      "compatibility": ["a"],
+      "img": "https://m.media-amazon.com/images/I/61m0zH-NiTL._AC_SX522_.jpg"
     },
     {
       "id": 2,
       "name": "Intel-Core i5-13600K",
       "price": 349,
       "description": "Processore Intel con 10 core e 16 thread, frequenza base di 3.5GHz e boost fino a 4.6GHz. Ideale per gaming e multitasking.",
-      "socket": "Intel Socket 1700"
+      "socket": "Intel Socket 1700",
+      "img": "https://m.media-amazon.com/images/I/41jGgn0uK4L._AC_SX522_.jpg"
     },
     {
       "id": 3,
       "name": "Intel-Core i3-13100",
       "price": 145,
       "description": "Processore Intel quad-core con 8 thread, frequenza base di 3.6GHz e boost fino a 4.2GHz. Ottimo per utilizzo quotidiano e gaming leggero.",
-      "socket": "Intel Socket 1700"
+      "socket": "Intel Socket 1700",
+      "img": "https://m.media-amazon.com/images/I/619GUXiTq6L._AC_SX522_.jpg"
     },
     {
       "id": 4,
       "name": "Ryzen 9 7950X3D",
       "price": 821,
       "description": "Processore AMD con 16 core e 32 thread, frequenza base di 3.5GHz e boost fino a 5.0GHz. Elevate prestazioni per carichi di lavoro pesanti e gaming avanzato.",
-      "socket": "AMD Socket AM5"
+      "socket": "AMD Socket AM5",
+      "img": "https://m.media-amazon.com/images/I/51qA89Dg6UL._AC_SX522_.jpg"
     },
     {
       "id": 5,
       "name": "Ryzen 5 5600X",
       "price": 232,
       "description": "Processore AMD con 6 core e 12 thread, frequenza base di 3.7GHz e boost fino a 4.6GHz. Ottime prestazioni per gaming e multitasking.",
-      "socket": "AMD Socket AM4"
+      "socket": "AMD Socket AM4",
+      "img": "https://www.pcokomegna.it/theme/default/assets/images/product/1316505900/amd-ryzen-5-5600x-6cores-12threads-370460ghz-65w-tdp-1.jpg"
     }
   ],
   "gpu": [
@@ -43,35 +48,41 @@
       "name": "Nvidia RTX 4090",
       "price": 1400,
       "description": "Scheda grafica di fascia top con architettura Ampere, 24GB di memoria GDDR6X e prestazioni eccezionali per gaming ad alta risoluzione e rendering.",
-      "socket": ""
+      "socket": "",
+      "img": "https://m.media-amazon.com/images/I/81KR0fO8WgL._AC_SL1500_.jpg"
+
     },
     {
       "id": 2,
       "name": "Nvidia RTX 4070",
       "price": 527,
       "description": "Scheda grafica con architettura Ampere, 8GB di memoria GDDR6 e prestazioni di fascia alta per gaming fluido e rendering di alta qualità.",
-      "socket": ""
+      "socket": "",
+      "img": "https://media.ldlc.com/r1600/ld/products/00/06/00/53/LD0006005314.jpg"
     },
     {
       "id": 3,
       "name": "Nvidia RTX 4060 Ti",
       "price": 350,
       "description": "Scheda grafica di fascia media con architettura Ampere, 6GB di memoria GDDR6 e ottimo rapporto prezzo-prestazioni per gaming e grafica.",
-      "socket": ""
+      "socket": "",
+      "img": "https://media.ldlc.com/r1600/ld/products/00/06/05/19/LD0006051908.jpg"
     },
     {
       "id": 4,
       "name": "RX 7900 XT",
       "price": 791,
       "description": "Scheda grafica AMD con architettura RDNA3, 16GB di memoria GDDR6X e prestazioni adatte a gaming ad alta risoluzione e carichi di lavoro intensi.",
-      "socket": ""
+      "socket": "",
+      "img": "https://media.ldlc.com/r1600/ld/products/00/06/00/12/LD0006001240.jpg"
     },
     {
       "id": 5,
       "name": "RX 6800 XT",
       "price": 570,
       "description": "Scheda grafica AMD con architettura RDNA2, 16GB di memoria GDDR6 e prestazioni elevate per gaming fluido e rendering professionale.",
-      "socket": ""
+      "socket": "",
+      "img": "https://www.romapcpoint.it/product_images/rx6800xt-pgd-16go_asrock-rx-6800-xt-pgd-16g_1.jpg"
     }
   ],
   "motherboard": [
@@ -80,7 +91,8 @@
       "name": "ASUS ROG Strix Z690-E Gaming WiFi",
       "price": 349.99,
       "description": "Scheda madre per processori Intel 1700, supporto Wi-Fi integrato, chipset Z690.",
-      "type": "a"
+      "type": "a",
+      "img": "https://dlcdnwebimgs.asus.com/gain/0D73CA8E-5909-46B6-BCEF-68A83D8E04C5/w1000/h732"
     },
     {
       "id": 2,
@@ -91,7 +103,7 @@
     {
       "id": 3,
       "name": "MSI MAG B550 TOMAHAWK",
-      "price": 189.99,
+      "price": 150,
       "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen, chipset B550."
     },
     {
@@ -99,6 +111,11 @@
       "name": "ASRock B450M PRO4",
       "price": 79.99,
       "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen di serie 3000, formato Micro-ATX."
+    },{
+      "id": 5,
+      "name": "ASUS ROG STRIX B550-XE GAMING WIFI",
+      "price": 330,
+      "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen di serie 5000, formato ATX."
     }
   ],
   "ram": [
@@ -260,5 +277,108 @@
       "price": 180,
       "description": "Sistema di raffreddamento a liquido con radiatore da 360mm e illuminazione personalizzabile."
     }
+  ],
+  "prebuilder": [
+   {
+    "id": 1,
+    "name": "Creator 1",
+    "description": "asdasdasd",
+     "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
+    "price": 955,
+    "cpu": "Intel-Core i3-13100",
+    "gpu": "Nvidia RTX 4060 Ti", 
+    "motherboard": "GIGABYTE B660M DS3H", 
+    "ram": "Crucial Ballistix DDR4 8GB",
+    "cooler": "be quiet! Dark Rock Pro 4",
+    "case": "NZXT H510",
+    "ssd": "WD Blue SN550 500GB NVMe",
+    "power": "EVGA SuperNOVA 650 G5",
+    "socket": "1700"
+
+  },
+  {
+    "id": 2,
+    "name": "Creator 2",
+    "description": "asdasdasd",
+    "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
+    "price": 1051,
+    "cpu": "Ryzen 5 5600X",
+    "gpu": "Nvidia RTX 4060 Ti", 
+    "motherboard": "ASRock B450M PRO4", 
+    "ram": "HyperX Predator DDR4 16GB",
+    "cooler": "be quiet! Dark Rock Pro 4",
+    "case": "NZXT H510",
+    "ssd": "Samsung 860 EVO 500GB",
+    "power": "Corsair CX550M",
+    "socket": "AM4"
+
+  },
+  {
+    "id": 3,
+    "name": "Inventor 1",
+    "description": "asdasdasd",
+    "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
+    "price": 1496,
+    "cpu": "Intel-Core i5-13600K",
+    "gpu": "Nvidia RTX 4070", 
+    "motherboard": "GIGABYTE B660M DS3H", 
+    "ram": "HyperX Predator DDR4 16GB",
+    "cooler": "Noctua NH-D15",
+    "case": "Corsair iCUE 220T",
+    "ssd": "Crucial MX500 1TB",
+    "power": "EVGA SuperNOVA 650 G5",
+    "socket": "1700"
+
+  },
+  {
+    "id": 4,
+    "name": "Inventor 2",
+    "description": "asdasdasd",
+    "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
+    "price": 1669,
+    "cpu": "Intel-Core i5-13600K",
+    "gpu": "RX 6800 XT", 
+    "motherboard": "MSI MAG B550 TOMAHAWK", 
+    "ram": "Corsair DDR5 16GB",
+    "cooler": "Corsair H100i RGB Platinum",
+    "case": "Fractal Design Meshify C",
+    "ssd": "Crucial MX500 1TB",
+    "power": "Seasonic Focus GX-750",
+    "socket": "AM4"
+
+  },
+  {
+    "id": 5,
+    "name": "Forge Master 1",
+    "description": "asdasdasd",
+    "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
+    "price": 2999,
+    "cpu": "Intel-Core i7-13700K",
+    "gpu": "Nvidia RTX 4090", 
+    "motherboard": "ASUS ROG Strix Z690-E Gaming WiFi", 
+    "ram": "G.Skill Trident Z Neo DDR5 32GB",
+    "cooler": "NZXT Kraken X63",
+    "case": "Fractal Design Meshify C",
+    "ssd": "Samsung 970 EVO Plus 1TB NVMe",
+    "power": "be quiet! Straight Power 11 850W",
+    "socket": "1700"
+
+  },
+  {
+    "id": 6,
+    "name": "Forge Master 2",
+    "description": "asdasdasd",
+    "img": "https://www.datocms-assets.com/34299/1677913954-prebuilt-category-performance-primary.png",
+    "price": 3510,
+    "cpu": "Ryzen 9 7950X3D",
+    "gpu": "Nvidia RTX 4090", 
+    "motherboard": "ASUS ROG STRIX B550-XE GAMING WIFI", 
+    "ram": "Kingston Fury Beast DDR5 64GB",
+    "cooler": "Cooler Master MasterLiquid ML360R",
+    "case": "Lian Li Lancool II Mesh",
+    "ssd": "Sabrent Rocket Q 2TB NVMe",
+    "power": "be quiet! Straight Power 11 850W",
+    "socket": "AM4"
+  } 
   ]
 }

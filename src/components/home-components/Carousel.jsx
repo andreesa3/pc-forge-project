@@ -4,6 +4,8 @@ import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
 import Card from '@mui/joy/Card';
 
+import CarouselCard from '../cards/CarouselCard'
+
 const data = [
   {
     src: 'https://images.unsplash.com/photo-1502657877623-f66bf489d236',
@@ -47,7 +49,6 @@ const Carousel = () => {
                   srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
                   src={`${item.src}?h=120&fit=crop&auto=format`}
                   alt={item.title}
-                  className='imgCarouselCard'
                 />
               </AspectRatio>
               <Box sx={{ whiteSpace: 'nowrap', mx: 1 }}>
@@ -57,6 +58,9 @@ const Carousel = () => {
             </Card>
           ))}
         </Box>
+
+        <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price='1999,98€' />
+
       </div>
     </section>
   );

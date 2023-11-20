@@ -19,7 +19,7 @@ const Home = () => {
       <Exclusive />
 
       {/* Services */}
-      <Services />
+      <Services/>
 
       {/* CallToAction */}
       <CallToAction />

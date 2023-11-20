@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Logo from '../../assets/icons/logo.svg';
 import PersonIcon from '@mui/icons-material/Person';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 /* COMPONENTS */
 import Dropdown from '../home-components/Dropdown';
@@ -80,7 +81,7 @@ const Navbar = ({ hamburger, event }) => {
       <div className="nav-wrapper wrapper">
         <Link to='/'>
           <div className="logo">
-            <img src={logo} alt="logo" />
+            <img src={Logo} alt="logo" />
             <h3><span className="purple">PC</span>FORGE</h3>
           </div>
         </Link>

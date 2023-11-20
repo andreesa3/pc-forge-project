@@ -1,0 +1,54 @@
+.wrapCarouselCard{
+    background-color: #F5F5F8;
+    max-width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+
+.carouselCard{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    gap: 40px;
+    
+}
+
+.imgCarouselCard{
+    width: 70%;
+    height: 70%;
+    align-self: center;
+    transition: transform .2s; 
+}
+
+.imgCarouselCard:hover {
+    transform: scale(1.1); 
+    cursor:pointer
+  }
+
+.titleCarouselCard{
+    align-self: flex-start;
+    font-size: 18px;
+    align-self: flex-start;
+}
+
+.titleCarouselCard:hover{
+    cursor:pointer;
+    color: rgb(7, 7, 114);
+}
+
+.infoCardCarousel{
+    border-top: 1px solid grey;
+}
+
+.btnCarouselCard{
+    display: flex;
+    flex: row;
+    gap: 20px;
+    width: 100%;
+}
