@@ -7,6 +7,7 @@ import GpuDetail from "./pages/GpuDetail"
 import CpuCards from "./components/cards/CpuCards"
 import PreBuilderCard from "./components/cards/PreBuilderCard"
 import GpuCards from "./components/cards/GpuCards"
+import PrebuildDetail from "./pages/PrebuildDetail"
 const App = () => {
 
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<DefaultDisplay />}>
           <Route path="" element={<Home />} />
           <Route path="prebuilder" element={<PreBuilderCard/>} />
+          <Route path="prebuilder/:id" element={<PrebuildDetail  />} />
           <Route path="products" element={<Products />} />
           <Route path="products/cpu" element={<CpuCards/> } />
          <Route path="product/cpu/:id" element={<CpuDetail />} />
