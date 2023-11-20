@@ -25,13 +25,13 @@
   color: var(--clr-purple);
 }
 
-.purple {
+.btn-purple {
   background-color: var(--clr-purple);
   color: var(--clr-white);
   border: 1.5px solid var(--clr-white) !important;
 }
 
-.purple:hover {
+.btn-purple:hover {
   background-color: var(--clr-white);
   color: var(--clr-purple);
   border: 1.5px solid var(--clr-white) !important;

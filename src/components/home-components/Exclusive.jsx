@@ -13,7 +13,7 @@ const Exclusive = () => {
             </div>
             <div className="price">
               <p>2500,00€</p>
-              <Button text="Click me" theme="purple" />
+              <Button text="Click me" theme="btn-purple" />
             </div>
           </div>
           <div className="container-center">
