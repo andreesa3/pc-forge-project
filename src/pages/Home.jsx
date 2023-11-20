@@ -4,6 +4,7 @@ import Exclusive from "../components/home-components/Exclusive";
 import Hero from "../components/home-components/Hero";
 import Services from "../components/home-components/Services";
 import FAQ from "../components/home-components/FAQ";
+import Carousel from "../components/home-components/Carousel";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Hero />
 
       {/* Slider */}
+      <Carousel />
 
       {/* PC */}
       <Exclusive />
@@ -19,7 +21,7 @@ const Home = () => {
       {/* Services */}
       <Services />
 
-      {/* Slider */}
+      {/* CallToAction */}
       <CallToAction />
 
       {/* FAQ */}
