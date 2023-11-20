@@ -1,1 +1,36 @@
+.calltoaction-section {
+  background-color: var(--clr-purple);
+  color: white;
+}
 
+.calltoaction-left {
+  /* background-color: white; */
+  height: 400px;
+  width: 500px;
+  margin: 40px;
+  justify-content: start;
+}
+
+.calltoaction-left img{
+  height: 400px;
+  height: 450px;
+}
+
+.calltoaction-rigth {
+  max-width: 400px;
+}
+
+.calltoaction {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.calltoaction-rigth h2{
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.calltoaction-rigth p{
+  margin-bottom: 20px;
+  font-size: 18px;
+}

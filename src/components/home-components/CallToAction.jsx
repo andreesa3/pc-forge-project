@@ -1,12 +1,11 @@
-import Button from "./Button";
+import Button from "../home-components/Button";
 
 const CallToAction = () => {
   return (
-    <>
-      <div className="calltoaction">
-        <div className="calltoaction-wrapper">
+    <section className="calltoaction-section">
+      <div className="calltoaction wrapper">
           <div className="calltoaction-left">
-            {/* <img src="#" alt="buld-pc" /> */}
+            <img src="./src/assets/images/pc1.jpg" alt="" />
           </div>
           <div className="calltoaction-rigth">
             <h2>Assembla il tuo pc con il nostro builder</h2>
@@ -16,13 +15,12 @@ const CallToAction = () => {
               laboriosam corporis velit corrupti sed sapiente sequi expedita
               esse, cupiditate doloremque debitis.
             </p>
-            <div>
-              <Button text="Click me" theme="light" />
+            <div className="btn-calltoaction">
+              <Button text="Click me" theme="purple" />
             </div>
           </div>
         </div>
-      </div>
-    </>
+    </section>
   );
 };
 

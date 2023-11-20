@@ -5,7 +5,7 @@ import pcHero from '../../assets/images/pc.jpg'
 const Hero = () => {
   return (
     <section className="hero-section">
-      <div className="hero-box">
+      <div className="hero-box wrapper">
         <div className="hero-left">
           <h1>Lorem Ipsum Dolor</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur et temporibus inventore velit ratione sunt voluptas itaque quis exercitationem?</p>
