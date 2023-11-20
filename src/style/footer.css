@@ -54,6 +54,9 @@ footer * {
   display: flex;
   align-items: center;
 }
+.footer-contact p {
+  margin: 0;
+}
 .footer-contact svg {
   height: 1.8rem;
   width: 1.8rem;
@@ -62,8 +65,9 @@ footer * {
 
 /* Social */
 .social-icon-box svg {
-  height: 1.8rem;
+  height: 2rem;
   width: 1.8rem;
+  margin-bottom: .5rem;
   margin-right: auto;
 }
 

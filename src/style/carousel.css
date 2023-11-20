@@ -1,13 +1,30 @@
-.MuiBox-root {
-  width: auto;
+.carousel {
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.MuiCard-root {
-  display: flex;
-  flex-direction: column !important;
-  align-items: center;
+.carousel-control-prev {
+  left: -2rem;
+  width: 3rem;
 }
 
-.MuiCard-root img{
-  width: 100% !important;
+.carousel-control-next {
+  right: -2rem;
+  width: 3rem;
+}
+
+.carousel-indicators {
+  bottom: -3.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-control-prev {
+    left: -3rem;
+    width: 3rem;
+  }
+
+  .carousel-control-next {
+    right: -3rem;
+    width: 3rem;
+  }
 }
