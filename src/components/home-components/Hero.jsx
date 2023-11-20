@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="hero-box">
         <div className="hero-left">
           <h1>Lorem Ipsum Dolor</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur et temporibus inventore velit ratione sunt voluptas itaque quis exercitationem?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span className="builder-gradient">Autem consequuntur et temporibus inventore velit ratione sunt voluptas itaque</span>  quis exercitationem?</p>
           <div className="btns-box">
             <Button text='Click me' theme='dark' />
             <Button text='Click me' theme='light' />

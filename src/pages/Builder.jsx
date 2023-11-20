@@ -48,8 +48,7 @@ function Builder() {
     </div>
 
    
-   <div className="builder">
-        
+   <div className="builder">  
        <SelectionWrapper imgSrc={cpu} options={mockData.cpu} onSelectChange={handleSelectionChange("cpu")} selectedData={selectedItems.cpu} name="cpu"/>
        <SelectionWrapper imgSrc={gpu} options={mockData.gpu} onSelectChange={handleSelectionChange("gpu")} selectedData={selectedItems.gpu} name="gpu"/>
        <SelectionWrapper imgSrc={ram} options={mockData.ram} onSelectChange={handleSelectionChange("ram")} selectedData={selectedItems.ram} name="ram"/>

@@ -9,9 +9,9 @@ const SelectionWrapper = ({ imgSrc, options, onSelectChange, selectedData,name }
       <Select className="builder-select" options={options} onSelectChange={onSelectChange} label={`Select ${name}`} />
       {selectedData && (
         <div className="selected-details">
-          <p>Name: {selectedData.name}</p>
-          <p>Price: {selectedData.price}$</p>
-          <p>Description: {selectedData.description}</p>
+          <p className="selected-details-p">{/* Name: */} {selectedData.name}</p>
+          <p className="selected-details-p">{/* Price: */} {selectedData.price}$</p>
+          <p className="selected-details-p">{/* Description: */} {selectedData.description}</p>
         </div>
       )}
     </div>

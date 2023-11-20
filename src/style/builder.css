@@ -2,7 +2,8 @@
 .builder{
     display: flex;
     flex-direction: column;
-    width: 700px
+    width: 700px;
+    gap:10px;
    
   }
   .selection-wrapper {
@@ -12,11 +13,15 @@
     
   }
   .selected-details{
-    border: 1px solid #000000;
+    border: 1px solid #8A00FB;
     padding: 10px;
     margin-left: 10px;
     display: flex;
     flex-direction: row;
+    min-width: 800px;
+    color: #ffffff;
+    background-color: #8A00FB;
+
   }
   
   .bubbleAssistant-image {
@@ -44,6 +49,14 @@
   text-decoration: none;
 
 }
+.builder-select{
+  padding: 10px;
+  background-color: #8A00FB;
+  color: #ffffff;
+  border-radius:5px;
+  min-width: 300px;
+  
+}
 
 .builder-gradient:hover {
 background-size: 100% 3px;
@@ -57,5 +70,8 @@ background-size: 100% 3px;
   width: 35px;
   height: 35px;
   
+}
+.selected-details-p{
+  padding:4px
 }
  

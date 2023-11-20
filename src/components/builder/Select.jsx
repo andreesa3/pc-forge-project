@@ -4,7 +4,7 @@ const Select = ({ options, onSelectChange,label }) => {
 
     return (
 
-      <select onChange={onSelectChange} aria-label={label} selected={label}>
+      <select className="builder-select"onChange={onSelectChange} aria-label={label} selected={label}>
          <option value="none" selected disabled hidden>
           {label}
       </option>
