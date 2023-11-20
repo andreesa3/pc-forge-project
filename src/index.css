@@ -3,6 +3,7 @@
 @import url(./style/footer.css);
 @import url(./style/hero.css);
 @import url(./style/services.css);
+@import url(./style/carousel.css);
 @import url(./style/faq.css);
 @import url(./style/sidebar.css);
 
@@ -48,6 +49,7 @@ section {
   width: 100%;
   max-width: 1300px;
   padding: 0 2rem;
+  margin: 0 auto;
 }
 
 .center-wrapper {
