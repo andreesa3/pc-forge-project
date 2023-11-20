@@ -2,10 +2,10 @@ import { useState } from 'react'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
-const API_KEY = "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";
+const API_KEY = "";
 // my test key davide
 const systemMessage = { 
-  "role": "system", "content": "Spiegame come se fossi un'assitente per l'acquisto di un pc da gaming assemblato da PC Forge."
+  "role": "system", "content": "Spiegami come se fossi un'assitente per l'acquisto di un pc da gaming assemblato da PC Forge."
 }
 
 function Chat() {
