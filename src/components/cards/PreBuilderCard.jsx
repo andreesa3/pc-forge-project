@@ -1,40 +1,43 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import mockfile from "/mockfile.json";
-import CarouselCard from "./CarouselCard";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import mockfile from '/mockfile.json';
+import CarouselCard from './CarouselCard';
 
-const PreBuilderCard = () => {
-  const [sortOrder, setSortOrder] = useState("asc");
-  const gpu = mockfile.gpu;
-  const cpu = mockfile.cpu;
-  const mb = mockfile.motherboard;
-  const ram = mockfile.motherboard;
+const PreBuilderCards = () => {
+  const [sortOrder, setSortOrder] = useState('asc');
+  const preBuilderArray = mockfile.prebuilder;
   const navigate = useNavigate();
 
-  
+  const handleSortOrderChange = (e) => {
+    setSortOrder(e.target.value);
+  };
+
+  const handleCardClick = (preBuilderId) => {
+    navigate(`/prebuilder/${preBuilderId}`);
+  };
+
+  const sortedPrebuilderArray = [...preBuilderArray].sort((a, b) => {
+    return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
+  });
 
   return (
-    <div className='componentCards' >
-      <div>
-        <CarouselCard text="PC 1" price="500" img="" />
+    <section> 
+    <div className='cardWrapper wrapper'>
+      <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
+      <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
+        <option value="asc">Crescente</option>
+        <option value="desc">Decrescente</option>
+      </select>
+      <div className='componentCards'>
+        {sortedPrebuilderArray.map((preBuilder) => (
+          <div key={preBuilder.id} onClick={() => handleCardClick(preBuilder.id)}>
+            <CarouselCard text={preBuilder.name} price={`${preBuilder.price}€`} img={preBuilder.img} />
+          </div>
+        ))}
       </div>
-      <div>
-        <CarouselCard text="PC 2 " price="500" img="" />
       </div>
-      <div>
-        <CarouselCard text="PC 3 " price="500" img="" />
-      </div>
-      <div>
-        <CarouselCard text="PC 4 " price="500" img="" />
-      </div>
-      <div>
-        <CarouselCard text="PC 5 " price="500" img="" />
-      </div>
-      <div>
-        <CarouselCard text="PC 6 " price="500" img="" />
-      </div>
-    </div>
+    </section>
   );
-};
+}
 
-export default PreBuilderCard;
+export default PreBuilderCards;

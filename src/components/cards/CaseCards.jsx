@@ -21,22 +21,22 @@ const CaseCards = () => {
   });
 
   return (
-    <> 
-    <div className='cardWrapper'>
-      <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
-      <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
-        <option value="asc">Crescente</option>
-        <option value="desc">Decrescente</option>
-      </select>
-      <div className='componentCards'>
-        {sortedCaseArray.map((tower) => (
-          <div key={tower.id} onClick={() => handleCardClick(tower.id)}>
-            <CarouselCard text={tower.name} price={`${tower.price}€`} img={tower.img} />
-          </div>
-        ))}
+    <section>
+      <div className='cardWrapper wrapper'>
+        <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
+        <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
+          <option value="asc">Crescente</option>
+          <option value="desc">Decrescente</option>
+        </select>
+        <div className='componentCards'>
+          {sortedCaseArray.map((tower) => (
+            <div key={tower.id} onClick={() => handleCardClick(tower.id)}>
+              <CarouselCard text={tower.name} price={`${tower.price}€`} img={tower.img} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-    </>
+    </section>
   );
 }
 

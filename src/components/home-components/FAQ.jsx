@@ -10,11 +10,6 @@ import { useState } from 'react';
 export default function BasicAccordion() {
 
   const [expanded, setExpanded] = useState(false);
-  const [isRotated, setIsRotated] = useState(false);
-
-  const handleRotate = (e) => {
-    setIsRotated(r => !r);
-  }
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);

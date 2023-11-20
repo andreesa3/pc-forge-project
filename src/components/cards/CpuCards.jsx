@@ -21,22 +21,22 @@ const CpuCards = () => {
   });
 
   return (
-    <> 
-    <div className='cardWrapper'>
-      <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
-      <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
-        <option value="asc">Crescente</option>
-        <option value="desc">Decrescente</option>
-      </select>
-      <div className='componentCards'>
-        {sortedCpuArray.map((cpu) => (
-          <div key={cpu.id} onClick={() => handleCardClick(cpu.id)}>
-            <CarouselCard text={cpu.name} price={`${cpu.price}€`} img={cpu.img} />
-          </div>
-        ))}
+    <section>
+      <div className='cardWrapper wrapper'>
+        <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
+        <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
+          <option value="asc">Crescente</option>
+          <option value="desc">Decrescente</option>
+        </select>
+        <div className='componentCards'>
+          {sortedCpuArray.map((cpu) => (
+            <div key={cpu.id} onClick={() => handleCardClick(cpu.id)}>
+              <CarouselCard text={cpu.name} price={`${cpu.price}€`} img={cpu.img} />
+            </div>
+          ))}
+        </div>
       </div>
-      </div>
-    </>
+    </section>
   );
 }
 

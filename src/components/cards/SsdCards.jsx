@@ -21,22 +21,22 @@ const SsdCards = () => {
   });
 
   return (
-    <> 
-    <div className='cardWrapper'>
-      <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
-      <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
-        <option value="asc">Crescente</option>
-        <option value="desc">Decrescente</option>
-      </select>
-      <div className='componentCards'>
-        {sortedSsdArray.map((ssd) => (
-          <div key={ssd.id} onClick={() => handleCardClick(ssd.id)}>
-            <CarouselCard text={ssd.name} price={`${ssd.price}€`} img={ssd.img} />
-          </div>
-        ))}
+    <section>
+      <div className='cardWrapper wrapper'>
+        <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
+        <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
+          <option value="asc">Crescente</option>
+          <option value="desc">Decrescente</option>
+        </select>
+        <div className='componentCards'>
+          {sortedSsdArray.map((ssd) => (
+            <div key={ssd.id} onClick={() => handleCardClick(ssd.id)}>
+              <CarouselCard text={ssd.name} price={`${ssd.price}€`} img={ssd.img} />
+            </div>
+          ))}
+        </div>
       </div>
-      </div>
-    </>
+    </section>
   );
 }
 

@@ -1,0 +1,13 @@
+.MuiBox-root {
+  width: auto;
+}
+
+.MuiCard-root {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+}
+
+.MuiCard-root img{
+  width: 100% !important;
+}

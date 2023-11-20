@@ -22,7 +22,7 @@ const Footer = () => {
             <Link to='/'>
               <div className="logo">
                 <img src={logo} alt="logo" />
-                <h3><span className="purple">PC</span>FORGE</h3>
+                <h3><span>PC</span>FORGE</h3>
               </div>
             </Link>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fuga eligendi laboriosam repudiandae blanditiis autem inventore minima hic aut doloremque.</p>

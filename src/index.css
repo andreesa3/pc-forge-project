@@ -2,7 +2,10 @@
 @import url(./style/nav.css);
 @import url(./style/footer.css);
 @import url(./style/hero.css);
+@import url(./style/callToAction.css);
+@import url(./style/exclusive.css);
 @import url(./style/services.css);
+@import url(./style/carousel.css);
 @import url(./style/faq.css);
 @import url(./style/sidebar.css);
 @import url(./style/card_css/card-carousel.css);
@@ -33,15 +36,14 @@ button {
   font-family: "Lexend", sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
   color: var(--clr-black);
   cursor: pointer !important;
-}
-
-main {
-  display: flex;
-  justify-content: center;
 }
 
 section {
@@ -52,6 +54,7 @@ section {
   width: 100%;
   max-width: 1300px;
   padding: 0 2rem;
+  margin: 0 auto;
 }
 
 .center-wrapper {
