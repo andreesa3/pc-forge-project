@@ -47,6 +47,7 @@ const Carousel = () => {
                   srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
                   src={`${item.src}?h=120&fit=crop&auto=format`}
                   alt={item.title}
+                  className='imgCarouselCard'
                 />
               </AspectRatio>
               <Box sx={{ whiteSpace: 'nowrap', mx: 1 }}>
