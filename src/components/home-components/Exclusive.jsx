@@ -12,7 +12,7 @@ const Exclusive = () => {
         <div className="container-sx">
           <h2>Lorem Ipsum</h2>
           <div className="container-sx-pc">
-            <img src="/src/assets/images/homepage.png" alt="pc-build" />
+            <img src="./src/assets/images/pc1.jpg" alt="pc-build" />
           </div>
           <div className="build-list">
             <p>
@@ -28,7 +28,7 @@ const Exclusive = () => {
         </div>
         <div className="container-center">
           <div className="pc">
-            <img src="/src/assets/images/homepage.png" alt="pc-build" />
+            <img src="./src/assets/images/pc1.jpg" alt="pc-build" />
           </div>
         </div>
         <div className="container-dx">

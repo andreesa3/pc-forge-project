@@ -15,6 +15,12 @@ import CoolerCards from "./components/cards/CoolerCards"
 import CoolerDetail from "./pages/CoolerDetail"
 import PrebuildDetail from "./pages/PrebuildDetail"
 import Contact from "./components/home-components/Contact"
+import MotherboardCards from "./components/cards/MotherboardCards"
+import MotherBoardDetail from "./pages/MotherBoardDetail"
+import RamCards from "./components/cards/RamCards"
+import RamDetail from "./pages/RamDetail"
+import PowerCards from "./components/cards/PowerCards"
+import PowerDetail from "./pages/PowerDetail"
 
 
 const App = () => {
@@ -36,6 +42,12 @@ const App = () => {
           <Route path="product/case/:id" element={<CaseDetail />} />
           <Route path="products/cooler" element={<CoolerCards />} />
           <Route path="product/cooler/:id" element={<CoolerDetail />} />
+          <Route path="products/mb" element={<MotherboardCards />} />
+          <Route path="product/mb/:id" element={<MotherBoardDetail />} />
+          <Route path="products/ram" element={<RamCards />} />
+          <Route path="product/ram/:id" element={<RamDetail />} />
+          <Route path="products/power" element={<PowerCards />} />
+          <Route path="product/power/:id" element={<PowerDetail />} />
           <Route path="contact" element={<Contact/>}/>
         </Route>
       </Routes>

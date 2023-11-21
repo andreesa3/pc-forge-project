@@ -7,10 +7,6 @@
   margin: 40px;
 }
 
-.calltoaction-rigth {
-  max-width: 400px;
-}
-
 .calltoaction-rigth h2 {
   margin-bottom: 20px;
   font-size: 32px;
@@ -25,5 +21,6 @@
   .calltoaction {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
 }

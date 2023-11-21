@@ -5,13 +5,13 @@ import Button from '../home-components/Button'
 const CarouselCard = ({ img, text, price }) => {
   return (
     <div className='wrapCarouselCard'>
-      <div className='carouselCard'><img className='imgCarouselCard' src={img} alt="" />
+      <div className='carouselCard'><div className='wrapImg'><img className='imgCarouselCard' src={img} alt="" /></div>
         <div className='infoCardCarousel'>
           <span className='titleCarouselCard'><p>{text}</p></span>
-          <span className='priceCarouselCard'>{price}</span></div>
+          <span className='priceCarouselCard'>€{price}</span>
+        </div>
         <div className='btnCarouselCard'>
-          <Button text='Compra ora' theme='dark' />
-          <Button text='Aggiungi al carrello' theme='light' />
+          <Button text='Aggiungi al Carrello' theme='dark' />
         </div>
       </div>
 

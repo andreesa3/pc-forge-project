@@ -49,19 +49,19 @@ const Navbar = ({ hamburger, event }) => {
       id: 3,
       text: 'Motherboard',
       image: motherboardIcon,
-      path: '#'
+      path: '/products/mb'
     },
     {
       id: 4,
       text: 'RAM',
       image: ramIcon,
-      path: '#'
+      path: '/products/ram'
     },
     {
       id: 5,
       text: 'Power',
       image: powerIcon,
-      path: '#'
+      path: '/products/power'
     },
     {
       id: 6,
@@ -111,7 +111,7 @@ const Navbar = ({ hamburger, event }) => {
             )}
           </Link>
           <Link
-            to='/products'
+            to='/#'
             className="nav-dropdown-box"
             onMouseEnter={() => handleMouseEnter('components')}
           >
