@@ -14,6 +14,7 @@ import CaseDetail from "./pages/CaseDetail"
 import CoolerCards from "./components/cards/CoolerCards"
 import CoolerDetail from "./pages/CoolerDetail"
 import PrebuildDetail from "./pages/PrebuildDetail"
+import Contact from "./components/home-components/Contact"
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="product/case/:id" element={<CaseDetail />} />
           <Route path="products/cooler" element={<CoolerCards />} />
           <Route path="product/cooler/:id" element={<CoolerDetail />} />
+          <Route path="contact" element={<Contact/>}/>
         </Route>
       </Routes>
     </>
