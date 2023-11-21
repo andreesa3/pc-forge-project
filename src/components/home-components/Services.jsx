@@ -4,7 +4,7 @@ import Anchor from '../home-components/Anchor';
 const Services = () => {
   return (
     <section>
-      <div className="services-box">
+      <div className="services-box wrapper">
         <div className="service-card">
           <img src={box} alt="box icon" />
           <h3>Lorem Ipsum</h3>

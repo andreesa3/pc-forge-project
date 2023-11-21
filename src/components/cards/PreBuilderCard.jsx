@@ -21,8 +21,8 @@ const PreBuilderCards = () => {
   });
 
   return (
-    <> 
-    <div className='cardWrapper'>
+    <section> 
+    <div className='cardWrapper wrapper'>
       <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
       <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
         <option value="asc">Crescente</option>
@@ -36,7 +36,7 @@ const PreBuilderCards = () => {
         ))}
       </div>
       </div>
-    </>
+    </section>
   );
 }
 

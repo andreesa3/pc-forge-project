@@ -1,8 +1,10 @@
+import CallToAction from "../components/home-components/CallToAction";
+import Exclusive from "../components/home-components/Exclusive";
 // import FAQ from "../components/FAQ";
-import Hero from "../components/home-components/Hero"
+import Hero from "../components/home-components/Hero";
 import Services from "../components/home-components/Services";
 import FAQ from "../components/home-components/FAQ";
-import CarouselCard from "../components/cards/CarouselCard";
+import CarouselComponent from "../components/home-components/CarouselComponent";
 
 const Home = () => {
   return (
@@ -11,17 +13,21 @@ const Home = () => {
       <Hero />
 
       {/* Slider */}
+      <CarouselComponent />
 
       {/* PC */}
-      <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price='1999,98€'/>
+      <Exclusive />
+
       {/* Services */}
       <Services/>
+
+      {/* CallToAction */}
+      <CallToAction />
 
       {/* FAQ */}
       <FAQ />
     </>
-  )
-}
+  );
+};
 
 export default Home;
-
