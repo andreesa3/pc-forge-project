@@ -1,52 +1,42 @@
 .wrapCarouselCard {
-    background-color: #f5f5f8;
-    max-width: 350px;
-  }
-  
-  .carouselCard {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1.25rem;
-  }
-  
-  .wrapImg{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 200px;
-      width: 100%;
-  }
-  
-  .imgCarouselCard {
-    width: 50%;
-    transition: transform 0.2s;
-    object-fit:contain;
-    
-  }
-  
-  .imgCarouselCard:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-  
-  .titleCarouselCard {
-    align-self: flex-start;
-    font-size: 16px;
-    align-self: flex-start;
-  }
-  
-  .titleCarouselCard:hover {
-    cursor: pointer;
-    color: rgb(7, 7, 114);
-  }
-  
-  .priceCarouselCard {
-      font-size: 22px;
-  }
-  
-  .infoCardCarousel {
-    border-top: 1px solid grey;
-    padding-top: .5rem;
-  }
-  
+  background-color: #f5f5f8;
+  max-width: 350px;
+}
+
+.carouselCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1.25rem;
+}
+
+.imgCarouselCard {
+  width: 50%;
+  align-self: center;
+  transition: transform 0.2s;
+}
+
+.imgCarouselCard:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.titleCarouselCard {
+  align-self: flex-start;
+  font-size: 18px;
+  align-self: flex-start;
+}
+
+.titleCarouselCard:hover {
+  cursor: pointer;
+  color: rgb(7, 7, 114);
+}
+
+.priceCarouselCard {
+    font-size: 22px;
+}
+
+.infoCardCarousel {
+  border-top: 1px solid grey;
+  padding-top: .5rem;
+}
