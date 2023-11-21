@@ -111,7 +111,7 @@ const Navbar = ({ hamburger, event }) => {
             )}
           </Link>
           <Link
-            to='/products'
+            to='/#'
             className="nav-dropdown-box"
             onMouseEnter={() => handleMouseEnter('components')}
           >
@@ -122,7 +122,7 @@ const Navbar = ({ hamburger, event }) => {
             )}
           </Link>
           <Link to='/products'>PC BUILDER</Link>
-          <Link to='/products'>CONTATTI</Link>
+          <Link to='/contact'>CONTATTI</Link>
         </div>
 
         <div className="nav-right">

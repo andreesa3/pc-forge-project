@@ -1,10 +1,8 @@
 .componentCards{
-    display: flex;
-    flex-direction: row;
+    display: flex;  
     gap: 15px;
     flex-wrap: wrap;
     margin-top: 100px;
-   
 }
 
 .sortOrderSelect{
@@ -14,8 +12,7 @@
 
 .cardWrapper{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: column;;
     margin-top: 100px;
     gap:8px
 }

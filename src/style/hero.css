@@ -37,6 +37,8 @@
 /* Hero-Right */
 .hero-right {
   margin-top: 4rem;
+  display: flex;
+  justify-content: center;
 }
 .hero-right img {
   max-width: 100%;
