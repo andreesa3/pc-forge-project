@@ -5,7 +5,7 @@ const CallToAction = () => {
     <section className="calltoaction-section">
       <div className="calltoaction wrapper">
           <div className="calltoaction-left">
-            <img src="./src/assets/images/home2.png" alt="" />
+            <img src="./src/assets/images/home2.pngq" alt="" />
           </div>
           <div className="calltoaction-rigth">
             <h2>Assembla il tuo pc con il nostro builder</h2>
