@@ -21,6 +21,7 @@ import RamCards from "./components/cards/RamCards"
 import RamDetail from "./pages/RamDetail"
 import PowerCards from "./components/cards/PowerCards"
 import PowerDetail from "./pages/PowerDetail"
+import Builder from "./pages/Builder"
 
 
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
           <Route path="products/power" element={<PowerCards />} />
           <Route path="product/power/:id" element={<PowerDetail />} />
           <Route path="contact" element={<Contact/>}/>
+          <Route path="builder" element={<Builder/>}/>
         </Route>
       </Routes>
       

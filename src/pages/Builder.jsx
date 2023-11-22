@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import mockData from '../mockfile.json'
+import mockData from '/mockfile.json';
 import cpu from "../assets/icons/cpu.webp"
 import power from "../assets/icons/power.webp"
 import gpu from "../assets/icons/gpu.webp"

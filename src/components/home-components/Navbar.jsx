@@ -93,12 +93,8 @@ const Navbar = ({ hamburger, event }) => {
           </div>
         </Link>
         <div className="nav-links">
-< HEAD
-          <Link
-            to='/products'
-            className="nav-dropdown-box"
-            onMouseEnter={() => handleMouseEnter('store')}
-          >
+
+          <Link to='/products' className="nav-dropdown-box" onMouseEnter={() => handleMouseEnter('store')}>
             STORE
 
             {dropdownVisible === 'store' && (
@@ -122,13 +118,10 @@ const Navbar = ({ hamburger, event }) => {
               <Dropdown data={componentsItems} leaveEvent={handleMouseLeave} />
             )}
           </Link>
-          <Link to='/products'>PC BUILDER</Link>
+          <Link to='/builder'>PC BUILDER</Link>
           <Link to='/contact'>CONTATTI</Link>
 
-          <Link to='/'>HOME</Link>
-          <Link to='/products'>STORE</Link>
-          <Link to='/builder'>PC BUILDER</Link>
-          <Link to='/products'>CONTACT US</Link>
+        
 
         </div>
 
