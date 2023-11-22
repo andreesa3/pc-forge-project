@@ -93,6 +93,7 @@ const Navbar = ({ hamburger, event }) => {
           </div>
         </Link>
         <div className="nav-links">
+< HEAD
           <Link
             to='/products'
             className="nav-dropdown-box"
@@ -123,6 +124,12 @@ const Navbar = ({ hamburger, event }) => {
           </Link>
           <Link to='/products'>PC BUILDER</Link>
           <Link to='/contact'>CONTATTI</Link>
+
+          <Link to='/'>HOME</Link>
+          <Link to='/products'>STORE</Link>
+          <Link to='/builder'>PC BUILDER</Link>
+          <Link to='/products'>CONTACT US</Link>
+
         </div>
 
         <div className="nav-right">
