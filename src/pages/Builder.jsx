@@ -38,7 +38,7 @@ function Builder() {
 
   return (
     <>
-    <div className="builder-header">
+    <div className="builder-header wrapper">
 
       <h2><img src={logo} alt="logo" /><span className="purple">PC</span> Forge Builder</h2>
       <h3>Assembla il pc dei tuoi sogni con il builder di pc Forge <span className="builder-gradient">In Pc Forge creadiamo nella liberta dei nostri clienti di scegliere il compputer adatto alle proprie esigenze,
@@ -48,7 +48,7 @@ function Builder() {
     </div>
 
    
-   <div className="builder">  
+   <div className="builder wrapper">  
        <SelectionWrapper imgSrc={cpu} options={mockData.cpu} onSelectChange={handleSelectionChange("cpu")} selectedData={selectedItems.cpu} name="cpu"/>
        <SelectionWrapper imgSrc={gpu} options={mockData.gpu} onSelectChange={handleSelectionChange("gpu")} selectedData={selectedItems.gpu} name="gpu"/>
        <SelectionWrapper imgSrc={ram} options={mockData.ram} onSelectChange={handleSelectionChange("ram")} selectedData={selectedItems.ram} name="ram"/>
@@ -57,8 +57,8 @@ function Builder() {
        <SelectionWrapper imgSrc={ssd} options={mockData.ssd} onSelectChange={handleSelectionChange("ssd")} selectedData={selectedItems.ssd} name="ssd"/>
        <SelectionWrapper imgSrc={cooler} options={mockData.cooler} onSelectChange={handleSelectionChange("cooler")} selectedData={selectedItems.cooler} name="cooler"/>
        <SelectionWrapper imgSrc={cases} options={mockData.case} onSelectChange={handleSelectionChange("case")} selectedData={selectedItems.case} name="case"/>
-   </div>
    <BubbleAssistant/>
+   </div>
     </>
     
   )
