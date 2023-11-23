@@ -57,8 +57,8 @@ function Builder() {
        <SelectionWrapper imgSrc={ssd} options={mockData.ssd} onSelectChange={handleSelectionChange("ssd")} selectedData={selectedItems.ssd} name="ssd"/>
        <SelectionWrapper imgSrc={cooler} options={mockData.cooler} onSelectChange={handleSelectionChange("cooler")} selectedData={selectedItems.cooler} name="cooler"/>
        <SelectionWrapper imgSrc={cases} options={mockData.case} onSelectChange={handleSelectionChange("case")} selectedData={selectedItems.case} name="case"/>
-   </div>
    <BubbleAssistant/>
+   </div>
     </>
     
   )
