@@ -1,6 +1,6 @@
 import Button from "../home-components/Button";
 
-import pcHero from '../../assets/images/pc.jpg'
+import pcHero from '../../assets/images/pc.png'
 
 const Hero = () => {
   return (

@@ -7,7 +7,7 @@
       "description": "Processore Intel di fascia alta con 12 core e 20 thread, frequenza base di 3.8GHz e boost fino a 5.0GHz. Ottimizzato per gaming e carichi di lavoro intensi.",
       "socket": "Intel Socket 1700",
       "compatibility": ["a"],
-      "img": "https://m.media-amazon.com/images/I/61m0zH-NiTL._AC_SX522_.jpg"
+      "img": "https://lv4tech.com/wp-content/uploads/2023/08/13700k-800x800.png"
     },
     {
       "id": 2,
@@ -15,7 +15,7 @@
       "price": 349,
       "description": "Processore Intel con 10 core e 16 thread, frequenza base di 3.5GHz e boost fino a 4.6GHz. Ideale per gaming e multitasking.",
       "socket": "Intel Socket 1700",
-      "img": "https://m.media-amazon.com/images/I/41jGgn0uK4L._AC_SX522_.jpg"
+      "img": "https://logg.api.cygnus.market/static/logg/Global/Procesador%20Intel%20Core%20i5-12600K%204.9GHz%2020MB%20Alder%20Lake%20Gr%C3%A1ficos%20UHD%20770%20LGA1700/c8561ce3f7114c1f9afbc5e4be2260c1.webp"
     },
     {
       "id": 3,
@@ -23,7 +23,7 @@
       "price": 145,
       "description": "Processore Intel quad-core con 8 thread, frequenza base di 3.6GHz e boost fino a 4.2GHz. Ottimo per utilizzo quotidiano e gaming leggero.",
       "socket": "Intel Socket 1700",
-      "img": "https://m.media-amazon.com/images/I/619GUXiTq6L._AC_SX522_.jpg"
+      "img": "https://product.hstatic.net/1000296652/product/i3-10105_8e93d105361a478f97263f6a6b574f50_grande.png"
     },
     {
       "id": 4,
@@ -31,7 +31,7 @@
       "price": 821,
       "description": "Processore AMD con 16 core e 32 thread, frequenza base di 3.5GHz e boost fino a 5.0GHz. Elevate prestazioni per carichi di lavoro pesanti e gaming avanzato.",
       "socket": "AMD Socket AM5",
-      "img": "https://m.media-amazon.com/images/I/51qA89Dg6UL._AC_SX522_.jpg"
+      "img": "https://utopiacomputers.co.uk/cdn/shop/products/amd-cpu-amd-ryzen-5-5600x-6-core-3-7ghz-17568853360777_9c6c45a8-f389-4f80-b781-e18980965521_1024x1024.jpg?v=1699625774"
     },
     {
       "id": 5,
@@ -39,7 +39,7 @@
       "price": 232,
       "description": "Processore AMD con 6 core e 12 thread, frequenza base di 3.7GHz e boost fino a 4.6GHz. Ottime prestazioni per gaming e multitasking.",
       "socket": "AMD Socket AM4",
-      "img": "https://www.pcokomegna.it/theme/default/assets/images/product/1316505900/amd-ryzen-5-5600x-6cores-12threads-370460ghz-65w-tdp-1.jpg"
+      "img": "https://i0.wp.com/www.fullysilentpcs.com/wp-content/uploads/2017/07/AMD-Ryzen-5-5600X.png?fit=888%2C888&ssl=1"
     }
   ],
   "gpu": [
@@ -49,7 +49,7 @@
       "price": 1400,
       "description": "Scheda grafica di fascia top con architettura Ampere, 24GB di memoria GDDR6X e prestazioni eccezionali per gaming ad alta risoluzione e rendering.",
       "socket": "",
-      "img": "https://m.media-amazon.com/images/I/81KR0fO8WgL._AC_SL1500_.jpg"
+      "img": "https://asset.msi.com/resize/image/global/product/product_1665552671c76199be0956de9b63d7e35b33b91acb.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
     },
     {
       "id": 2,
@@ -57,7 +57,7 @@
       "price": 527,
       "description": "Scheda grafica con architettura Ampere, 8GB di memoria GDDR6 e prestazioni di fascia alta per gaming fluido e rendering di alta qualità.",
       "socket": "",
-      "img": "https://media.ldlc.com/r1600/ld/products/00/06/00/53/LD0006005314.jpg"
+      "img": "https://asset.msi.com/resize/image/global/product/product_16812916502ca0a14b6dfb5319c99da1d4ffb3a8ad.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
     },
     {
       "id": 3,
@@ -65,7 +65,7 @@
       "price": 350,
       "description": "Scheda grafica di fascia media con architettura Ampere, 6GB di memoria GDDR6 e ottimo rapporto prezzo-prestazioni per gaming e grafica.",
       "socket": "",
-      "img": "https://media.ldlc.com/r1600/ld/products/00/06/05/19/LD0006051908.jpg"
+      "img": "https://asset.msi.com/resize/image/global/product/product_1684397602eb9f48f9a4cb8084634fb4ded7227345.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
     },
     {
       "id": 4,
@@ -73,7 +73,7 @@
       "price": 791,
       "description": "Scheda grafica AMD con architettura RDNA3, 16GB di memoria GDDR6X e prestazioni adatte a gaming ad alta risoluzione e carichi di lavoro intensi.",
       "socket": "",
-      "img": "https://media.ldlc.com/r1600/ld/products/00/06/00/12/LD0006001240.jpg"
+      "img": "https://static.gigabyte.com/StaticFile/Image/Global/868436ba12e23fc0d98e26322a618a2c/Product/32810/Png"
     },
     {
       "id": 5,
@@ -81,7 +81,7 @@
       "price": 570,
       "description": "Scheda grafica AMD con architettura RDNA2, 16GB di memoria GDDR6 e prestazioni elevate per gaming fluido e rendering professionale.",
       "socket": "",
-      "img": "https://www.romapcpoint.it/product_images/rx6800xt-pgd-16go_asrock-rx-6800-xt-pgd-16g_1.jpg"
+      "img": "https://static.gigabyte.com/StaticFile/Image/Global/c0bbcfc26864fe03dcc9b32d285d77d5/Product/26410/Png"
     }
   ],
   "motherboard": [

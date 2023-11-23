@@ -1,0 +1,42 @@
+.dark-mode  {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    position: relative;
+    transition: background-color 0.5s ease
+}
+  
+.dark-mode .wrapCarouselCard{
+    background-color: rgb(44, 44, 44);
+    transition: background-color 0.5s ease
+    
+}
+.dark-mode .carousel .carousel-control-prev-icon,
+.dark-mode .carousel .carousel-control-next-icon{
+    filter: invert(0) grayscale(100);
+    transition: filter 0.5s ease
+}
+
+.dark-mode .carousel .carousel-indicators [data-bs-target]  {
+    background-color: white;
+    transition: background-color 0.5s ease
+}
+
+.dark-mode .css-1elwnq4-MuiPaper-root-MuiAccordion-root{
+    background-color:  rgb(44, 44, 44);
+    color: white;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease
+}
+
+.dark-mode .form-container{
+    background: none;
+    background-color:rgb(44, 44, 44);
+}
+
+.toggleDark{
+    position: fixed;
+    right: 0;
+    top: 55px;
+    padding: 25px;
+    z-index: 2;
+}
