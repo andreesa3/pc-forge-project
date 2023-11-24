@@ -42,6 +42,15 @@
     border: 1.5px solid var(--clr-dark-modeBG) !important;
 }
 
+.dark-mode .faq-title-box h3,
+.dark-mode .css-1xo8r4u-MuiSvgIcon-root{
+    color: #ac47ff
+}
+
+.dark-mode .faq-card{
+    border-bottom:1px solid #ac47ff 
+}
+
 .toggleDark{
     position: fixed;
     right: 0;

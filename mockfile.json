@@ -91,7 +91,7 @@
       "price": 349.99,
       "description": "Scheda madre per processori Intel 1700, supporto Wi-Fi integrato, chipset Z690.",
       "type": "a",
-      "img": "https://dlcdnwebimgs.asus.com/gain/0D73CA8E-5909-46B6-BCEF-68A83D8E04C5/w1000/h732"
+      "img": "https://dlcdnwebimgs.asus.com/gain/293AC7FB-F2DB-4559-A749-9AD4A23598EF/w717/h525"
     },
     {
       "id": 2,
@@ -116,7 +116,7 @@
     },
     {
       "id": 5,
-      "name": "ASUS ROG STRIX B550-XE GAMING WIFI",
+      "name": "ASUS ROG STRIX B550-XE GAMING",
       "price": 330,
       "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen di serie 5000, formato ATX.",
       "img": "https://dlcdnwebimgs.asus.com/gain/369EA2C2-76F1-4B2B-8B38-D466CD4B059C/w1000/h732"
@@ -128,7 +128,7 @@
       "name": "Corsair DDR5 16GB",
       "price": 120,
       "description": "RAM DDR5 ad alta velocità per prestazioni elevate.",
-      "img": "https://media.ldlc.com/r1600/ld/products/00/05/90/05/LD0005900506_1_0005910243.jpg"
+      "img": "https://res.cloudinary.com/corsair-pwa/image/upload/f_auto,q_auto/v1/akamai/pdp/vengeance-ddr5-sodimm/sodimm_render.png"
     },
     {
       "id": 2,
@@ -142,7 +142,7 @@
       "name": "Kingston Fury Beast DDR5 64GB",
       "price": 180,
       "description": "RAM DDR5 di alta fascia per prestazioni estreme e multitasking.",
-      "img": "https://media.kingston.com/kingston/product/FURY_Beast_RGB_DDR5_2_angle-zm-lg.jpg"
+      "img": "https://ae01.alicdn.com/kf/S6a3a598387974313b3ba3a28b1240550c/Kingston-HyperX-FURY-memoria-ram-DDR4-2400MHz-8g-2666MHz-16g-3200MHz-32g-memoria-DIMM-memoria-interna.png"
     },
     {
       "id": 4,
@@ -156,7 +156,7 @@
       "name": "HyperX Predator DDR4 16GB",
       "price": 110,
       "description": "Altra opzione di RAM DDR4 con buone prestazioni ed efficienza.",
-      "img": "https://m.media-amazon.com/images/I/71jgOM8DQ8S._AC_UF1000,1000_QL80_.jpg"
+      "img": "https://www.nexthardware.com/recensioni/ram-memorie-flash/970/hyperx-predator-ddr4-3000mhz-16gb-kit/immagini/HyperX_Predator_3000MHz_16GB_Kit_intro.png"
     }
   ],
   "power": [
