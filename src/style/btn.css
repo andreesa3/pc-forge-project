@@ -1,4 +1,41 @@
 .btn {
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--clr-purple);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--clr-purple);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--clr-purple);
+  height: 150px;
+  width: 300px;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.btn:hover {
+  color: var(--clr-white) !important;
+  border: 1px solid var(--clr-purple);
+}
+
+.btn:hover:before {
+  color: var(--clr-white);
+  top: -30px;
+  left: -30px;
+}
+
+/* .btn {
   padding: 0.5rem 0.8rem;
   border: 1.5px solid var(--clr-purple);
   font-weight: bold;
@@ -36,3 +73,4 @@
   color: var(--clr-purple);
   border: 1.5px solid var(--clr-white) !important;
 }
+ */
