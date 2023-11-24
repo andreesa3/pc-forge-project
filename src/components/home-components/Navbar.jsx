@@ -32,6 +32,27 @@ const Navbar = ({ hamburger, event }) => {
   };
 
   /* Dropdown Data */
+  const storeItems = [
+    {
+      id: 1,
+      text: 'Low Range',
+      image: cpuIcon,
+      path: '/prebuilder'
+    },
+    {
+      id: 2,
+      text: 'Mid Range',
+      image: cpuIcon,
+      path: '/prebuilder'
+    },
+    {
+      id: 3,
+      text: 'High Range',
+      image: cpuIcon,
+      path: '/prebuilder'
+    },
+  ];
+
   const componentsItems = [
     {
       id: 1,
@@ -94,24 +115,18 @@ const Navbar = ({ hamburger, event }) => {
         </Link>
         <div className="nav-links">
           <Link
-            to='/products'
+            to='/'
             className="nav-dropdown-box"
             onMouseEnter={() => handleMouseEnter('store')}
           >
             STORE
 
             {dropdownVisible === 'store' && (
-              <div className="nav-dropdown-content" onMouseLeave={handleMouseLeave}>
-                {/* Contenuto della tendina */}
-                <div className="nav-store-dropdown-card">
-                  <img src="" alt="" />
-                  <p></p>
-                </div>
-              </div>
+              <Dropdown data={storeItems} leaveEvent={handleMouseLeave} />
             )}
           </Link>
           <Link
-            to='/#'
+            to='/'
             className="nav-dropdown-box"
             onMouseEnter={() => handleMouseEnter('components')}
           >
