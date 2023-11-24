@@ -38,7 +38,6 @@ nav {
 /* Nav Links */
 .nav-links {
   display: none;
-  transition: all 0.3s ease;
     position: relative;
   }
   
@@ -200,8 +199,3 @@ nav {
   }
 }
 
-@media screen and (min-width: 1020px) {
-  .nav-links {
-    margin-right: 4rem;
-  }
-}

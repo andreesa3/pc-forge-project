@@ -1,42 +1,33 @@
-import {useState} from 'react'
-import { Route, Routes, ScrollRestoration } from "react-router-dom"
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import DefaultDisplay from './layout/DefaultDisplay'
-import Home from "./pages/Home"
-import Products from "./pages/Products"
-import CpuDetail from "./pages/CpuDetail"
-import GpuDetail from "./pages/GpuDetail"
-import CpuCards from "./components/cards/CpuCards"
-import PreBuilderCard from "./components/cards/PreBuilderCard"
-import GpuCards from "./components/cards/GpuCards"
-import SsdDetail from "./pages/SsdDetail"
-import SsdCards from "./components/cards/SsdCards"
-import CaseCards from "./components/cards/CaseCards"
-import CaseDetail from "./pages/CaseDetail"
-import CoolerCards from "./components/cards/CoolerCards"
-import CoolerDetail from "./pages/CoolerDetail"
-import PrebuildDetail from "./pages/PrebuildDetail"
-import Contact from "./components/home-components/Contact"
-import MotherboardCards from "./components/cards/MotherboardCards"
-import MotherBoardDetail from "./pages/MotherBoardDetail"
-import RamCards from "./components/cards/RamCards"
-import RamDetail from "./pages/RamDetail"
-import PowerCards from "./components/cards/PowerCards"
-import PowerDetail from "./pages/PowerDetail"
-import Builder from "./pages/Builder"
-import darkMode from './features/darkmode';
-
+import { Route, Routes } from "react-router-dom";
+import DefaultDisplay from "./layout/DefaultDisplay";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import CpuDetail from "./pages/CpuDetail";
+import GpuDetail from "./pages/GpuDetail";
+import CpuCards from "./components/cards/CpuCards";
+import PreBuilderCard from "./components/cards/PreBuilderCard";
+import GpuCards from "./components/cards/GpuCards";
+import SsdDetail from "./pages/SsdDetail";
+import SsdCards from "./components/cards/SsdCards";
+import CaseCards from "./components/cards/CaseCards";
+import CaseDetail from "./pages/CaseDetail";
+import CoolerCards from "./components/cards/CoolerCards";
+import CoolerDetail from "./pages/CoolerDetail";
+import PrebuildDetail from "./pages/PrebuildDetail";
+import Contact from "./components/home-components/Contact";
+import MotherboardCards from "./components/cards/MotherboardCards";
+import MotherBoardDetail from "./pages/MotherBoardDetail";
+import RamCards from "./components/cards/RamCards";
+import RamDetail from "./pages/RamDetail";
+import PowerCards from "./components/cards/PowerCards";
+import PowerDetail from "./pages/PowerDetail";
+import Builder from "./pages/Builder";
+import DarkMode from "./features/darkmode";
 
 const App = () => {
-  const {appClassName, isDarkMode, toggleDarkMode} = darkMode()
+  const {appClassName} = DarkMode();
   return (
-    <div style={{position: 'relative'}} className={appClassName}>
-      <DarkModeSwitch
-      className='toggleDark'
-      checked={isDarkMode}
-      onClick={toggleDarkMode}
-      size={90}
-    />
+    <div className={appClassName}>
       <Routes>
         <Route path="/" element={<DefaultDisplay />}>
           <Route path="" element={<Home />} />
@@ -59,13 +50,12 @@ const App = () => {
           <Route path="product/ram/:id" element={<RamDetail />} />
           <Route path="products/power" element={<PowerCards />} />
           <Route path="product/power/:id" element={<PowerDetail />} />
-          <Route path="contact" element={<Contact/>}/>
-          <Route path="builder" element={<Builder/>}/>
+          <Route path="contact" element={<Contact />} />
+          <Route path="builder" element={<Builder />} />
         </Route>
       </Routes>
-      
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
