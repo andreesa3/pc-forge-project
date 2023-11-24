@@ -322,7 +322,8 @@
       "case": "NZXT H510",
       "ssd": "WD Blue SN550 500GB NVMe",
       "power": "EVGA SuperNOVA 650 G5",
-      "socket": "1700"
+      "socket": "1700",
+      "type" :"entrylevel"
     },
     {
       "id": 2,
@@ -338,7 +339,8 @@
       "case": "NZXT H510",
       "ssd": "Samsung 860 EVO 500GB",
       "power": "Corsair CX550M",
-      "socket": "AM4"
+      "socket": "AM4",
+      "type" :"entrylevel"
     },
     {
       "id": 3,
@@ -354,7 +356,8 @@
       "case": "Corsair iCUE 220T",
       "ssd": "Crucial MX500 1TB",
       "power": "EVGA SuperNOVA 650 G5",
-      "socket": "1700"
+      "socket": "1700",
+      "type" :"medium"
     },
     {
       "id": 4,
@@ -370,7 +373,8 @@
       "case": "Fractal Design Meshify C",
       "ssd": "Crucial MX500 1TB",
       "power": "Seasonic Focus GX-750",
-      "socket": "AM4"
+      "socket": "AM4",
+      "type" :"medium"
     },
     {
       "id": 5,
@@ -386,7 +390,8 @@
       "case": "Fractal Design Meshify C",
       "ssd": "Samsung 970 EVO Plus 1TB NVMe",
       "power": "be quiet! Straight Power 11 850W",
-      "socket": "1700"
+      "socket": "1700",
+      "type" :"high"
     },
     {
       "id": 6,
@@ -402,7 +407,8 @@
       "case": "Lian Li Lancool II Mesh",
       "ssd": "Sabrent Rocket Q 2TB NVMe",
       "power": "be quiet! Straight Power 11 850W",
-      "socket": "AM4"
+      "socket": "AM4",
+      "type" :"high"
     }
   ]
 }

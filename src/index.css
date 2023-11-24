@@ -22,6 +22,8 @@
   --clr-white: #fff;
   --clr-black: #000;
   --clr-purple: #8a00fc;
+  --clr-dark-modeBG: #1a1a1a;
+  --clr-color-card-BG: #f5f5f8
 }
 
 * {

@@ -1,12 +1,12 @@
 .dark-mode  {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: var(--clr-dark-modeBG);
+    color: var(--clr-white);
     position: relative;
     transition: background-color 0.5s ease
 }
   
 .dark-mode .wrapCarouselCard{
-    background-color: rgb(44, 44, 44);
+    background-color: var(--clr-dark-modeBG);
     transition: background-color 0.5s ease
     
 }
@@ -17,20 +17,29 @@
 }
 
 .dark-mode .carousel .carousel-indicators [data-bs-target]  {
-    background-color: white;
+    background-color: var(--clr-white);
     transition: background-color 0.5s ease
 }
 
 .dark-mode .css-1elwnq4-MuiPaper-root-MuiAccordion-root{
-    background-color:  rgb(44, 44, 44);
-    color: white;
+    background-color:  var(--clr-dark-modeBG);
+    color: var(--clr-white);
     transition: background-color 0.5s ease;
     transition: color 0.5s ease
 }
 
 .dark-mode .form-container{
     background: none;
-    background-color:rgb(44, 44, 44);
+    background-color:var(--clr-dark-modeBG);
+}
+
+.dark-mode .calltoaction-rigth{
+    color:var(--clr-dark-modeBG);
+}
+
+.dark-mode .btn-purple{
+    color: var(--clr-dark-modeBG);
+    border: 1.5px solid var(--clr-dark-modeBG) !important;
 }
 
 .toggleDark{

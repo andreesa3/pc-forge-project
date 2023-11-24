@@ -17,6 +17,7 @@ import powerIcon from '../../assets/icons/componentsIcon/power-icon.svg'
 import ssdIcon from '../../assets/icons/componentsIcon/ssd-icon.svg'
 import caseIcon from '../../assets/icons/componentsIcon/case-icon.svg'
 import coolerIcon from '../../assets/icons/componentsIcon/cooler-icon.svg'
+import ScrollTop from '../../features/ScrollTop';
 
 
 const Navbar = ({ hamburger, event }) => {
@@ -30,6 +31,13 @@ const Navbar = ({ hamburger, event }) => {
   const handleMouseLeave = () => {
     setDropdownVisible(null);
   };
+
+  const scrollUp = () => {
+    //Scroll al click del logo
+      window.scrollTo(0, 0);
+  };
+  
+
 
   /* Dropdown Data */
   const componentsItems = [
@@ -87,7 +95,7 @@ const Navbar = ({ hamburger, event }) => {
     <nav className="center-wrapper">
       <div className="nav-wrapper wrapper">
         <Link to='/'>
-          <div className="logo">
+          <div className="logo" onClick={scrollUp}>
             <img src={logo} alt="logo" />
             <h3><span className="purple">PC</span>FORGE</h3>
           </div>

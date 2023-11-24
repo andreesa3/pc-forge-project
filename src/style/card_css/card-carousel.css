@@ -1,5 +1,5 @@
 .wrapCarouselCard {
-    background-color: #f5f5f8;
+    background-color: var(--clr-color-card-BG);
     max-width: 350px;
   }
   
