@@ -6,7 +6,7 @@
 }
   
 .dark-mode .wrapCarouselCard{
-    background-color: var(--clr-dark-modeBG);
+    background-color: var(--clr-color-card-BG);
     transition: background-color 0.5s ease
     
 }
@@ -29,13 +29,20 @@
 }
 
 .dark-mode .form-container{
-    background: none;
-    background-color:var(--clr-dark-modeBG);
+    background: linear-gradient(#131212,#131212) padding-box,
+    linear-gradient(145deg, transparent 35%, #8a00fc, #40c9ff) border-box;
+    
 }
 
-.dark-mode .calltoaction-rigth{
-    color:var(--clr-dark-modeBG);
+.dark-mode .form-group input, .form-group textarea{
+    color: white !important ; 
+    background-color: rgba(255, 255, 255, 0.06) !important;
 }
+
+.dark-mode .form-group label{
+    color: white !important;
+}
+
 
 .dark-mode .btn-purple{
     color: var(--clr-dark-modeBG);
