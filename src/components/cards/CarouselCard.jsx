@@ -6,14 +6,11 @@ const CarouselCard = ({ text, price, img, productId, onClick }) => {
     if (onClick) {
       onClick(productId.toString());
     }
-  }
-  
+  };
+
   return (
     <div className='wrapCarouselCard' onClick={handleCardClick}>
-      <div className='carouselCard'>
-        <div className='wrapImg' style={{ display: 'flex', justifyContent: 'center' }}>
-          <img className='imgCarouselCard' src={img} alt="" />
-        </div>
+      <div className='carouselCard'><div className='wrapImg'><img className='imgCarouselCard' src={img} alt="" /></div>
         <div className='infoCardCarousel'>
           <span className='titleCarouselCard'><p>{text}</p></span>
           <span className='priceCarouselCard'>€{price}</span>
