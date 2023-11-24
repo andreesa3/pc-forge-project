@@ -1,0 +1,39 @@
+.containerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .row-container-up{
+    display: flex;
+    flex-direction: row;
+    background-color:  #C8E3EC; ;
+    gap: 15px;
+    border-radius: 5px;
+    padding: 50px;
+  }
+  
+  .row-container-down {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    border-radius: 5px;
+  }
+  
+  .image-container {
+    max-width: 500px;
+  }
+  
+  .text-container {
+    align-self: center;
+  }
+  
+  .column-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 650px;
+    background-color: #C8E3EC;
+    border-radius: 5px;
+    padding: 50px;
+  }

@@ -31,28 +31,14 @@ const Navbar = ({ hamburger, event }) => {
     setDropdownVisible(null);
   };
 
-  /* Dropdown Data */
-  const storeItems = [
-    {
-      id: 1,
-      text: 'Low Range',
-      image: cpuIcon,
-      path: '/prebuilder'
-    },
-    {
-      id: 2,
-      text: 'Mid Range',
-      image: cpuIcon,
-      path: '/prebuilder'
-    },
-    {
-      id: 3,
-      text: 'High Range',
-      image: cpuIcon,
-      path: '/prebuilder'
-    },
-  ];
+  const scrollUp = () => {
+    //Scroll al click del logo
+      window.scrollTo(0, 0);
+  };
+  
 
+
+  /* Dropdown Data */
   const componentsItems = [
     {
       id: 1,
@@ -108,25 +94,28 @@ const Navbar = ({ hamburger, event }) => {
     <nav className="center-wrapper">
       <div className="nav-wrapper wrapper">
         <Link to='/'>
-          <div className="logo">
+          <div className="logo" onClick={scrollUp}>
             <img src={logo} alt="logo" />
             <h3><span className="purple">PC</span>FORGE</h3>
           </div>
         </Link>
         <div className="nav-links">
-          <Link
-            to='/'
-            className="nav-dropdown-box"
-            onMouseEnter={() => handleMouseEnter('store')}
-          >
+
+          <Link to='/products' className="nav-dropdown-box" onMouseEnter={() => handleMouseEnter('store')}>
             STORE
 
             {dropdownVisible === 'store' && (
-              <Dropdown data={storeItems} leaveEvent={handleMouseLeave} />
+              <div className="nav-dropdown-content" onMouseLeave={handleMouseLeave}>
+                {/* Contenuto della tendina */}
+                <div className="nav-store-dropdown-card">
+                  <img src="" alt="" />
+                  <p></p>
+                </div>
+              </div>
             )}
           </Link>
           <Link
-            to='/'
+            to='/#'
             className="nav-dropdown-box"
             onMouseEnter={() => handleMouseEnter('components')}
           >
@@ -136,7 +125,7 @@ const Navbar = ({ hamburger, event }) => {
               <Dropdown data={componentsItems} leaveEvent={handleMouseLeave} />
             )}
           </Link>
-          <Link to='/products'>PC BUILDER</Link>
+          <Link to='/builder'>PC BUILDER</Link>
           <Link to='/contact'>CONTATTI</Link>
         </div>
 

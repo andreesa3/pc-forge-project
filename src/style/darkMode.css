@@ -1,0 +1,60 @@
+.dark-mode  {
+    background-color: var(--clr-dark-modeBG);
+    color: var(--clr-white);
+    position: relative;
+    transition: background-color 0.5s ease
+}
+  
+.dark-mode .wrapCarouselCard{
+    background-color: var(--clr-dark-modeBG);
+    transition: background-color 0.5s ease
+    
+}
+.dark-mode .carousel .carousel-control-prev-icon,
+.dark-mode .carousel .carousel-control-next-icon{
+    filter: invert(0) grayscale(100);
+    transition: filter 0.5s ease
+}
+
+.dark-mode .carousel .carousel-indicators [data-bs-target]  {
+    background-color: var(--clr-white);
+    transition: background-color 0.5s ease
+}
+
+.dark-mode .css-1elwnq4-MuiPaper-root-MuiAccordion-root{
+    background-color:  var(--clr-dark-modeBG);
+    color: var(--clr-white);
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease
+}
+
+.dark-mode .form-container{
+    background: none;
+    background-color:var(--clr-dark-modeBG);
+}
+
+.dark-mode .calltoaction-rigth{
+    color:var(--clr-dark-modeBG);
+}
+
+.dark-mode .btn-purple{
+    color: var(--clr-dark-modeBG);
+    border: 1.5px solid var(--clr-dark-modeBG) !important;
+}
+
+.dark-mode .faq-title-box h3,
+.dark-mode .css-1xo8r4u-MuiSvgIcon-root{
+    color: #ac47ff
+}
+
+.dark-mode .faq-card{
+    border-bottom:1px solid #ac47ff 
+}
+
+.toggleDark{
+    position: fixed;
+    right: 0;
+    top: 55px;
+    padding: 25px;
+    z-index: 2;
+}

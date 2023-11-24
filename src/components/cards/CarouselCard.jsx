@@ -1,10 +1,15 @@
 import React from 'react'
 import Button from '../home-components/Button'
 
-
-const CarouselCard = ({ img, text, price }) => {
+const CarouselCard = ({ text, price, img, productId, onClick }) => {
+  const handleCardClick = () => {
+    if (onClick) {
+      onClick(productId.toString());
+    }
+  }
+  
   return (
-    <div className='wrapCarouselCard'>
+    <div className='wrapCarouselCard' onClick={handleCardClick}>
       <div className='carouselCard'>
         <div className='wrapImg' style={{ display: 'flex', justifyContent: 'center' }}>
           <img className='imgCarouselCard' src={img} alt="" />

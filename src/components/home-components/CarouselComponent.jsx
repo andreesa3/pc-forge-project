@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+// CarouselComponent.js
 
-import pc1 from '../../assets/images/pc1.jpg'
-
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import mockfile from '/mockfile.json';
 import CarouselCard from '../cards/CarouselCard';
 
 const CarouselComponent = () => {
@@ -11,6 +12,11 @@ const CarouselComponent = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const navigate = useNavigate();
+
+  const handleCardClick = (preBuilderId) => {
+    navigate(`/prebuilder/${preBuilderId}`);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,105 +33,90 @@ const CarouselComponent = () => {
     };
   }, []);
 
+  const preBuilderArray = mockfile.prebuilder;
+
+  const cardArray = (array, cardSize) => {
+    const result = [];
+    for (let i = 0; i < array.length; i += cardSize) {
+      result.push(array.slice(i, i + cardSize));
+    }
+    return result;
+  };
+
+  let rowCard;
+  if (screenSize.width <= 678) {
+    rowCard = 1;
+  } else if (screenSize.width < 1010) {
+    rowCard = 2;
+  } else {
+    rowCard = 3;
+  }
+
+  const groupedPrebuilderArray = cardArray(preBuilderArray, rowCard);
+
   return (
     <section>
       <div className="wrapper">
         {
-           screenSize.width <= 678 ? (
+          screenSize.width <= 678 ? (
             // Mobile
             <Carousel data-bs-theme="dark" style={{ margin: '0 auto' }}>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
+              {groupedPrebuilderArray.map((group, index) => (
+                <Carousel.Item key={index}>
+                  <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+                    {group.map((preBuilder) => (
+                      <CarouselCard
+                        key={preBuilder.id}
+                        text={preBuilder.name}
+                        price={`${preBuilder.price}€`}
+                        img={preBuilder.img}
+                        productId={preBuilder.id}
+                        onClick={handleCardClick}
+                      />
+                    ))}
+                  </div>
+                </Carousel.Item>
+              ))}
             </Carousel>
-          ) : screenSize.width < 820 ? (
+          ) : screenSize.width < 1010 ? (
             // Tablet
             <Carousel data-bs-theme="dark" style={{ margin: '0 auto' }}>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
+              {groupedPrebuilderArray.map((group, index) => (
+                <Carousel.Item key={index}>
+                  <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+                    {group.map((preBuilder) => (
+                      <CarouselCard
+                        key={preBuilder.id}
+                        text={preBuilder.name}
+                        price={`${preBuilder.price}€`}
+                        img={preBuilder.img}
+                        productId={preBuilder.id}
+                        onClick={handleCardClick}
+                      />
+                    ))}
+                  </div>
+                </Carousel.Item>
+              ))}
             </Carousel>
           ) : (
             // Desktop
             <Carousel data-bs-theme="dark" style={{ margin: '0 auto' }}>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                  <CarouselCard img='src\assets\images\pngaaa.com-2319740.png' text='HP Victus 15L TG02-1002nl Gaming Desktop' price={1999.98} />
-                </div>
-              </Carousel.Item>
+              {groupedPrebuilderArray.map((group, index) => (
+                <Carousel.Item key={index}>
+                  <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+                    {group.map((preBuilder) => (
+                      <CarouselCard
+                        key={preBuilder.id}
+                        text={preBuilder.name}
+                        price={`${preBuilder.price}€`}
+                        img={preBuilder.img}
+                        productId={preBuilder.id}
+                        onClick={handleCardClick}
+                      />
+                    ))}
+                  </div>
+                </Carousel.Item>
+              ))}
             </Carousel>
           )
         }

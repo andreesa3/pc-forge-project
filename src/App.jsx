@@ -1,4 +1,6 @@
-import { Route, Routes } from "react-router-dom"
+import {useState} from 'react'
+import { Route, Routes, ScrollRestoration } from "react-router-dom"
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import DefaultDisplay from './layout/DefaultDisplay'
 import Home from "./pages/Home"
 import Products from "./pages/Products"
@@ -21,11 +23,20 @@ import RamCards from "./components/cards/RamCards"
 import RamDetail from "./pages/RamDetail"
 import PowerCards from "./components/cards/PowerCards"
 import PowerDetail from "./pages/PowerDetail"
+import Builder from "./pages/Builder"
+import darkMode from './features/darkmode';
 
 
 const App = () => {
+  const {appClassName, isDarkMode, toggleDarkMode} = darkMode()
   return (
-    <>
+    <div style={{position: 'relative'}} className={appClassName}>
+      <DarkModeSwitch
+      className='toggleDark'
+      checked={isDarkMode}
+      onClick={toggleDarkMode}
+      size={90}
+    />
       <Routes>
         <Route path="/" element={<DefaultDisplay />}>
           <Route path="" element={<Home />} />
@@ -49,9 +60,11 @@ const App = () => {
           <Route path="products/power" element={<PowerCards />} />
           <Route path="product/power/:id" element={<PowerDetail />} />
           <Route path="contact" element={<Contact/>}/>
+          <Route path="builder" element={<Builder/>}/>
         </Route>
       </Routes>
-    </>
+      
+    </div>
   )
 }
 
