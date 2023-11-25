@@ -3,6 +3,7 @@ import Footer from "../components/home-components/Footer";
 import Navbar from "../components/home-components/Navbar";
 import Sidebar from "../components/home-components/Sidebar";
 import { useState, useEffect } from "react";
+import DarkModeComponent from "../components/home-components/DarkModeComponent";
 
 const DefaultDisplay = () => {
   const [hamburger, setHamburger] = useState(false);
@@ -29,7 +30,7 @@ const DefaultDisplay = () => {
 
   return (
     <>
-      <Navbar hamburger={hamburger} event={handleHamburger} />
+      <Navbar hamburger={hamburger} event={handleHamburger} toggle={<DarkModeComponent/>} />
 
       <Sidebar hamburger={hamburger} />
 
