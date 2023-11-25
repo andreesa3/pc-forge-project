@@ -1,5 +1,4 @@
 import React from 'react'
-import CarouselCard from './cards/CarouselCard'
 
 const InfoPcBuilder = ({}) => {
   return (
