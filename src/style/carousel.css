@@ -4,27 +4,15 @@
 }
 
 .carousel-control-prev {
-  left: -2rem;
+  left: -3rem;
   width: 3rem;
 }
 
 .carousel-control-next {
-  right: -2rem;
+  right: -3rem;
   width: 3rem;
 }
 
 .carousel-indicators {
   bottom: -3.5rem;
-}
-
-@media screen and (min-width: 768px) {
-  .carousel-control-prev {
-    left: -3rem;
-    width: 3rem;
-  }
-
-  .carousel-control-next {
-    right: -3rem;
-    width: 3rem;
-  }
 }
