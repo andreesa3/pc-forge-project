@@ -2,8 +2,6 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import mockfile from "/mockfile.json";
 import Button from "../components/home-components/Button";
-import CpuCards from "../components/cards/CpuCards";
-import GpuCards from "../components/cards/GpuCards";
 import InfoPcBuilder from "../components/InfoPcBuilder";
 
 const PrebuildDetail = () => {
@@ -67,7 +65,7 @@ const PrebuildDetail = () => {
         </div>
         <div>
           {id === "1" ? (
-            <InfoPcBuilder/>
+            <InfoPcBuilder />
           ) : id === "2" ? (
             <InfoPcBuilder />
           ) : id === "3" ? (

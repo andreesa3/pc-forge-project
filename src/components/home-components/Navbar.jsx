@@ -19,7 +19,7 @@ import DarkMode from "../../features/darkmode";
 import DarkModeComponent from "./DarkModeComponent";
 
 
-const Navbar = ({ hamburger, event }) => {
+const Navbar = ({ hamburger, event, toggle }) => {
   const { appClassName, isDarkMode, toggleDarkMode } = DarkMode();
   // Stato per gestire la visibilità delle dropdown
   const [dropdownVisible, setDropdownVisible] = useState(null);
@@ -135,7 +135,7 @@ const Navbar = ({ hamburger, event }) => {
         </div>
 
         <div className="nav-right">
-         <DarkModeComponent/>
+         {toggle}
           <Link to="/login">
             <PersonIcon />
           </Link>

@@ -22,10 +22,13 @@ import RamDetail from "./pages/RamDetail";
 import PowerCards from "./components/cards/PowerCards";
 import PowerDetail from "./pages/PowerDetail";
 import Builder from "./pages/Builder";
-import DarkMode from "./features/darkmode";
+import useDarkMode from "./features/darkmode";
 
 const App = () => {
-  const {appClassName} = DarkMode();
+  const { appClassName } = useDarkMode();
+  
+  document.body.className = appClassName;
+
   return (
     <div className={appClassName}>
       <Routes>

@@ -6,7 +6,6 @@ import Services from "../components/home-components/Services";
 import FAQ from "../components/home-components/FAQ";
 import CarouselComponent from "../components/home-components/CarouselComponent";
 
-
 const Home = () => {
   return (
     <>
