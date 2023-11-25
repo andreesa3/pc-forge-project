@@ -8,8 +8,8 @@ const Dropdown = ({ data, leaveEvent }) => {
 
         {
           data.map((item) => (
-            <Link>
-              <li key={item.id} className="nav-components-dropdown-card">
+            <Link to={item.path} key={item.id}>
+              <li className="nav-components-dropdown-card">
                 <img src={item.image} alt={`${item.text} icon`} />
                 {item.text}
               </li>

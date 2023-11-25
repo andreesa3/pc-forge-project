@@ -1,0 +1,101 @@
+.boxDetails{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   gap: 20px;
+   align-items: center;
+   margin: 100px;
+   width: fit-content;
+   height: fit-content;
+}
+
+.imageComponent {
+   max-width: 40%;
+   min-width: 235px;
+}
+
+.detailsComponent{
+   display: flex;
+   flex-direction: column;
+   align-self: flex-start;
+   padding-top: 20px;
+   
+}
+
+.typeComponent{
+   padding-bottom: 3rem;
+   color: #004170;
+}
+
+.descriptionComponent{
+   max-width: 400px;
+   letter-spacing: 1px;
+   color: rgb(83, 83, 83);
+   padding-top: 20px;
+}
+
+.detailsButton{
+   display: flex;
+   gap: 20px;
+   margin-top: 3rem;
+}
+
+.infoCompontent{
+   color:rgb(83, 83, 83);
+
+}
+
+.priceComponent{
+   color:rgb(83, 83, 83);
+}
+
+.prevPageProducts{
+   background:none;
+   border: none;
+  
+}
+
+.prevPageProducts .imgButtonPrev {
+   width: 70px;
+   height: 70px;
+   transition: transform .3s; 
+}
+
+
+.prevPageProducts .imgButtonPrev:hover{
+   transform: scale(1.3);
+}
+
+@media screen and (max-width: 840px) {
+   .boxDetails{
+      display: flex;
+      flex-direction: column;
+           
+   }
+   .detailsComponent{
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      
+   }
+   .imageComponent {
+      max-width: 80%;
+   }
+ }@media screen and (max-width: 840px) {
+   .boxDetails{
+      display: flex;
+      flex-direction: column;
+           
+   }
+   .detailsComponent{
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      
+   }
+   .imageComponent {
+      max-width: 80%;
+   }
+ }

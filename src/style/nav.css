@@ -22,6 +22,7 @@ nav {
   color: var(--clr-black);
   font-weight: 500;
   font-size: 1.5rem;
+  margin: 0;
 }
 
 .logo h3 span {
@@ -38,8 +39,9 @@ nav {
 /* Nav Links */
 .nav-links {
   display: none;
-  transition: all 0.3s ease;
-}
+    position: relative;
+  }
+  
 .nav-links a {
   font-weight: 600;
 }
@@ -163,6 +165,25 @@ nav {
   transform: rotate(180deg);
 }
 
+.select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  gap: 5px;
+}
+.components-link {
+  position: relative;
+}
+
+.components-link:hover .select-dropdown {
+  display: flex; 
+}
+
 @media screen and (min-width: 900px) {
   .nav-links {
     display: flex;
@@ -179,8 +200,3 @@ nav {
   }
 }
 
-@media screen and (min-width: 1020px) {
-  .nav-links {
-    margin-right: 4rem;
-  }
-}

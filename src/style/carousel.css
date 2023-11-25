@@ -1,41 +1,30 @@
 .carousel {
-  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.carousel-container {
-  display: flex;
-  overflow: hidden;
+.carousel-control-prev {
+  left: -2rem;
+  width: 3rem;
 }
 
-.carousel-item {
-  width: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
+.carousel-control-next {
+  right: -2rem;
+  width: 3rem;
 }
 
 .carousel-indicators {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  bottom: -3.5rem;
 }
 
-.indicator {
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  border-radius: 50%;
-  background-color: #bbb;
-}
+@media screen and (min-width: 768px) {
+  .carousel-control-prev {
+    left: -3rem;
+    width: 3rem;
+  }
 
-.indicator.active {
-  background-color: #333;
+  .carousel-control-next {
+    right: -3rem;
+    width: 3rem;
+  }
 }

@@ -1,18 +1,19 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
 import Footer from "../components/home-components/Footer";
 import Navbar from "../components/home-components/Navbar";
 import Sidebar from "../components/home-components/Sidebar";
 import { useState, useEffect } from "react";
+import DarkModeComponent from "../components/home-components/DarkModeComponent";
 
 const DefaultDisplay = () => {
   const [hamburger, setHamburger] = useState(false);
 
   const handleHamburger = () => {
-    setHamburger(h => !h);
-  }
+    setHamburger((h) => !h);
+  };
 
   const handleResize = () => {
-    if (window.matchMedia('(min-width: 900px)').matches) {
+    if (window.matchMedia("(min-width: 900px)").matches) {
       setHamburger(false);
     }
   };
@@ -20,16 +21,16 @@ const DefaultDisplay = () => {
   useEffect(() => {
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <>
-      <Navbar hamburger={hamburger} event={handleHamburger} />
+      <Navbar hamburger={hamburger} event={handleHamburger} toggle={<DarkModeComponent/>} />
 
       <Sidebar hamburger={hamburger} />
 
@@ -39,7 +40,7 @@ const DefaultDisplay = () => {
 
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default DefaultDisplay;
