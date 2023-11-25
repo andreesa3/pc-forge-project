@@ -6,7 +6,7 @@
 }
 
 .dark-mode .wrapCarouselCard {
-  background-color: var(--clr-dark-modeBG);
+  background-color: var(--clr-dark-mode-card-BG);
   transition: background-color 0.5s ease;
 }
 .dark-mode .carousel .carousel-control-prev-icon,
