@@ -39,10 +39,6 @@
   color: white !important; 
 }
 
-.dark-mode .calltoaction-rigth {
-  color: var(--clr-dark-modeBG);
-}
-
 .dark-mode .btn-purple {
   color: var(--clr-dark-modeBG);
   border: 1.5px solid var(--clr-dark-modeBG) !important;
