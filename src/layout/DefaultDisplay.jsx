@@ -32,7 +32,7 @@ const DefaultDisplay = () => {
     <>
       <Navbar hamburger={hamburger} event={handleHamburger} toggle={<DarkModeComponent/>} />
 
-      <Sidebar hamburger={hamburger} />
+      <Sidebar hamburger={hamburger} event={handleHamburger} />
 
       <main>
         <Outlet />

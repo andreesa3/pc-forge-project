@@ -8,6 +8,7 @@
   transition: transform 0.4s ease;
   transform: translateX(-100%);
   padding: 1rem;
+  overflow: scroll;
 }
 
 .sidebar .logo {
@@ -26,7 +27,7 @@ body.visible {
 /* Sidebar Links */
 
 .sidebar-links {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .sidebar-link-card {
@@ -34,28 +35,83 @@ body.visible {
   border-bottom: 1.5px solid var(--clr-white);
 }
 
-.sidebar-link-card a {
+.sidebar-accordion {
+  border-bottom: 1.5px solid var(--clr-white);
+}
+
+.sidebar-accordion .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.sidebar-link-card a,
+.sidebar-accordion .css-o4b71y-MuiAccordionSummary-content {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
   font-size: 1.5rem;
   transition: all 0.2s ease;
   font-weight: 600;
   color: var(--clr-white);
 }
 
+.sidebar-accordion .css-o4b71y-MuiAccordionSummary-content p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sidebar-link-card a:hover,
+.sidebar-accordion .css-o4b71y-MuiAccordionSummary-content:hover {
+  gap: 1.8rem;
+  font-weight: 600;
+}
+
 .sidebar-link-card p {
   margin-bottom: 0rem !important;
 }
 
-.sidebar-link-card a:hover {
-  gap: 2rem;
-  font-weight: 600;
+.sidebar-link-card a svg,
+.sidebar-accordion .MuiAccordionSummary-content svg {
+  width: 2rem !important;
+  height: 2rem !important;
 }
 
-.sidebar-link-card a svg {
-  width: 2rem;
-  height: 2rem;
+.sidebar-accordion .MuiPaper-root {
+  padding: 0 !important;
+}
+
+.sidebar-accordion .css-o4b71y-MuiAccordionSummary-content {
+  margin: 0 !important;
+}
+
+.sidebar-accordion .MuiButtonBase-root {
+  padding: 1.5rem 1rem !important;
+}
+
+.sidebar-accordion .css-15v22id-MuiAccordionDetails-root {
+  padding: 0;
+}
+
+.sidebar-accordion .sidebar-accordion-card a p {
+  color: var(--clr-white) !important;
+  font-size: 1.25rem;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 300;
+  padding: .6rem 1rem .6rem !important;
+  margin: 0;
+}
+
+.sidebar-accordion .sidebar-accordion-card a p:hover {
+  border-bottom: 1px solid var(--clr-white);
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.sidebar-accordion .css-o4b71y-MuiAccordionSummary-content.Mui-expanded {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
 }
 
 @media screen and (min-width: 900px) {

@@ -60,6 +60,7 @@
   display: inline-block;
   width: 64px;
   height: 34px;
+  padding: .1rem;
 }
 
 .switch input {
@@ -75,7 +76,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #73c0fc;
+  background-color: #9A1FFF;
   transition: 0.4s;
   border-radius: 30px;
 }
@@ -130,6 +131,7 @@
 /* .switch:hover */
 .moon svg {
   animation: tilt 5s linear infinite;
+  fill: var(--clr-white);
 }
 
 @keyframes tilt {
@@ -151,11 +153,11 @@
 }
 
 .input:checked + .slider {
-  background-color: #183153;
+  background-color: #9A1FFF;
 }
 
 .input:focus + .slider {
-  box-shadow: 0 0 1px #183153;
+  box-shadow: 0 0 1px #9A1FFF;
 }
 
 .input:checked + .slider:before {

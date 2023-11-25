@@ -74,6 +74,28 @@ section {
   justify-content: center;
 }
 
+.calltoaction-section, .exclusive-build {
+  position: relative;
+}
+
+.box-1, .box-2 {
+  width: 100%;
+  max-width: 250px;
+  height: 30px;
+  background-color: var(--clr-purple);
+  position: absolute;
+}
+
+.box-1 {
+  top: -1rem;
+  right: 0;
+}
+
+.box-2 {
+  bottom: -1rem;
+  left: 0;
+}
+
 @media screen and (min-width: 1300px) {
   .wrapper {
     padding: 0;
