@@ -12,6 +12,10 @@ const Contact = () => {
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
+
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 4000);
     }, 2000);
   };
 
@@ -30,12 +34,7 @@ const Contact = () => {
           <form className="form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input
-                required
-                name="email"
-                id="email"
-                type="text"
-              />
+              <input required name="email" id="email" type="text" />
             </div>
             <div className="form-group">
               <label htmlFor="textarea">How Can We Help You?</label>
