@@ -24,6 +24,7 @@ import PowerDetail from "./pages/PowerDetail";
 import Builder from "./pages/Builder";
 import useDarkMode from "./features/darkmode";
 
+
 const App = () => {
   const { appClassName } = useDarkMode();
   
