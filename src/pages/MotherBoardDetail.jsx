@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import mockfile from '/mockfile.json';
 import Button from '../components/home-components/Button';
+import MotherBoardCarousel from '../components/carousels/MotherBoardCarousel';
 
 const MotherBoardDetail = () => {
   const { id } = useParams();
@@ -17,6 +18,7 @@ const MotherBoardDetail = () => {
   };
 
   return (
+    <>
     <div className='boxDetails'>
         <button className='prevPageProducts' onClick={prevPage}><img className='imgButtonPrev' src="https://cdn0.iconfinder.com/data/icons/controls-add-on/48/v-38-512.png" alt="" /></button>
         <img className='imageComponent' src={mb.img} alt="" />
@@ -32,6 +34,8 @@ const MotherBoardDetail = () => {
       </div>
       </div>
     </div>
+    <MotherBoardCarousel/>
+    </>
   );
 };
 

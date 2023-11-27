@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import mockfile from '/mockfile.json';
 import Button from '../components/home-components/Button';
+import CpuCarousel from '../components/carousels/CpuCarousel';
 
 
 const CpuDetail = () => {
@@ -34,6 +35,7 @@ const CpuDetail = () => {
       </div>
       </div>
     </div>
+    <CpuCarousel/>
     </>
   );
 };

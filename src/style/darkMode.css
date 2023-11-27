@@ -32,17 +32,11 @@
   linear-gradient(145deg, transparent 35%, #8a00fc, #40c9ff) border-box;
 }
 
-.form-container .form-group input {
-  color: white !important; 
-}
-.form-container .form-group textarea {
-  color: white !important; 
-}
 
-.form-container .form-group input {
+.dark-mode .form-container .form-group input {
   color: white !important; 
 }
-.form-container .form-group textarea {
+.dark-mode .form-container .form-group textarea {
   color: white !important; 
 }
 
