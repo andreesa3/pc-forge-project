@@ -2,7 +2,7 @@ import CallToAction from "../components/home-components/CallToAction";
 import Exclusive from "../components/home-components/Exclusive";
 // import FAQ from "../components/FAQ";
 import Hero from "../components/home-components/Hero";
-import Services from "../components/home-components/Services";
+import AvailableComponent from "../components/home-components/AvailableComponent";
 import FAQ from "../components/home-components/FAQ";
 import CarouselComponent from "../components/home-components/CarouselComponent";
 
@@ -19,7 +19,7 @@ const Home = () => {
       <Exclusive />
 
       {/* Services */}
-      <Services/>
+      <AvailableComponent/>
 
       {/* CallToAction */}
       <CallToAction />

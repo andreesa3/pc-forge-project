@@ -8,6 +8,7 @@ import ramIcon from "../../assets/icons/componentsIcon/ram-icon.svg";
 const Exclusive = () => {
   return (
     <section className="exclusive-build">
+      <div className="box-1"></div>
       <div className="exclusive-build-wrapper wrapper">
         <div className="container-sx">
           <h2>Lorem Ipsum</h2>
@@ -76,6 +77,7 @@ const Exclusive = () => {
           </div>
         </div>
       </div>
+      <div className="box-2"></div>
     </section>
   );
 };

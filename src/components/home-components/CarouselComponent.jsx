@@ -12,6 +12,7 @@ const CarouselComponent = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const [key, setKey] = useState(0);
   const navigate = useNavigate();
 
   const handleCardClick = (preBuilderId) => {
@@ -24,6 +25,7 @@ const CarouselComponent = () => {
         width: window.innerWidth,
         height: window.innerHeight,
       });
+      setKey((prevKey) => prevKey + 1);
     };
 
     window.addEventListener('resize', handleResize);
@@ -60,7 +62,7 @@ const CarouselComponent = () => {
         {
           screenSize.width <= 678 ? (
             // Mobile
-            <Carousel data-bs-theme="dark" style={{ margin: '0 auto' }}>
+            <Carousel key={key} data-bs-theme="dark" style={{ margin: '0 auto' }}>
               {groupedPrebuilderArray.map((group, index) => (
                 <Carousel.Item key={index}>
                   <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
@@ -80,7 +82,7 @@ const CarouselComponent = () => {
             </Carousel>
           ) : screenSize.width < 1010 ? (
             // Tablet
-            <Carousel data-bs-theme="dark" style={{ margin: '0 auto' }}>
+            <Carousel key={key} data-bs-theme="dark" style={{ margin: '0 auto' }}>
               {groupedPrebuilderArray.map((group, index) => (
                 <Carousel.Item key={index}>
                   <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
@@ -100,7 +102,7 @@ const CarouselComponent = () => {
             </Carousel>
           ) : (
             // Desktop
-            <Carousel data-bs-theme="dark" style={{ margin: '0 auto' }}>
+            <Carousel key={key} data-bs-theme="dark" style={{ margin: '0 auto' }}>
               {groupedPrebuilderArray.map((group, index) => (
                 <Carousel.Item key={index}>
                   <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>

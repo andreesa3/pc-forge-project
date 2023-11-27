@@ -121,7 +121,7 @@ const Navbar = ({ hamburger, event, toggle }) => {
             )}
           </Link>
           <Link
-            to="/#"
+            to=""
             className="nav-dropdown-box"
             onMouseEnter={() => handleMouseEnter("components")}
           >

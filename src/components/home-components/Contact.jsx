@@ -1,4 +1,24 @@
+import { useState } from "react";
+
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      setSubmitted(true);
+
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 4000);
+    }, 2000);
+  };
+
   return (
     <section>
       <div className="contact-wrapper wrapper">
@@ -11,15 +31,15 @@ const Contact = () => {
           </p>
         </div>
         <div className="form-container">
-          <form className="form">
+          <form className="form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input required="" name="email" id="email" type="text" />
+              <input required name="email" id="email" type="text" />
             </div>
             <div className="form-group">
               <label htmlFor="textarea">How Can We Help You?</label>
               <textarea
-                required=""
+                required
                 cols="50"
                 rows="10"
                 id="textarea"
@@ -28,7 +48,7 @@ const Contact = () => {
                 {" "}
               </textarea>
             </div>
-            <button>
+            <button disabled={loading || submitted}>
               <div className="svg-wrapper-1">
                 <div className="svg-wrapper">
                   <svg
@@ -45,7 +65,9 @@ const Contact = () => {
                   </svg>
                 </div>
               </div>
-              <span>Send</span>
+              <span>
+                {loading ? "Loading..." : submitted ? "Done ✓" : "Send"}
+              </span>
             </button>
           </form>
         </div>

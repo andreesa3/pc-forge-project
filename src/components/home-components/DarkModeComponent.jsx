@@ -1,11 +1,11 @@
 import DarkMode from "../../features/darkmode";
 
-const DarkModeComponent = ({click}) => {
-  const {isDarkMode, toggleDarkMode } = DarkMode();
+const DarkModeComponent = ({ click }) => {
+  const { isDarkMode, toggleDarkMode } = DarkMode();
   return (
     <div onClick={click}>
-      <label className="switch" 
-          >
+      <label className="switch"
+      >
         <span className="sun">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g fill="#ffd43b">
