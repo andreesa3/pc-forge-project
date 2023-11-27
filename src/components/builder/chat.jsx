@@ -1,19 +1,18 @@
 import { useState } from "react";
-import { openai } from "./openai"; 
+import { openai } from "./openai";
 import InputForm from "./inputform";
 import Conversation from "./Conversation";
 import { useCallback } from "react";
 
 export default function Chat() {
-  const [conversations, setConversations] = useState([]); // To track all the conversations
-  const [aiMessage, setAiMessage] = useState(""); // To store the new AI responses
-  const [userMessage, setUserMessage] = useState(""); // To store the message sent by the user
+  const [conversations, setConversations] = useState([]);
+  const [aiMessage, setAiMessage] = useState("");
+  const [userMessage, setUserMessage] = useState("");
 
   const handleSubmit = useCallback(
     async (e) => {
-      e.preventDefault(); //To prevent the default form submission behaviour
+      e.preventDefault();
 
-      // Storing the user message to the state
       setConversations((prev) => {
         return [
           ...prev,
@@ -23,21 +22,19 @@ export default function Chat() {
           },
         ];
       });
-      setUserMessage(""); // Emptying the input field
+      setUserMessage("");
 
       const stream = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [{ role: "user", content: userMessage }],
-        stream: true, // This is required to stream the response
+        stream: true,
       });
 
       let streamedMessage = "";
 
-      // The stream will be read till its closed
       for await (const part of stream) {
         setAiMessage((prev) => prev + part.choices[0].delta.content);
 
-        // Once the entire message is received, the stream will receive the finish_reason as 'stop;
         if (part.choices[0].finish_reason === "stop") {
           setConversations((prev) => {
             return [
@@ -59,12 +56,14 @@ export default function Chat() {
     [userMessage]
   );
 
-
- 
   return (
     <div className="Chat">
-      <Conversation conversations={conversations} aiMessage={aiMessage}/>
-      <InputForm userMessage={userMessage} setUserMessage={setUserMessage} handleSubmit={handleSubmit}/>
+      <Conversation conversations={conversations} aiMessage={aiMessage} />
+      <InputForm
+        userMessage={userMessage}
+        setUserMessage={setUserMessage}
+        handleSubmit={handleSubmit}
+      />
     </div>
   );
 }
