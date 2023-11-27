@@ -10,4 +10,6 @@ npm install @mui/joy @emotion/react @emotion/styled (per slider)
 
 npm install @chatscope/chat-ui-kit-react (per chat)
 
+npm i openai
+
 npm install @chatscope/chat-ui-kit-styles (per css chat)

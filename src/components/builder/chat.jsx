@@ -1,101 +1,70 @@
-import { useState } from 'react'
-import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
-import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
+import { useState } from "react";
+import { openai } from "./openai"; 
+import InputForm from "./inputform";
+import Conversation from "./Conversation";
+import { useCallback } from "react";
 
-const API_KEY = "";
-// my test key davide
-const systemMessage = { 
-  "role": "system", "content": "Spiegami come se fossi un'assitente per l'acquisto di un pc da gaming assemblato da PC Forge."
-}
+export default function Chat() {
+  const [conversations, setConversations] = useState([]); // To track all the conversations
+  const [aiMessage, setAiMessage] = useState(""); // To store the new AI responses
+  const [userMessage, setUserMessage] = useState(""); // To store the message sent by the user
 
-function Chat() {
-  const [messages, setMessages] = useState([
-    {
-      message: "Ciao sono l'assistente di PC Forge come posso esserti di aiuto",
-      sentTime: "just now",
-      sender: "ChatGPT"
-    }
-  ]);
-  const [isTyping, setIsTyping] = useState(false);
+  const handleSubmit = useCallback(
+    async (e) => {
+      e.preventDefault(); //To prevent the default form submission behaviour
 
-  const handleSend = async (message) => {
-    const newMessage = {
-      message,
-      direction: 'outgoing',
-      sender: "user"
-    };
+      // Storing the user message to the state
+      setConversations((prev) => {
+        return [
+          ...prev,
+          {
+            message: userMessage,
+            isHuman: true,
+          },
+        ];
+      });
+      setUserMessage(""); // Emptying the input field
 
-    const newMessages = [...messages, newMessage];
-    
-    setMessages(newMessages);
+      const stream = await openai.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: userMessage }],
+        stream: true, // This is required to stream the response
+      });
 
-    
-    setIsTyping(true);
-    await processMessageToChatGPT(newMessages);
-  };
+      let streamedMessage = "";
 
-  async function processMessageToChatGPT(chatMessages) { 
+      // The stream will be read till its closed
+      for await (const part of stream) {
+        setAiMessage((prev) => prev + part.choices[0].delta.content);
 
-    let apiMessages = chatMessages.map((messageObject) => {
-      let role = "";
-      if (messageObject.sender === "ChatGPT") {
-        role = "assistant";
-      } else {
-        role = "user";
+        // Once the entire message is received, the stream will receive the finish_reason as 'stop;
+        if (part.choices[0].finish_reason === "stop") {
+          setConversations((prev) => {
+            return [
+              ...prev,
+              {
+                message: streamedMessage,
+                isHuman: false,
+              },
+            ];
+          });
+
+          setAiMessage("");
+          break;
+        } else {
+          streamedMessage += part.choices[0].delta.content;
+        }
       }
-      return { role: role, content: messageObject.message}
-    });
+    },
+    [userMessage]
+  );
 
 
-    
-    const apiRequestBody = {
-      "model": "gpt-3.5-turbo",
-      "messages": [
-        systemMessage,  
-        ...apiMessages
-      ]
-    }
-
-    await fetch("https://api.openai.com/v1/chat/completions", 
-    {
-      method: "POST",
-      headers: {
-        "Authorization": "Bearer " + API_KEY,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(apiRequestBody)
-    }).then((data) => {
-      return data.json();
-    }).then((data) => {
-      console.log(data);
-      setMessages([...chatMessages, {
-        message: data.choices[0].message.content,
-        sender: "ChatGPT"
-      }]);
-      setIsTyping(false);
-    });
-  }
-
+ 
   return (
-    <div className="Builder-Chat">
-      <div style={{ position:"relative", height: "800px", width: "700px"  }}>
-        <MainContainer>
-          <ChatContainer>       
-            <MessageList 
-              scrollBehavior="smooth" 
-              typingIndicator={isTyping ? <TypingIndicator content="PC Forge assistant is typing" /> : null}
-            >
-              {messages.map((message, i) => {
-                console.log(message)
-                return <Message key={i} model={message} />
-              })}
-            </MessageList>
-            <MessageInput placeholder="Type message here" onSend={handleSend} />        
-          </ChatContainer>
-        </MainContainer>
-      </div>
+    <div className="Chat">
+      <Conversation conversations={conversations} aiMessage={aiMessage}/>
+      <InputForm userMessage={userMessage} setUserMessage={setUserMessage} handleSubmit={handleSubmit}/>
     </div>
-  )
+  );
 }
-
-export default Chat

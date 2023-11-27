@@ -39,6 +39,13 @@
   color: white !important; 
 }
 
+.form-container .form-group input {
+  color: white !important; 
+}
+.form-container .form-group textarea {
+  color: white !important; 
+}
+
 .dark-mode .btn-purple {
   color: var(--clr-dark-modeBG);
   border: 1.5px solid var(--clr-dark-modeBG) !important;
