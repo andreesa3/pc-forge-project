@@ -76,7 +76,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #9A1FFF;
+  background-color: #73c0fc;
   transition: 0.4s;
   border-radius: 30px;
 }
@@ -153,13 +153,20 @@
 }
 
 .input:checked + .slider {
-  background-color: #9A1FFF;
+  background-color: #183153;
 }
 
 .input:focus + .slider {
-  box-shadow: 0 0 1px #9A1FFF;
+  box-shadow: 0 0 1px #183153;
 }
 
 .input:checked + .slider:before {
   transform: translateX(30px);
+}
+
+
+/* Component Card */
+.dark-mode .component-card {
+  border: .8px solid var(--clr-white);
+  box-shadow: 0 0 5px var(--clr-white);
 }

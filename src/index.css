@@ -16,7 +16,6 @@
 @import url(./style/builder.css);
 @import url(./style/infoPcBuilder.css);
 
-
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;700&display=swap");
 
 :root {
@@ -48,7 +47,9 @@ img {
   max-width: 100%;
 }
 
-ol, ul, p {
+ol,
+ul,
+p {
   padding: 0 !important;
 }
 
@@ -74,13 +75,14 @@ section {
   justify-content: center;
 }
 
-.calltoaction-section, .exclusive-build {
+.calltoaction-section,
+.exclusive-build {
   position: relative;
 }
 
-.box-1, .box-2 {
+.box-1,
+.box-2 {
   width: 100%;
-  max-width: 250px;
   height: 30px;
   background-color: var(--clr-purple);
   position: absolute;
@@ -88,12 +90,16 @@ section {
 
 .box-1 {
   top: -1rem;
+  height: 3rem;
   right: 0;
+  transform: rotate(-1deg);
 }
 
 .box-2 {
   bottom: -1rem;
+  height: 3rem;
   left: 0;
+  transform: rotate(-1deg);
 }
 
 @media screen and (min-width: 1300px) {

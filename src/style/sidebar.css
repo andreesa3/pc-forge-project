@@ -99,13 +99,13 @@ body.visible {
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
   font-weight: 300;
-  padding: .6rem 1rem .6rem !important;
+  padding: 0.6rem 1rem 0.6rem !important;
   margin: 0;
 }
 
 .sidebar-accordion .sidebar-accordion-card a p:hover {
   border-bottom: 1px solid var(--clr-white);
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-accordion .css-o4b71y-MuiAccordionSummary-content.Mui-expanded {

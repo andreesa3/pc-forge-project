@@ -1,3 +1,4 @@
+/* Images */
 import cpuComponent from '../../assets/images/services-components/services-cpu.png'
 import gpuComponent from '../../assets/images/services-components/services-gpu.png'
 import mbComponent from '../../assets/images/services-components/services-mb.png'
@@ -7,17 +8,19 @@ import powerComponent from '../../assets/images/services-components/services-pow
 import coolerComponent from '../../assets/images/services-components/services-cooler.png'
 import caseComponent from '../../assets/images/services-components/services-case.png'
 
+const images = [
+  { id: 0, img: cpuComponent, text: 'Processori' },
+  { id: 1, img: gpuComponent, text: 'Processore Grafico' },
+  { id: 2, img: mbComponent, text: 'Scheda Madre' },
+  { id: 3, img: ramComponent, text: 'RAM' },
+  { id: 4, img: ssdComponent, text: 'Hard Disk' },
+  { id: 5, img: powerComponent, text: 'Caricabatterie' },
+  { id: 6, img: coolerComponent, text: 'Ventole' },
+  { id: 7, img: caseComponent, text: 'Case' }
+]
+
+
 const AvailableComponent = () => {
-  const images = [
-    { id: 0, img: cpuComponent, text: 'Processori' },
-    { id: 1, img: gpuComponent, text: 'Processore Grafico' },
-    { id: 2, img: mbComponent, text: 'Scheda Madre' },
-    { id: 3, img: ramComponent, text: 'RAM' },
-    { id: 4, img: ssdComponent, text: 'Hard Disk' },
-    { id: 5, img: powerComponent, text: 'Caricabatterie' },
-    { id: 6, img: coolerComponent, text: 'Ventole' },
-    { id: 7, img: caseComponent, text: 'Case' }
-  ]
 
   return (
     <section>
@@ -25,9 +28,12 @@ const AvailableComponent = () => {
         <h2 className='component-title'>Componenti</h2>
         <div className="components-box">
           {
-            images.map(item => (
-              <div key={item.id} className="component-card">
-                <img src={item.img} alt={`${item.text}-img`} className='component-img' />
+            images.map((item) => (
+              <div
+                key={item.id}
+                className="component-card"
+              >
+                <img src={item.img} alt={`${item.text}`} className='component-img' />
                 <p>{item.text}</p>
               </div>
             ))

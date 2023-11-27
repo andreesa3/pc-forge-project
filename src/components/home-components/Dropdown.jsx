@@ -8,7 +8,7 @@ const Dropdown = ({ data, leaveEvent }) => {
 
         {
           data.map((item) => (
-            <Link to={item.path} key={item.id}>
+            <Link to={item.path} key={item.id} onClick={leaveEvent}>
               <li className="nav-components-dropdown-card">
                 <img src={item.image} alt={`${item.text} icon`} />
                 {item.text}
