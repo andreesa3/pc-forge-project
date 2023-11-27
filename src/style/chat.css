@@ -72,6 +72,7 @@
     border-radius: 10px;
     margin: 14px;
     font-weight: 400;
+    white-space: pre-line;
   }
   
   .builder-human .builder-bubble-content {
