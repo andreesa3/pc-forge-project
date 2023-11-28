@@ -31,7 +31,7 @@ const MotherboardCards = () => {
       <div className='componentCards'>
         {sortedMbArray.map((mb) => (
           <div key={mb.id} onClick={() => handleCardClick(mb.id)}>
-            <CarouselCard text={mb.name} price={`${mb.price}€`} img={mb.img} />
+            <CarouselCard text={mb.name} price={`${mb.price}`} img={mb.img} />
           </div>
         ))}
       </div>

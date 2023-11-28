@@ -10,12 +10,12 @@ import caseComponent from '../../assets/images/services-components/services-case
 
 const images = [
   { id: 0, img: cpuComponent, text: 'Processori' },
-  { id: 1, img: gpuComponent, text: 'Processore Grafico' },
+  { id: 1, img: gpuComponent, text: 'Schede Grafoche' },
   { id: 2, img: mbComponent, text: 'Scheda Madre' },
   { id: 3, img: ramComponent, text: 'RAM' },
-  { id: 4, img: ssdComponent, text: 'Hard Disk' },
-  { id: 5, img: powerComponent, text: 'Caricabatterie' },
-  { id: 6, img: coolerComponent, text: 'Ventole' },
+  { id: 4, img: ssdComponent, text: 'Storage' },
+  { id: 5, img: powerComponent, text: 'Alimentatori' },
+  { id: 6, img: coolerComponent, text: 'Dissipatori' },
   { id: 7, img: caseComponent, text: 'Case' }
 ]
 

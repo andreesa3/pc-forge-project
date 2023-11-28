@@ -1,5 +1,4 @@
 import Button from "./Button";
-
 import cpuIcon from "../../assets/icons/componentsIcon/cpu-icon.svg";
 import gpuIcon from "../../assets/icons/componentsIcon/gpu-icon.svg";
 import ssdIcon from "../../assets/icons/componentsIcon/ssd-icon.svg";
@@ -8,7 +7,7 @@ import mockfile from "/mockfile.json";
 import { Details } from "@mui/icons-material";
 const Exclusive = () => {
   const forgeMasterII=mockfile.prebuilder[5]
-  console.log(mockfile.cpu);
+  
   return (
     <section className="exclusive-build">
       <div className="box-1"></div>
@@ -70,7 +69,7 @@ const Exclusive = () => {
               </div>
               <div>
                 <h3>{forgeMasterII.ram}</h3>
-                <p>Lorem Ipsum dolor sit amet</p>
+                <p>{}</p>
               </div>
             </div>
             <div className="info-price">

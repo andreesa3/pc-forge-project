@@ -43,7 +43,7 @@ const PrebuildDetail = () => {
             <span className="typeComponent">PREASSEMBLATI</span>
             <h2 className="nameComponent">{preBuilder.name}</h2>
             <p className="descriptionComponent">
-            <span className="titleComponent">DESCRIZIONE:</span>{preBuilder.description}{" "}
+            {/* <span className="titleComponent">DESCRIZIONE:</span>{" "} */}
             </p>
             <p className="infoCompontent"><span className="titleComponent">SOCKET:</span> {preBuilder.socket}</p>
             <p className="infoCompontent"><span className="titleComponent">CPU:</span> {preBuilder.cpu}</p>
