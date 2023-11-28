@@ -4,26 +4,28 @@ import cpuIcon from "../../assets/icons/componentsIcon/cpu-icon.svg";
 import gpuIcon from "../../assets/icons/componentsIcon/gpu-icon.svg";
 import ssdIcon from "../../assets/icons/componentsIcon/ssd-icon.svg";
 import ramIcon from "../../assets/icons/componentsIcon/ram-icon.svg";
-
+import mockfile from "/mockfile.json";
+import { Details } from "@mui/icons-material";
 const Exclusive = () => {
+  const forgeMasterII=mockfile.prebuilder[5]
+  console.log(mockfile.cpu);
   return (
     <section className="exclusive-build">
       <div className="box-1"></div>
       <div className="exclusive-build-wrapper wrapper">
         <div className="container-sx">
-          <h2>Lorem Ipsum</h2>
+          <h2>{forgeMasterII.name}</h2>
           <div className="container-sx-pc">
             <img src="./src/assets/images/homepage.png" alt="pc-build" />
           </div>
           <div className="build-list">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-              eaque, numquam ea unde repudiandae nam accusantium facilis
-              voluptatem architecto illum?
+            <p>FORGE MASTER II' è una potente macchina progettata per gaming avanzato e attività ad elevate performance.
+               Con un design pensato per offrire prestazioni eccezionali, 
+              è un'ottima scelta per esperienze di gioco di fascia alta.
             </p>
           </div>
           <div className="price">
-            <p>2500,00€</p>
+            <p>{forgeMasterII.price}€ </p>
             <Button text="Click me" theme="btn-purple" />
           </div>
         </div>
@@ -39,8 +41,9 @@ const Exclusive = () => {
                 <img src={cpuIcon} alt="cpu-icon" />
               </div>
               <div>
-                <h3>Lorem Ipsum</h3>
+                <h3>{forgeMasterII.cpu}</h3>
                 <p>Lorem Ipsum dolor sit amet</p>
+                {/* <p>Cores:{mockfile.cpu[3].details.cores}</p> */}
               </div>
             </div>
             <div className="info-card">
@@ -48,7 +51,7 @@ const Exclusive = () => {
                 <img src={gpuIcon} alt="gpu-icon" />
               </div>
               <div>
-                <h3>Lorem Ipsum</h3>
+                <h3>{forgeMasterII.gpu}</h3>
                 <p>Lorem Ipsum dolor sit amet</p>
               </div>
             </div>
@@ -57,7 +60,7 @@ const Exclusive = () => {
                 <img src={ssdIcon} alt="ssd-icon" />
               </div>
               <div>
-                <h3>Lorem Ipsum</h3>
+                <h3>{forgeMasterII.ssd}</h3>
                 <p>Lorem Ipsum dolor sit amet</p>
               </div>
             </div>
@@ -66,7 +69,7 @@ const Exclusive = () => {
                 <img src={ramIcon} alt="ram-icon" />
               </div>
               <div>
-                <h3>Lorem Ipsum</h3>
+                <h3>{forgeMasterII.ram}</h3>
                 <p>Lorem Ipsum dolor sit amet</p>
               </div>
             </div>

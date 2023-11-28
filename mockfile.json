@@ -724,7 +724,7 @@
       "name": "FORGE MASTER II",
       "description": "'FORGE MASTER II' è una potente macchina progettata per le attività più impegnative e il gaming di fascia alta. Al suo interno batte il cuore di un Ryzen 9 7950X3D, affiancato dalla maestosa Nvidia RTX 4090 su una scheda madre ASUS ROG STRIX B550-XE GAMING WIFI. Con 64GB di RAM Kingston Fury Beast DDR5 e il raffreddamento affidabile del Cooler Master MasterLiquid ML360R, questo sistema offre prestazioni eccezionali. L'alloggiamento nel case Lian Li Lancool II Mesh ospita l'SSD Sabrent Rocket Q da 2TB NVMe. Con l'alimentatore be quiet! Straight Power 11 da 850W, questa configurazione rappresenta l'eccellenza per chi ricerca la massima potenza per attività avanzate e il gaming di fascia alta.",
       "img": "/src/assets/images/ForgeMasterII.png",
-      "price": 3510,
+      "price": 3499,
       "cpu": "Ryzen 9 7950X3D",
       "gpu": "Nvidia RTX 4090",
       "motherboard": "ASUS ROG STRIX B550-XE GAMING WIFI",

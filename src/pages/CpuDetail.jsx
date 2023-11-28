@@ -26,9 +26,13 @@ const CpuDetail = () => {
       <div className='detailsComponent'>
         <span className='typeComponent'>CPU</span>
         <h2 className='nameComponent'>{cpu.name}</h2>
-      <p className='descriptionComponent'>Descrizione:{cpu.description} </p>
-      <p className='infoCompontent'>Socket: {cpu.socket}</p>
-      <p className='priceComponent'>Prezzo: {`${cpu.price}€`}</p>
+      <p className='descriptionComponent'><span className="titleComponent">DESCRIZIONE:</span>{cpu.description} </p>
+      <p className='infoCompontent'><span className="titleComponent">SOCKET:</span> {cpu.socket}</p>
+      <p className='priceComponent'><span className="titleComponent">CORES:</span> {cpu.details.cores}</p>
+      <p className='priceComponent'><span className="titleComponent">THREADS:</span> {cpu.details.threads}</p>
+      <p className='priceComponent'><span className="titleComponent">CACHE:</span> {cpu.details.cache}</p>
+      <p className='priceComponent'><span className="titleComponent">TDB:</span> {cpu.details.power}</p>
+      <p className='priceComponent'><span className="titleComponent">PREZZO:</span> {`${cpu.price} €`}</p>
       <div className='detailsButton'>
         <Button text='Compra ora' theme='dark'/>
         <Button text='Aggiungi al carrello' theme='light'/>
