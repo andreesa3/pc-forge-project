@@ -25,15 +25,21 @@ const SsdDetail = () => {
       <div className='detailsComponent'>
       <span className='typeComponent'>SSD</span>
         <h2 className='nameComponent'>{ssd.name}</h2>
-      <p className='descriptionComponent'>Descrizione:{ssd.description} </p>
-      <p className='infoCompontent'>Socket: {ssd.socket}</p>
-      <p className='priceComponent'>Prezzo: {`${ssd.price}€`}</p>
+      <p className='descriptionComponent'><span className="titleComponent">DESCRIZIONE:</span>{ssd.description} </p>
+      <p className='descriptionComponent'><span className="titleComponent">TIPOLOGIA:</span>{ssd.details.type} </p>
+      <p className='descriptionComponent'><span className="titleComponent">INTERFACCIA:</span>{ssd.details.interface} </p>
+      <p className='descriptionComponent'><span className="titleComponent">DIMENSIONE:</span>{ssd.details.capacity} </p>
+      <p className='descriptionComponent'><span className="titleComponent">FORM FACTOR:</span>{ssd.details.formFactor} </p>
+      <p className='descriptionComponent'><span className="titleComponent">DESCRIZIONE:</span>{ssd.details.speed} </p>
+      
+      <p className='priceComponent'><span className="titleComponent">PREZZO:</span> {`${ssd.price}€`}</p>
       <div className='detailsButton'>
         <Button text='Compra ora' theme='dark'/>
         <Button text='Aggiungi al carrello' theme='light'/>
       </div>
       </div>
     </div>
+    <h3 className='component-details-suggestion'>ALTRI PRODOTTI</h3>
     <SsdCarousel/>
     </>
   );

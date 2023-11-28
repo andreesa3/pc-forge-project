@@ -55,7 +55,7 @@ const PowerCarousel = () => {
   const groupedPowerArray = cardArray(PowerArray, rowCard);
 
   return (
-    <section>
+    <section className='carosuel-section'>
       <div className="wrapper">
         {
           screenSize.width <= 678 ? (

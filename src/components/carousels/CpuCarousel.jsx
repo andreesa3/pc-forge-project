@@ -55,7 +55,7 @@ const CpuCarousel = () => {
   const groupedCpuArray = cardArray(CpuArray, rowCard);
 
   return (
-    <section>
+    <section className='carosuel-section'>
       <div className="wrapper">
         {
           screenSize.width <= 678 ? (

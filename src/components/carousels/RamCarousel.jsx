@@ -55,7 +55,7 @@ const RamCarousel = () => {
   const groupedRamArray = cardArray(RamArray, rowCard);
 
   return (
-    <section>
+    <section className='carosuel-section'>
       <div className="wrapper">
         {
           screenSize.width <= 678 ? (

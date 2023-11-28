@@ -55,7 +55,7 @@ const MotherBoardCarousel = () => {
   const groupedMoboArray = cardArray(MoboArray, rowCard);
 
   return (
-    <section>
+    <section className='carosuel-section'>
       <div className="wrapper">
         {
           screenSize.width <= 678 ? (

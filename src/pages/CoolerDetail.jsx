@@ -25,15 +25,18 @@ const CoolerDetail = () => {
       <div className='detailsComponent'>
       <span className='typeComponent'>COOLER</span>
         <h2 className='nameComponent'>{cooler.name}</h2>
-      <p className='descriptionComponent'>Descrizione:{cooler.description} </p>
-      <p className='infoCompontent'>Socket: {cooler.socket}</p>
-      <p className='priceComponent'>Prezzo: {`${cooler.price}€`}</p>
+      <p className='descriptionComponent'><span className="titleComponent">DESCRIZIONE:</span>{cooler.description} </p>
+      <p className='descriptionComponent'><span className="titleComponent">TIPO:</span>{cooler.details.type} </p>
+      <p className='descriptionComponent'><span className="titleComponent">DIMENSIONE VENTOLA:</span>{cooler.details.fanSize} </p>
+      <p className='descriptionComponent'><span className="titleComponent">SUPPORTO SOCKET:</span>{cooler.details.socketCompatibility} </p>
+      <p className='priceComponent'><span className="titleComponent">PREZZO:</span> {`${cooler.price}€`}</p>
       <div className='detailsButton'>
         <Button text='Compra ora' theme='dark'/>
         <Button text='Aggiungi al carrello' theme='light'/>
       </div>
       </div>
     </div>
+    <h3 className='component-details-suggestion'>ALTRI PRODOTTI</h3>
     <CoolerCarousel/>
     </>
   );

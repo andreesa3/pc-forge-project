@@ -25,15 +25,18 @@ const CaseDetail = () => {
       <div className='detailsComponent'>
       <span className='typeComponent'>CASE</span>
         <h2 className='nameComponent'>{tower.name}</h2>
-      <p className='descriptionComponent'>Descrizione:{tower.description} </p>
-      <p className='infoCompontent'>Socket: {tower.socket}</p>
-      <p className='priceComponent'>Prezzo: {`${tower.price}€`}</p>
+      <p className='descriptionComponent'><span className="titleComponent">DESCRIZIONE:</span>{tower.description} </p>
+      <p className='infoCompontent'><span className="titleComponent">TIPOLOGIA CASE:</span> {tower.details.type}</p>
+      <p className='infoCompontent'><span className="titleComponent">FORM FACTOR:</span> {tower.details.motherboardSupport}</p>
+      <p className='infoCompontent'><span className="titleComponent">DIMENSIONI:</span> {tower.details.dimensions}</p>
+      <p className='priceComponent'><span className="titleComponent">PREZZO:</span> {`${tower.price}€`}</p>
       <div className='detailsButton'>
         <Button text='Compra ora' theme='dark'/>
         <Button text='Aggiungi al carrello' theme='light'/>
       </div>
       </div>
     </div>
+      <h3 className='component-details-suggestion'>ALTRI PRODOTTI</h3>
     <CaseCarousel/>
     </>
   );

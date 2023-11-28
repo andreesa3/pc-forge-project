@@ -55,7 +55,7 @@ const CoolerCarousel = () => {
   const groupedCoolerArray = cardArray(CoolerArray, rowCard);
 
   return (
-    <section>
+    <section className='carosuel-section'>
       <div className="wrapper">
         {
           screenSize.width <= 678 ? (

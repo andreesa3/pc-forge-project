@@ -55,7 +55,7 @@ const GpuCarousel = () => {
   const groupedGpuArray = cardArray(GpuArray, rowCard);
 
   return (
-    <section>
+    <section className='carosuel-section'>
       <div className="wrapper">
         {
           screenSize.width <= 678 ? (

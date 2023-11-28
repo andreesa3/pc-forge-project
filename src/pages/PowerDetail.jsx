@@ -25,15 +25,18 @@ const PowerDetail = () => {
       <div className='detailsComponent'>
       <span className='typeComponent'>POWER</span>
         <h2 className='nameComponent'>{power.name}</h2>
-      <p className='descriptionComponent'>Descrizione:{power.description} </p>
-      <p className='infoCompontent'>Socket: {power.socket}</p>
-      <p className='priceComponent'>Prezzo: {`${power.price}€`}</p>
+      <p className='descriptionComponent'><span className="titleComponent">DESCRIZIONE:</span>{power.description} </p>
+      <p className='descriptionComponent'><span className="titleComponent">CERTIFICAZIONE:</span>{power.details.certification} </p>
+      <p className='descriptionComponent'><span className="titleComponent">WATTAGGIO:</span>{power.details.wattage} </p>
+      <p className='descriptionComponent'><span className="titleComponent">MODULARITA:</span>{power.details.modularity} </p>
+      <p className='priceComponent'><span className="titleComponent">PREZZO:</span> {`${power.price}€`}</p>
       <div className='detailsButton'>
         <Button text='Compra ora' theme='dark'/>
         <Button text='Aggiungi al carrello' theme='light'/>
       </div>
       </div>
     </div>
+    <h3 className='component-details-suggestion'>ALTRI PRODOTTI</h3>
     <PowerCarousel/>
     </>
   );

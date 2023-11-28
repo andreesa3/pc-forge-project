@@ -26,15 +26,17 @@ const RamDetail = () => {
       <div className='detailsComponent'>
         <span className='typeComponent'>Ram</span>
         <h2 className='nameComponent'>{ram.name}</h2>
-      <p className='descriptionComponent'>Descrizione:{ram.description} </p>
-      <p className='infoCompontent'>Socket: {ram.socket}</p>
-      <p className='priceComponent'>Prezzo: {`${ram.price}€`}</p>
+      <p className='descriptionComponent'><span className="titleComponent">DESCRIZIONE:</span>{ram.description} </p>
+      <p className='infoCompontent'><span className="titleComponent">TECNOLOGIA MEMORIA:</span> {ram.details.memoryType}</p>
+      <p className='infoCompontent'>S<span className="titleComponent">DIMENSIONI:</span> {ram.details.capacity}</p>
+      <p className='priceComponent'><span className="titleComponent">PREZZO:</span> {`${ram.price}€`}</p>
       <div className='detailsButton'>
         <Button text='Compra ora' theme='dark'/>
         <Button text='Aggiungi al carrello' theme='light'/>
       </div>
       </div>
     </div>
+    <h3 className='component-details-suggestion'>ALTRI PRODOTTI</h3>
     <RamCarousel/>
     </>
   );

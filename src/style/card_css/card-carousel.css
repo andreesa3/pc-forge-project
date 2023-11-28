@@ -2,7 +2,11 @@
     background-color: var(--clr-color-card-BG);
     max-width: 350px;
   }
-  
+.carosuel-section{
+  padding: 4rem ;
+}
+
+
   .carouselCard {
     display: flex;
     flex-direction: column;

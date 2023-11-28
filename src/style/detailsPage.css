@@ -71,6 +71,10 @@
 .titleComponent{
    font-weight: bold;
 }
+.component-details-suggestion{
+   display: flex;
+   justify-content: center;
+}
 @media screen and (max-width: 840px) {
    .boxDetails{
       display: flex;

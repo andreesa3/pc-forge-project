@@ -25,15 +25,18 @@ const GpuDetail = () => {
       <div className='detailsComponent'>
       <span className='typeComponent'>GPU</span>
         <h2 className='nameComponent'>{gpu.name}</h2>
-      <p className='descriptionComponent'>Descrizione:{gpu.description} </p>
-      <p className='infoCompontent'>Socket: {gpu.socket}</p>
-      <p className='priceComponent'>Prezzo: {`${gpu.price}€`}</p>
+      <p className='descriptionComponent'><span className="titleComponent">DESCRIZIONE:</span>{gpu.description} </p>
+      <p className='infoCompontent'><span className="titleComponent">ARCHITETTURA:</span> {gpu.details.architecture}</p>
+      <p className='infoCompontent'><span className="titleComponent">MEMORIA:</span> {gpu.details.memory}</p>
+      <p className='infoCompontent'><span className="titleComponent">TDB:</span> {gpu.details.power}</p>
+      <p className='priceComponent'><span className="titleComponent">Prezzo</span> {`${gpu.price}€`}</p>
       <div className='detailsButton'>
         <Button text='Compra ora' theme='dark'/>
         <Button text='Aggiungi al carrello' theme='light'/>
       </div>
       </div>
     </div>
+    <h3 className='component-details-suggestion'>ALTRI PRODOTTI</h3>
     <GpuCarousel/>
     </>
   );

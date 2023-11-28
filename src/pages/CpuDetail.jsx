@@ -39,6 +39,7 @@ const CpuDetail = () => {
       </div>
       </div>
     </div>
+    <h3 className='component-details-suggestion'>ALTRI PRODOTTI</h3>
     <CpuCarousel/>
     </>
   );
