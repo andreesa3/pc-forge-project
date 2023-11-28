@@ -40,23 +40,23 @@ const PrebuildDetail = () => {
           </button>
           <img className="imageComponent" src={preBuilder.img} alt="" />
           <div className="detailsComponent">
-            <span className="typeComponent">PREBUILDER</span>
+            <span className="typeComponent">PREASSEMBLATI</span>
             <h2 className="nameComponent">{preBuilder.name}</h2>
             <p className="descriptionComponent">
-              Descrizione:{preBuilder.description}{" "}
+            <span className="titleComponent">DESCRIZIONE:</span>{preBuilder.description}{" "}
             </p>
-            <p className="infoCompontent">Socket: {preBuilder.socket}</p>
-            <p className="infoCompontent">CPU: {preBuilder.cpu}</p>
-            <p className="infoCompontent">GPU: {preBuilder.gpu}</p>
-            <p className="infoCompontent">CASE: {preBuilder.case}</p>
-            <p className="infoCompontent">POWER: {preBuilder.power}</p>
-            <p className="infoCompontent">SSD: {preBuilder.ssd}</p>
-            <p className="infoCompontent">RAM: {preBuilder.ram}</p>
+            <p className="infoCompontent"><span className="titleComponent">SOCKET:</span> {preBuilder.socket}</p>
+            <p className="infoCompontent"><span className="titleComponent">CPU:</span> {preBuilder.cpu}</p>
+            <p className="infoCompontent"><span className="titleComponent">GPU:</span> {preBuilder.gpu}</p>
+            <p className="infoCompontent"><span className="titleComponent">CASE:</span> {preBuilder.case}</p>
+            <p className="infoCompontent"><span className="titleComponent">POWER:</span> {preBuilder.power}</p>
+            <p className="infoCompontent"><span className="titleComponent">SSD:</span> {preBuilder.ssd}</p>
+            <p className="infoCompontent"><span className="titleComponent">RAM:</span> {preBuilder.ram}</p>
             <p className="infoCompontent">
-              MOTHERBOARD: {preBuilder.motherboard}
+            <span className="titleComponent">MOTHERBOARD:</span> {preBuilder.motherboard}
             </p>
-            <p className="infoCompontent">COOLER: {preBuilder.cooler}</p>
-            <p className="priceComponent">Prezzo: {`${preBuilder.price}€`}</p>
+            <p className="infoCompontent"><span className="titleComponent">COOLER: </span>{preBuilder.cooler}</p>
+            <p className="priceComponent"><span className="titleComponent">Prezzo:</span> {`${preBuilder.price}€`}</p>
             <div className="detailsButton">
               <Button text="Compra ora" theme="dark" />
               <Button text="Aggiungi al carrello" theme="light" />

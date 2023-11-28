@@ -27,6 +27,7 @@
 .typeComponent{
    padding-bottom: 3rem;
    color: #004170;
+   font-weight: bold;
 }
 
 .descriptionComponent{
@@ -67,7 +68,9 @@
 .prevPageProducts .imgButtonPrev:hover{
    transform: scale(1.3);
 }
-
+.titleComponent{
+   font-weight: bold;
+}
 @media screen and (max-width: 840px) {
    .boxDetails{
       display: flex;
