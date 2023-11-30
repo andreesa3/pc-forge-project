@@ -4,10 +4,10 @@ const InfoPcBuilder = ({imgPc, textPc, detail1, imageDetail1, imageDetail2, deta
   return (
     <div className='wrapper containerInfo' >
         <div className='row-container-up' style={{backgroundColor: backgroundDetail}} >
-          <div className='separator-1'></div>
+          <div className='separator-1' style={{backgroundColor: backgroundDetail}}></div>
             <img className='image-container-up' src={imgPc} alt="" />
             <span style={{alignSelf:'center'}}>{textPc}</span>
-            <div className='separator-2'></div>
+            <div className='separator-2' style={{backgroundColor: backgroundDetail}}></div>
         </div>
         <div className='row-container-down'  >
             <div className='column-container1' style={{backgroundColor: backgroundDetail}}>
