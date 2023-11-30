@@ -18,8 +18,8 @@ const CaseDetail = () => {
   };
 
   return (
-    <>
-    <div className='boxDetails'>
+    <section>
+    <div className='boxDetails wrapper'>
         <button className='prevPageProducts' onClick={prevPage}><img className='imgButtonPrev' src="https://cdn0.iconfinder.com/data/icons/controls-add-on/48/v-38-512.png" alt="" /></button>
         <img className='imageComponent' src={tower.img} alt="" />
       <div className='detailsComponent'>
@@ -38,7 +38,7 @@ const CaseDetail = () => {
     </div>
       <h3 className='component-details-suggestion'>ALTRI PRODOTTI</h3>
     <CaseCarousel/>
-    </>
+    </section>
   );
 };
 
