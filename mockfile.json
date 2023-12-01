@@ -54,7 +54,7 @@
         "power": "170W"
       },
       "socket": "AMD  AM5",
-      "img": "https://m.media-amazon.com/images/I/51jNS8epPeL.jpg" 
+      "img": "https://static.wixstatic.com/media/131a7a_f0e8e9cba7034c069896a30fe6c38b94~mv2.png/v1/fill/w_839,h_801,al_c,q_90,enc_auto/131a7a_f0e8e9cba7034c069896a30fe6c38b94~mv2.png" 
     },
     {
       "id": 5,
@@ -82,7 +82,7 @@
         "power": "105W"
       },
       "socket": "AMD  AM4",
-      "img": "https://media.ldlc.com/r1600/ld/products/00/05/99/73/LD0005997308.jpg" 
+      "img": "/src/assets/images/Ryzen7.png" 
     }
     ],
   "gpu": [
@@ -156,7 +156,7 @@
           "memory": "12GB GDDR6",
           "power": "230 W"
         },
-        "img": "https://m.media-amazon.com/images/I/81PEqT21o3L.jpg" 
+        "img": "https://static.gigabyte.com/StaticFile/Image/Global/a3ca762dbed1ed1784adb4176957d840/Product/27846" 
       }
     ],
   "motherboard": [
@@ -354,7 +354,7 @@
         "wattage": "750W",
         "modularity": "Fully Modular"
       },
-      "img": "https://media.adeo.com/marketplace/MKP/88374621/7f716fb2caf7ada8e0fa8f47f51f4e0e.jpeg?width=3000&height=3000&format=jpg&quality=80&fit=bounds"
+      "img": "/src/assets/images/focus-gx-550.png"
     },
     {
       "id": 4,

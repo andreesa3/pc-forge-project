@@ -25,8 +25,8 @@ const CaseCards = () => {
       <div className='cardWrapper wrapper'>
         <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
         <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
-          <option value="asc">Crescente</option>
-          <option value="desc">Decrescente</option>
+          <option className='options' value="asc">Crescente</option>
+          <option className='options' value="desc">Decrescente</option>
         </select>
         <div className='componentCards'>
           {sortedCaseArray.map((tower) => (

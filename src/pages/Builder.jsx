@@ -37,7 +37,7 @@ function Builder() {
   };
 
   return (
-    <>
+    <section>
     <div className="builder-header wrapper">
 
       <h2><img src={logo} alt="logo" /><span className="purple">PC</span> Forge Builder</h2>
@@ -59,7 +59,7 @@ function Builder() {
        <SelectionWrapper imgSrc={cases} options={mockData.case} onSelectChange={handleSelectionChange("case")} selectedData={selectedItems.case} name="case"/>
    <BubbleAssistant/>
    </div>
-    </>
+    </section>
     
   )
 }

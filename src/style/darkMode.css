@@ -48,6 +48,10 @@
   border-bottom: 1px solid #ac47ff;
 }
 
+.dark-mode .containerInfo span{
+  color: var(--clr-white);
+}
+
 .switch {
   font-size: 17px;
   position: relative;

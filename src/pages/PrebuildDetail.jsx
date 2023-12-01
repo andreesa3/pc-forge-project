@@ -4,11 +4,16 @@ import mockfile from "/mockfile.json";
 import Button from "../components/home-components/Button";
 import InfoPcBuilder from "../components/InfoPcBuilder";
 
+//image
+import imgPc1 from "/src/assets/images/CreatorDetail.png"
+
 const PrebuildDetail = () => {
   const { id } = useParams();
   const preBuilder = mockfile.prebuilder.find(
     (preBuilder) => preBuilder.id === parseInt(id, 10)
   );
+
+ 
   const navigate = useNavigate();
 
   if (!preBuilder) {
@@ -65,17 +70,65 @@ const PrebuildDetail = () => {
         </div>
         <div>
           {id === "1" ? (
-            <InfoPcBuilder />
+            <InfoPcBuilder 
+            backgroundDetail="rgba(0, 255, 0, 0.2)"
+            textPc={mockfile.prebuilder[0].description}
+            imgPc={imgPc1}
+            detail1={mockfile.cpu[2].description}
+            imageDetail1={mockfile.cpu[2].img}
+            detail2={mockfile.gpu[2].description}
+            imageDetail2={mockfile.gpu[2].img}
+            />
           ) : id === "2" ? (
-            <InfoPcBuilder />
+            <InfoPcBuilder 
+            backgroundDetail="rgba(0, 255, 0, 0.2)"
+            textPc={mockfile.prebuilder[1].description}
+            imgPc={imgPc1}
+            detail1={mockfile.cpu[4].description}
+            imageDetail1={mockfile.cpu[4].img}
+            detail2={mockfile.gpu[2].description}
+            imageDetail2={mockfile.gpu[2].img}
+            />
           ) : id === "3" ? (
-            <InfoPcBuilder />
+            <InfoPcBuilder 
+            backgroundDetail="rgba(124, 30, 255, 0.2)"
+            textPc={mockfile.prebuilder[2].description}
+            imgPc={imgPc1}
+            detail1={mockfile.cpu[1].description}
+            imageDetail1={mockfile.cpu[1].img}
+            detail2={mockfile.gpu[1].description}
+            imageDetail2={mockfile.gpu[1].img}
+            />
           ) : id === "4" ? (
-            <InfoPcBuilder />
+            <InfoPcBuilder 
+            backgroundDetail="rgba(124, 30, 255, 0.2)"
+            textPc={mockfile.prebuilder[3].description}
+            imgPc={imgPc1}
+            detail1={mockfile.cpu[1].description}
+            imageDetail1={mockfile.cpu[1].img}
+            detail2={mockfile.gpu[4].description}
+            imageDetail2={mockfile.gpu[4].img}
+            />
           ) : id === "5" ? (
-            <InfoPcBuilder />
+            <InfoPcBuilder 
+            backgroundDetail="rgb(163, 51, 255, 0.6)"
+            textPc={mockfile.prebuilder[4].description}
+            imgPc={imgPc1}
+            detail1={mockfile.cpu[0].description}
+            imageDetail1={mockfile.cpu[0].img}
+            detail2={mockfile.gpu[0].description}
+            imageDetail2={mockfile.gpu[0].img}
+            />
           ) : id === "6" ? (
-            <InfoPcBuilder />
+            <InfoPcBuilder 
+            backgroundDetail="rgb(163, 51, 255, 0.6)"
+            textPc={mockfile.prebuilder[5].description}
+            imgPc={imgPc1}
+            detail1={mockfile.cpu[3].description}
+            imageDetail1={mockfile.cpu[3].img}
+            detail2={mockfile.gpu[0].description}
+            imageDetail2={mockfile.gpu[0].img}
+            />
           ) : null}
         </div>
       </div>
