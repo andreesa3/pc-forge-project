@@ -29,15 +29,14 @@
 
 .dark-mode .form-container {
   background: linear-gradient(#242424, #242424) padding-box,
-  linear-gradient(145deg, transparent 35%, #8a00fc, #40c9ff) border-box;
+    linear-gradient(145deg, transparent 35%, #8a00fc, #40c9ff) border-box;
 }
-
 
 .dark-mode .form-container .form-group input {
-  color: white !important; 
+  color: white !important;
 }
 .dark-mode .form-container .form-group textarea {
-  color: white !important; 
+  color: white !important;
 }
 
 .dark-mode .btn-purple {
@@ -61,7 +60,7 @@
   display: inline-block;
   width: 64px;
   height: 34px;
-  padding: .1rem;
+  padding: 0.1rem;
 }
 
 .switch input {
@@ -165,9 +164,20 @@
   transform: translateX(30px);
 }
 
-
 /* Component Card */
 .dark-mode .component-card {
-  border: .8px solid var(--clr-white);
-  box-shadow: 0 0 5px var(--clr-white);
+  border: 0.8px solid var(--clr-white);
+  color: var(--clr-white);
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode .component-card:hover {
+  transform: translateY(-0.6rem);
+  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode .descriptionComponent,
+.dark-mode .priceComponent,
+.dark-mode .infoCompontent {
+  color: var(--clr-white);
 }

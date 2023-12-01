@@ -7,6 +7,7 @@ import ssdComponent from '../../assets/images/services-components/services-ssd.p
 import powerComponent from '../../assets/images/services-components/services-power.png'
 import coolerComponent from '../../assets/images/services-components/services-cooler.png'
 import caseComponent from '../../assets/images/services-components/services-case.png'
+import { Link } from 'react-router-dom'
 
 const images = [
   { id: 0, img: cpuComponent, text: 'Processori' },
@@ -29,13 +30,14 @@ const AvailableComponent = () => {
         <div className="components-box">
           {
             images.map((item) => (
-              <div
-                key={item.id}
-                className="component-card"
-              >
-                <img src={item.img} alt={`${item.text}`} className='component-img' />
-                <p>{item.text}</p>
-              </div>
+              <Link key={item.id} to={`/products/${item.path}`}>
+                <div
+                  className="component-card"
+                >
+                  <img src={item.img} alt={`${item.text}`} className='component-img' />
+                  <p>{item.text}</p>
+                </div>
+              </Link>
             ))
           }
         </div>
