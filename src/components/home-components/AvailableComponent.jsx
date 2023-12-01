@@ -20,7 +20,6 @@ const images = [
   { id: 7, img: caseComponent, text: 'Case' }
 ]
 
-
 const AvailableComponent = () => {
 
   return (
