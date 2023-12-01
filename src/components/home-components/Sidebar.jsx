@@ -41,18 +41,18 @@ const Sidebar = ({ hamburger, event }) => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <div className="sidebar-accordion-card">
-                    <Link to='/products/cpu' onClick={event} onClickCapture={() => setExpanded(false)}>
-                      <p>Low Level Build</p>
+                    <Link to='/products/creator' onClick={event} onClickCapture={() => setExpanded(false)}>
+                      <p>Creator</p>
                     </Link>
                   </div>
                   <div className="sidebar-accordion-card">
-                    <Link to='/products/gpu' onClick={event} onClickCapture={() => setExpanded(false)}>
-                      <p>Mid Level Build</p>
+                    <Link to='/products/innovator' onClick={event} onClickCapture={() => setExpanded(false)}>
+                      <p>Innovator</p>
                     </Link>
                   </div>
                   <div className="sidebar-accordion-card">
-                    <Link to='/products/mb' onClick={event} onClickCapture={() => setExpanded(false)}>
-                      <p>High Level Build</p>
+                    <Link to='/products/forgemaster' onClick={event} onClickCapture={() => setExpanded(false)}>
+                      <p>Forge Master</p>
                     </Link>
                   </div>
                 </AccordionDetails>
