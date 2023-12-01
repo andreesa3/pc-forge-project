@@ -10,14 +10,14 @@ import caseComponent from '../../assets/images/services-components/services-case
 import { Link } from 'react-router-dom'
 
 const images = [
-  { id: 0, img: cpuComponent, text: 'Processori' },
-  { id: 1, img: gpuComponent, text: 'Schede Grafoche' },
-  { id: 2, img: mbComponent, text: 'Scheda Madre' },
-  { id: 3, img: ramComponent, text: 'RAM' },
-  { id: 4, img: ssdComponent, text: 'Storage' },
-  { id: 5, img: powerComponent, text: 'Alimentatori' },
-  { id: 6, img: coolerComponent, text: 'Dissipatori' },
-  { id: 7, img: caseComponent, text: 'Case' }
+  { id: 0, img: cpuComponent, text: 'Processori', path: 'cpu' },
+  { id: 1, img: gpuComponent, text: 'Processore Grafico', path: 'gpu' },
+  { id: 2, img: mbComponent, text: 'Scheda Madre', path: 'mb' },
+  { id: 3, img: ramComponent, text: 'RAM', path: 'ram' },
+  { id: 4, img: ssdComponent, text: 'Hard Disk', path: 'ssd' },
+  { id: 5, img: powerComponent, text: 'Caricabatterie', path: 'power' },
+  { id: 6, img: coolerComponent, text: 'Ventole', path: 'cooler' },
+  { id: 7, img: caseComponent, text: 'Case', path: 'case' }
 ]
 
 const AvailableComponent = () => {
