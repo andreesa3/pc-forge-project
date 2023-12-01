@@ -25,7 +25,7 @@ const Exclusive = () => {
           </div>
           <div className="price">
             <p>{forgeMasterII.price}€ </p>
-            <Button text="Click me" theme="btn-purple" />
+            <Button text="Click me" theme="btn-white" />
           </div>
         </div>
         <div className="container-center">

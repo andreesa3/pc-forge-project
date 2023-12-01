@@ -71,8 +71,8 @@ const PrebuildDetail = () => {
         <div>
           {id === "1" ? (
             <InfoPcBuilder 
-            backgroundDetail="#4ee56c"
-            textPc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae dignissimos iusto doloribus aperiam dolor facere, est expedita beatae tempora! Amet vel error deleniti distinctio nulla odio eveniet ut eaque! Doloribus?" 
+            backgroundDetail="rgba(0, 255, 0, 0.2)"
+            textPc={mockfile.prebuilder[0].description}
             imgPc={imgPc1}
             detail1={mockfile.cpu[2].description}
             imageDetail1={mockfile.cpu[2].img}
@@ -81,8 +81,8 @@ const PrebuildDetail = () => {
             />
           ) : id === "2" ? (
             <InfoPcBuilder 
-            backgroundDetail="#4ee56c"
-            textPc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae dignissimos iusto doloribus aperiam dolor facere, est expedita beatae tempora! Amet vel error deleniti distinctio nulla odio eveniet ut eaque! Doloribus?" 
+            backgroundDetail="rgba(0, 255, 0, 0.2)"
+            textPc={mockfile.prebuilder[1].description}
             imgPc={imgPc1}
             detail1={mockfile.cpu[4].description}
             imageDetail1={mockfile.cpu[4].img}
@@ -91,8 +91,8 @@ const PrebuildDetail = () => {
             />
           ) : id === "3" ? (
             <InfoPcBuilder 
-            backgroundDetail="#7756AD"
-            textPc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae dignissimos iusto doloribus aperiam dolor facere, est expedita beatae tempora! Amet vel error deleniti distinctio nulla odio eveniet ut eaque! Doloribus?" 
+            backgroundDetail="rgba(124, 30, 255, 0.2)"
+            textPc={mockfile.prebuilder[2].description}
             imgPc={imgPc1}
             detail1={mockfile.cpu[1].description}
             imageDetail1={mockfile.cpu[1].img}
@@ -101,8 +101,8 @@ const PrebuildDetail = () => {
             />
           ) : id === "4" ? (
             <InfoPcBuilder 
-            backgroundDetail="#7756AD"
-            textPc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae dignissimos iusto doloribus aperiam dolor facere, est expedita beatae tempora! Amet vel error deleniti distinctio nulla odio eveniet ut eaque! Doloribus?" 
+            backgroundDetail="rgba(124, 30, 255, 0.2)"
+            textPc={mockfile.prebuilder[3].description}
             imgPc={imgPc1}
             detail1={mockfile.cpu[1].description}
             imageDetail1={mockfile.cpu[1].img}
@@ -111,8 +111,8 @@ const PrebuildDetail = () => {
             />
           ) : id === "5" ? (
             <InfoPcBuilder 
-            backgroundDetail="#A333FF"
-            textPc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae dignissimos iusto doloribus aperiam dolor facere, est expedita beatae tempora! Amet vel error deleniti distinctio nulla odio eveniet ut eaque! Doloribus?" 
+            backgroundDetail="rgb(163, 51, 255, 0.6)"
+            textPc={mockfile.prebuilder[4].description}
             imgPc={imgPc1}
             detail1={mockfile.cpu[0].description}
             imageDetail1={mockfile.cpu[0].img}
@@ -121,8 +121,8 @@ const PrebuildDetail = () => {
             />
           ) : id === "6" ? (
             <InfoPcBuilder 
-            backgroundDetail="#A333FF"
-            textPc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae dignissimos iusto doloribus aperiam dolor facere, est expedita beatae tempora! Amet vel error deleniti distinctio nulla odio eveniet ut eaque! Doloribus?" 
+            backgroundDetail="rgb(163, 51, 255, 0.6)"
+            textPc={mockfile.prebuilder[5].description}
             imgPc={imgPc1}
             detail1={mockfile.cpu[3].description}
             imageDetail1={mockfile.cpu[3].img}
