@@ -23,11 +23,9 @@ const Contact = () => {
     <section>
       <div className="contact-wrapper wrapper">
         <div className="info-container">
-          <h2>Contact</h2>
+          <h2>Contattaci</h2>
           <p className="info-contact">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-            commodi repellat quaerat architecto molestias ratione assumenda
-            asperiores blanditiis enim consectetur.
+          Hai domande, richieste o desideri ricevere informazioni personalizzate? Compila il nostro breve modulo di contatto e mettiti in connessione con il team di esperti di PCForge. 
           </p>
         </div>
         <div className="form-container">
@@ -37,7 +35,7 @@ const Contact = () => {
               <input required name="email" id="email" type="text" />
             </div>
             <div className="form-group">
-              <label htmlFor="textarea">How Can We Help You?</label>
+              <label htmlFor="textarea">Come possiamo aiutarti?</label>
               <textarea
                 required
                 cols="50"

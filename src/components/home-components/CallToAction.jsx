@@ -11,13 +11,10 @@ const CallToAction = () => {
         <div className="calltoaction-rigth">
           <h2>Assembla il tuo pc con il nostro builder</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-            repellat cum officiis molestias totam sunt perspiciatis eius, at
-            laboriosam corporis velit corrupti sed sapiente sequi expedita
-            esse, cupiditate doloremque debitis.
+          Con PCForge, hai il controllo totale sulla creazione del tuo sistema ideale. Seleziona attentamente tra una vasta gamma di componenti di alta qualità, tra cui processori, schede madri, schede video, e altro ancora.
           </p>
           <div className="btn-calltoaction">
-            <Button text="Click me" theme="btn-purple" />
+            <Button text="Scopri di più" theme="btn-purple" />
           </div>
         </div>
       </div>

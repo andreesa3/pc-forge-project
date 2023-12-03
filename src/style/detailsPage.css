@@ -70,6 +70,7 @@
 }
 .titleComponent{
    font-weight: bold;
+   color: var(--clr-purple)
 }
 .component-details-suggestion{
    display: flex;

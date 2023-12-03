@@ -25,7 +25,7 @@ const Footer = () => {
                 <h3><span>PC</span>FORGE</h3>
               </div>
             </Link>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fuga eligendi laboriosam repudiandae blanditiis autem inventore minima hic aut doloremque.</p>
+            <p>Offriamo una gamma diversificata di PC assemblati su misura e componenti hardware di alta qualità.</p>
           </div>
           {/* Links Box */}
           <div className="footer-info-box">
