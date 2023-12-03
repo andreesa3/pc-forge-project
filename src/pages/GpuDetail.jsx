@@ -36,8 +36,10 @@ const GpuDetail = () => {
       </div>
       </div>
     </div>
-    <h3 className='component-details-suggestion'>ALTRI PRODOTTI</h3>
+    <div style={{marginTop: "150px"}}>
+    <h3 className='component-details-suggestion'>Altri Prodotti</h3>
     <GpuCarousel/>
+    </div>
     </section>
   );
 };

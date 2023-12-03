@@ -59,6 +59,7 @@ const CarouselComponent = () => {
   return (
     <section>
       <div className="wrapper">
+      <h2 className='component-title'>Scopri la nostra gamma di PC</h2>
         {
           screenSize.width <= 678 ? (
             // Mobile
