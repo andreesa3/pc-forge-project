@@ -9,6 +9,7 @@
   border-radius: 6px;
   font-weight: 500;
   color: var(--clr-purple);
+  width: 100%;
 }
 
 .btn:before {
@@ -16,12 +17,12 @@
   position: absolute;
   z-index: -1;
   background: var(--clr-purple);
-  height: 150px;
-  width: 300px;
-  border-radius: 50%;
+  height: 110px;
+  width: 390px;
   top: 100%;
   left: 100%;
   transition: all 0.7s;
+  border-radius: 50%;
 }
 
 .btn:hover {

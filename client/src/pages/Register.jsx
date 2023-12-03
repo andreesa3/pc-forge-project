@@ -1,6 +1,12 @@
 import { useState } from "react";
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Button from '../components/home-components/Button';
+
+import emailIcon from '../assets/icons/login-register/email.svg';
+import passwordIcon from '../assets/icons/login-register/password.svg';
+import googleIcon from '../assets/icons/login-register/google.svg';
+import appleIcon from '../assets/icons/login-register/apple.svg';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -27,38 +33,57 @@ const Register = () => {
   return (
     <section>
       <div className="wrapper">
-        <h1>Register</h1>
+        <form onSubmit={handleSubmit} className="user-form">
+          <h1>Crea un account</h1>
+          <div className="flex-column">
+            <label>Nome</label>
+            <div className="inputForm">
+              <img src={emailIcon} alt="text-icon" />
+              <input
+                type="text"
+                name="name"
+                className="form-input-auth"
+                value={name}
+                placeholder="Inserisci nome"
+                onChange={(e) => setName(e.target.value)} required
+              />
+            </div>
+          </div>
 
-        <form onSubmit={handleSubmit}>
+          <div className="flex-column">
+            <label>Email</label>
+            <div className="inputForm">
+              <img src={emailIcon} alt="email-icon" />
+              <input
+                type="email"
+                name="email"
+                autoComplete="off"
+                className="form-input-auth"
+                placeholder="Indirizzo email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} required />
+            </div>
+          </div>
 
-          <input
-            type="text"
-            name="name"
-            className="form-input-auth"
-            placeholder="First Name"
+          <div className="flex-column">
+            <label>Password</label>
+            <div className="inputForm">
+              <img src={passwordIcon} alt="password Icon" />
+              <input
+                type="password"
+                name="password"
+                className="form-input-auth"
+                placeholder="Inserisci password"
+                value={password}
+                minLength={8}
+                onChange={(e) => setPassword(e.target.value)} required
+              />
+            </div>
+          </div>
 
-            value={name}
-            onChange={(e) => setName(e.target.value)} required />
+          <button className="btn form-submit">Registra</button>
 
-          <input
-            type="email"
-            name="email"
-            autoComplete="off"
-            className="form-input-auth"
-            placeholder="example@gmail.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} required />
-
-          <input
-            type="password"
-            name="password"
-            className="form-input-auth"
-            placeholder="Password"
-            value={password}
-            minLength={8}
-            onChange={(e) => setPassword(e.target.value)} required />
-
-          <button type="submit">Registra</button>
+          <p className="p">Hai già un account? <Link to='/login' className="span">Login</Link></p>
         </form>
       </div>
     </section>
