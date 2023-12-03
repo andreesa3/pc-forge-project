@@ -1,0 +1,18 @@
+.carousel {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.carousel-control-prev {
+  left: -3rem;
+  width: 3rem;
+}
+
+.carousel-control-next {
+  right: -3rem;
+  width: 3rem;
+}
+
+.carousel-indicators {
+  bottom: -3.5rem;
+}
