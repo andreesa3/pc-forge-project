@@ -35,9 +35,14 @@ app.post('/login', async (req, res) => {
 
 
 
-
 app.post('/register', async (req, res) => {
   try {
+    const existingUser = await User.findOne({ email: req.body.email });
+
+    if (existingUser) {
+      return res.status(400).json({ error: 'User with this email already exists' });
+    }
+
     const newUser = await User.create(req.body);
     res.status(201).json(newUser);
   } catch (err) {
@@ -45,7 +50,6 @@ app.post('/register', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-
 
 // Connessione db
 db.connect();

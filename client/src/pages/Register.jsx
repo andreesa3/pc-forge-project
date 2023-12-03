@@ -13,15 +13,16 @@ const Register = () => {
     axios.post('http://localhost:3050/register', { first_name: name, email, password })
       .then(result => {
         console.log(result)
-        if (result.status !== 201) {
-          console.error('User not created!')
+        if (result.status === 201) {
+          navigate('/login');
+        } else {
+          console.error('User not created!');
         }
-
-        navigate('/login');
       })
-      .catch(err => console.error(err));
-  }
-  
+      .catch(err => console.error(err.response.data));  // Logga il messaggio di errore dal server
+  };
+
+
 
   return (
     <section>
