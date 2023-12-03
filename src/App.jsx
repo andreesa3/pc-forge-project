@@ -35,9 +35,9 @@ const App = () => {
         <Route path="/" element={<DefaultDisplay />}>
           <Route path="" element={<Home />} />
           <Route path="prebuilder" element={<PreBuilderCard />} />
-          <Route path="prebuilder/entrylevel" element={<PreBuilderCard />} />
-          <Route path="prebuilder/medium" element={<PreBuilderCard />} />
-          <Route path="prebuilder/high" element={<PreBuilderCard />} />
+          <Route path="products/creator" element={<PreBuilderCard />} />
+          <Route path="products/innovator" element={<PreBuilderCard />} />
+          <Route path="products/forgemaster" element={<PreBuilderCard />} />
           <Route path="prebuilder/:id" element={<PrebuildDetail />} />
           <Route path="products" element={<Products />} />
           <Route path="products/cpu" element={<CpuCards />} />

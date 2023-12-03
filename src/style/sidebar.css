@@ -62,7 +62,6 @@ body.visible {
 
 .sidebar-link-card a:hover,
 .sidebar-accordion .css-o4b71y-MuiAccordionSummary-content:hover {
-  gap: 1.8rem;
   font-weight: 600;
 }
 
@@ -113,6 +112,13 @@ body.visible {
   align-items: center;
   gap: 1rem;
   margin: 0;
+}
+
+@media screen and (min-width: 508px) {
+  .sidebar-link-card a:hover,
+  .sidebar-accordion .css-o4b71y-MuiAccordionSummary-content:hover {
+    gap: 1.8rem;
+  }  
 }
 
 @media screen and (min-width: 900px) {

@@ -6,6 +6,7 @@ import InfoPcBuilder from "../components/InfoPcBuilder";
 
 //image
 import imgPc1 from "/src/assets/images/CreatorDetail.png"
+import imgPc2 from "/src/assets/images/InnovatorDetail.png"
 
 const PrebuildDetail = () => {
   const { id } = useParams();
@@ -93,7 +94,7 @@ const PrebuildDetail = () => {
             <InfoPcBuilder 
             backgroundDetail="rgba(124, 30, 255, 0.2)"
             textPc={mockfile.prebuilder[2].description}
-            imgPc={imgPc1}
+            imgPc={imgPc2}
             detail1={mockfile.cpu[1].description}
             imageDetail1={mockfile.cpu[1].img}
             detail2={mockfile.gpu[1].description}
@@ -103,7 +104,7 @@ const PrebuildDetail = () => {
             <InfoPcBuilder 
             backgroundDetail="rgba(124, 30, 255, 0.2)"
             textPc={mockfile.prebuilder[3].description}
-            imgPc={imgPc1}
+            imgPc={imgPc2}
             detail1={mockfile.cpu[1].description}
             imageDetail1={mockfile.cpu[1].img}
             detail2={mockfile.gpu[4].description}
@@ -113,7 +114,7 @@ const PrebuildDetail = () => {
             <InfoPcBuilder 
             backgroundDetail="rgb(163, 51, 255, 0.6)"
             textPc={mockfile.prebuilder[4].description}
-            imgPc={imgPc1}
+            imgPc={imgPc2}
             detail1={mockfile.cpu[0].description}
             imageDetail1={mockfile.cpu[0].img}
             detail2={mockfile.gpu[0].description}
@@ -123,7 +124,7 @@ const PrebuildDetail = () => {
             <InfoPcBuilder 
             backgroundDetail="rgb(163, 51, 255, 0.6)"
             textPc={mockfile.prebuilder[5].description}
-            imgPc={imgPc1}
+            imgPc={imgPc2}
             detail1={mockfile.cpu[3].description}
             imageDetail1={mockfile.cpu[3].img}
             detail2={mockfile.gpu[0].description}

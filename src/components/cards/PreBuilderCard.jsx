@@ -28,11 +28,11 @@ const PreBuilderCards = () => {
   })();
 
   const filteredPrebuilders = sortedPrebuilderArray.filter((preBuilder) => {
-    if (type === 'entrylevel') {
+    if (type === 'creator') {
       return preBuilder.type === 'entrylevel';
-    } else if (type === 'medium') {
+    } else if (type === 'innovator') {
       return preBuilder.type === 'medium';
-    } else if (type === 'high') {
+    } else if (type === 'forgemaster') {
       return preBuilder.type === 'high';
     } else {
       return true;

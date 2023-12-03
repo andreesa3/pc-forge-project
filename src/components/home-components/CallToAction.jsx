@@ -17,7 +17,7 @@ const CallToAction = () => {
             esse, cupiditate doloremque debitis.
           </p>
           <div className="btn-calltoaction">
-            <Button text="Click me" theme="btn-white" />
+            <Button text="Click me" theme="btn-purple" />
           </div>
         </div>
       </div>

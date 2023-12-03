@@ -89,6 +89,28 @@ const Navbar = ({ hamburger, event, toggle }) => {
     },
   ];
 
+  /* Dropdown Data */
+  const prebuild = [
+    {
+      id: 1,
+      text: "Creator",
+      image: cpuIcon,
+      path: "/products/creator",
+    },
+    {
+      id: 2,
+      text: "Innovator",
+      image: gpuIcon,
+      path: "/products/innovator",
+    },
+    {
+      id: 3,
+      text: "Forge Master",
+      image: motherboardIcon,
+      path: "/products/forgemaster",
+    },
+  ];
+
   return (
     <nav className="center-wrapper">
       <div className="nav-wrapper wrapper">
@@ -102,26 +124,17 @@ const Navbar = ({ hamburger, event, toggle }) => {
         </Link>
         <div className="nav-links">
           <Link
-            to="/products"
+            to="/"
             className="nav-dropdown-box"
             onMouseEnter={() => handleMouseEnter("store")}
           >
             STORE
             {dropdownVisible === "store" && (
-              <div
-                className="nav-dropdown-content"
-                onMouseLeave={handleMouseLeave}
-              >
-                {/* Contenuto della tendina */}
-                <div className="nav-store-dropdown-card">
-                  <img src="" alt="" />
-                  <p></p>
-                </div>
-              </div>
+              <Dropdown data={prebuild} leaveEvent={handleMouseLeave} />
             )}
           </Link>
           <Link
-            to=""
+            to="/"
             className="nav-dropdown-box"
             onMouseEnter={() => handleMouseEnter("components")}
           >
@@ -135,7 +148,7 @@ const Navbar = ({ hamburger, event, toggle }) => {
         </div>
 
         <div className="nav-right">
-         {toggle}
+          {toggle}
           <Link to="/login">
             <PersonIcon />
           </Link>

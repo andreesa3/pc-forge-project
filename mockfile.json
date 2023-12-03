@@ -637,7 +637,7 @@
     {
       "id": 1,
       "name": "CREATOR",
-      "description": "Un PC entry-level potente, ottimizzato per attività creative e gaming moderato. Presenta un Intel-Core i3-13100, Nvidia RTX 4060 Ti, GIGABYTE B660M DS3H, Crucial Ballistix DDR4 8GB, be quiet! Dark Rock Pro 4, alloggiato nel case NZXT H510. Utilizza uno storage SSD NVMe WD Blue SN550 da 500GB e un EVGA SuperNOVA 650 G5 per prestazioni affidabili. Ideale per un inizio efficiente e performante nelle attività creative e di gaming.",
+      "description": "PC entry-level potente: Intel Core i3-13100, Nvidia RTX 4060 Ti, 8GB RAM, SSD 500GB NVMe. Ottimizzato per creatività e gaming moderato nel case NZXT H510. Prestazioni affidabili con be quiet! Dark Rock Pro 4 e EVGA SuperNOVA 650 G5. Ideale per iniziare efficientemente.",
       "img": "/src/assets/images/creator.png",
       "price": 955,
       "cpu": "Intel-Core i3-13100",
@@ -654,7 +654,7 @@
     {
       "id": 2,
       "name": "CREATOR II",
-      "description": "'CREATOR II' è una configurazione avanzata, perfetta per attività creative impegnative e gaming di livello medio. Con il Ryzen 5 5600X, Nvidia RTX 4060 Ti e la scheda madre ASRock B450M PRO4, offre prestazioni elevate. La RAM HyperX Predator DDR4 da 16GB e il dissipatore be quiet! Dark Rock Pro 4 assicurano un funzionamento fluido e silenzioso. Alloggiato nel case NZXT H510, utilizza un SSD Samsung 860 EVO da 500GB per lo storage e l'alimentatore Corsair CX550M. Perfect for high-performance creative tasks and mid-level gaming.",
+      "description": "'CREATOR II': Configurazione avanzata con Ryzen 5 5600X, Nvidia RTX 4060 Ti, e ASRock B450M PRO4 per prestazioni elevate. RAM HyperX Predator DDR4 16GB, dissipatore be quiet! Dark Rock Pro 4 per fluidità e silenziosità. Case NZXT H510, SSD Samsung 860 EVO 500GB, alimentatore Corsair CX550M. Ideale per attività creative e gaming di livello medio.",
       "img": "/src/assets/images/creator2.png",
       "price": 1051,
       "cpu": "Ryzen 5 5600X",
@@ -671,7 +671,7 @@
     {
       "id": 3,
       "name": "INNOVATOR",
-      "description": "L'INNOVATOR è un PC di fascia media bilanciato con un Intel-Core i5-13600K, Nvidia RTX 4070 e RAM HyperX Predator DDR4 da 16GB, perfetto per gaming e creazione di contenuti. Il case Corsair iCUE 220T e l'SSD Crucial MX500 da 1TB lo rendono affidabile e versatile. Con il dissipatore Noctua NH-D15 e l'alimentatore EVGA SuperNOVA 650 G5, offre prestazioni stabili e silenziose. Ideale per chi cerca un sistema efficiente per attività creative e gaming avanzato",
+      "description": "'INNOVATOR': PC di fascia media con Intel-Core i5-13600K, Nvidia RTX 4070, RAM HyperX Predator DDR4 16GB. Case Corsair iCUE 220T, SSD Crucial MX500 1TB per affidabilità. Dissipatore Noctua NH-D15, alimentatore EVGA SuperNOVA 650 G5 per prestazioni stabili e silenziose. Versatile per gaming e creazione di contenuti avanzata.",
       "img": "/src/assets/images/Innovator.png",
       "price": 1496,
       "cpu": "Intel-Core i5-13600K",
@@ -688,7 +688,7 @@
     {
       "id": 4,
       "name": "INNOVATOR II",
-      "description": "L'INNOVATOR II è un sistema potente, perfetto per il gaming e la creazione di contenuti. Con processore Intel-Core i5-13600K, GPU RX 6800 XT e RAM Corsair DDR5 da 16GB, offre prestazioni elevate. Il case Fractal Design Meshify C assicura un design moderno e un raffreddamento efficiente, mentre l'SSD Crucial MX500 da 1TB garantisce uno storage affidabile. Con l'alimentatore Seasonic Focus GX-750, è ideale per il gaming avanzato e la produzione multimediale.",
+      "description": "'INNOVATOR II': Sistema potente per gaming e creazione di contenuti. Intel-Core i5-13600K, GPU RX 6800 XT, RAM Corsair DDR5 16GB. Design moderno con Fractal Design Meshify C per raffreddamento efficiente. SSD Crucial MX500 1TB per storage affidabile. Alimentatore Seasonic Focus GX-750. Ideale per gaming avanzato e produzione multimediale.",
       "img": "/src/assets/images/innovatorII.png",
       "price": 1669,
       "cpu": "Intel-Core i5-13600K",
@@ -705,7 +705,7 @@
     {
       "id": 5,
       "name": "FORGE MASTER",
-      "description": "Il 'FORGE MASTER' è un concentrato di potenza progettato per attività intensive e gaming ad altissime prestazioni. Al suo cuore c'è l'Intel-Core i7-13700K, supportato dalla potentissima Nvidia RTX 4090 e dalla scheda madre ASUS ROG Strix Z690-E Gaming WiFi. Con 32GB di RAM G.Skill Trident Z Neo DDR5 e il raffreddamento affidabile del NZXT Kraken X63, questo sistema offre prestazioni sorprendenti. Il case Fractal Design Meshify C ospita l'SSD Samsung 970 EVO Plus da 1TB NVMe. Con l'alimentatore be quiet! Straight Power 11 da 850W, questa configurazione è pensata per coloro che cercano il massimo delle prestazioni per attività avanzate e gaming di fascia alta.",
+      "description": "'FORGE MASTER': Concentrato di potenza per attività intensive e gaming ad altissime prestazioni. Intel-Core i7-13700K, Nvidia RTX 4090, ASUS ROG Strix Z690-E Gaming WiFi. 32GB RAM G.Skill Trident Z Neo DDR5, raffreddamento NZXT Kraken X63, case Fractal Design Meshify C. SSD Samsung 970 EVO Plus 1TB NVMe. Alimentatore be quiet! Straight Power 11 850W. Configurazione per prestazioni massime in attività avanzate e gaming di fascia alta.",
       "img": "/src/assets/images/ForgeMasterMarcio.png",
       "price": 2999,
       "cpu": "Intel-Core i7-13700K",
@@ -722,7 +722,7 @@
     {
       "id": 6,
       "name": "FORGE MASTER II",
-      "description": "'FORGE MASTER II' è una potente macchina progettata per le attività più impegnative e il gaming di fascia alta. Al suo interno batte il cuore di un Ryzen 9 7950X3D, affiancato dalla maestosa Nvidia RTX 4090 su una scheda madre ASUS ROG STRIX B550-XE GAMING WIFI. Con 64GB di RAM Kingston Fury Beast DDR5 e il raffreddamento affidabile del Cooler Master MasterLiquid ML360R, questo sistema offre prestazioni eccezionali. L'alloggiamento nel case Lian Li Lancool II Mesh ospita l'SSD Sabrent Rocket Q da 2TB NVMe. Con l'alimentatore be quiet! Straight Power 11 da 850W, questa configurazione rappresenta l'eccellenza per chi ricerca la massima potenza per attività avanzate e il gaming di fascia alta.",
+      "description": "'FORGE MASTER II': Macchina potente per attività impegnative e gaming di fascia alta. Ryzen 9 7950X3D, Nvidia RTX 4090, ASUS ROG STRIX B550-XE GAMING WIFI. 64GB RAM Kingston Fury Beast DDR5, raffreddamento Cooler Master MasterLiquid ML360R, case Lian Li Lancool II Mesh. SSD Sabrent Rocket Q 2TB NVMe. Alimentatore be quiet! Straight Power 11 850W. Configurazione di eccellenza per massima potenza in attività avanzate e gaming di fascia alta.",
       "img": "/src/assets/images/ForgeMasterII.png",
       "price": 3499,
       "cpu": "Ryzen 9 7950X3D",

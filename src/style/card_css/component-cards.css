@@ -10,7 +10,10 @@
 .sortOrderSelect{
     width: 150px;
     margin-bottom: 10px;
+    border:none;
+    box-shadow: 5px 5px 5px grey;
 }
+
 
 .cardWrapper{
     display: flex;
