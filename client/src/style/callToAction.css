@@ -1,0 +1,26 @@
+.calltoaction-section {
+  background-color: var(--clr-purple);
+  color: white;
+}
+
+.calltoaction {
+  display: grid;
+  gap: 3rem;
+}
+
+.calltoaction-rigth h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.calltoaction-rigth p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .calltoaction {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
