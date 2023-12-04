@@ -9,7 +9,6 @@
   border-radius: 6px;
   font-weight: 500;
   color: var(--clr-purple);
-  width: 100%;
 }
 
 .btn:before {
@@ -36,6 +35,9 @@
   left: -30px;
 }
 
+.btn:active {
+  border: 1px solid var(--clr-purple);
+}
 
 /* Purple Background */
 .btn-purple {

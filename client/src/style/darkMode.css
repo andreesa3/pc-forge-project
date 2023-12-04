@@ -32,10 +32,18 @@
     linear-gradient(145deg, transparent 35%, #8a00fc, #40c9ff) border-box;
 }
 
-.dark-mode .form-container .form-group input {
+.dark-mode .form-container .form-group input, 
+.dark-mode .inputForm,
+.dark-mode .form-input-auth,
+.dark-mode .form-submit {
   color: white !important;
+  background-color: transparent;
 }
-.dark-mode .form-container .form-group textarea {
+.dark-mode .form-container .form-group textarea, 
+.dark-mode .user-form,
+.dark-mode .inputForm,
+.dark-mode .form-input-auth,
+.dark-mode .form-submit {
   color: white !important;
 }
 
@@ -48,7 +56,7 @@
   border-bottom: 1px solid #ac47ff;
 }
 
-.dark-mode .containerInfo span{
+.dark-mode .containerInfo span {
   color: var(--clr-white);
 }
 
@@ -213,3 +221,21 @@
 .dark-mode .infoCompontent {
   color: var(--clr-white);
 }
+
+
+.dark-mode .user-form {
+  background-color: #242424;
+}
+
+.dark-mode .user-form *:not(.span, h1) {
+  color: var(--clr-white); 
+}
+
+.dark-mode .svg path {
+  fill: #fff;
+}
+
+.dark-mode .inputForm {
+  border: 1px solid gray;
+}
+

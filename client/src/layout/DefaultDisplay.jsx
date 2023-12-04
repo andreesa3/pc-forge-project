@@ -12,6 +12,10 @@ const DefaultDisplay = () => {
     setHamburger((h) => !h);
   };
 
+  const closeSidebar = () => {
+    setHamburger(false);
+  }
+
   const handleResize = () => {
     if (window.matchMedia("(min-width: 900px)").matches) {
       setHamburger(false);
@@ -30,7 +34,7 @@ const DefaultDisplay = () => {
 
   return (
     <>
-      <Navbar hamburger={hamburger} event={handleHamburger} toggle={<DarkModeComponent/>} />
+      <Navbar hamburger={hamburger} event={handleHamburger} closeSidebar={closeSidebar} toggle={<DarkModeComponent/>} />
 
       <Sidebar hamburger={hamburger} event={handleHamburger} />
 

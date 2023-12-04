@@ -18,7 +18,7 @@ import coolerIcon from "../../assets/icons/componentsIcon/cooler-icon.svg";
 import DarkMode from "../../features/darkmode";
 
 
-const Navbar = ({ hamburger, event, toggle }) => {
+const Navbar = ({ hamburger, event, toggle, closeSidebar }) => {
   const { appClassName, isDarkMode, toggleDarkMode } = DarkMode();
   // Stato per gestire la visibilità delle dropdown
   const [dropdownVisible, setDropdownVisible] = useState(null);
@@ -113,7 +113,7 @@ const Navbar = ({ hamburger, event, toggle }) => {
   return (
     <nav className="center-wrapper">
       <div className="nav-wrapper wrapper">
-        <Link to="/" onClick={handleMouseLeave}>
+        <Link to="/" onClick={closeSidebar} onMouseEnter={handleMouseLeave} >
           <div className="logo" onClick={scrollUp}>
             <img src={logo} alt="logo" />
             <h3>
@@ -140,16 +140,16 @@ const Navbar = ({ hamburger, event, toggle }) => {
               <Dropdown data={componentsItems} leaveEvent={handleMouseLeave} />
             )}
           </span>
-          <Link to="/builder" onClick={handleMouseLeave}>PC BUILDER</Link>
-          <Link to="/contact" onClick={handleMouseLeave}>CONTATTI</Link>
+          <Link to="/builder" onClick={handleMouseLeave} onMouseEnter={handleMouseLeave}>PC BUILDER</Link>
+          <Link to="/contact" onClick={handleMouseLeave} onMouseEnter={handleMouseLeave}>CONTATTI</Link>
         </div>
 
         <div className="nav-right">
           {toggle}
-          <Link to="/login">
+          <Link to="/login" onClick={closeSidebar} onMouseEnter={handleMouseLeave} >
             <PersonIcon />
           </Link>
-          <Link to="/cart">
+          <Link to="/cart" onClick={closeSidebar} onMouseEnter={handleMouseLeave} >
             <ShoppingCartIcon />
           </Link>
           <div className="hamburger">
