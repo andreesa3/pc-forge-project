@@ -21,11 +21,9 @@ app.post('/login', async (req, res) => {
     if (user) {
       if (user.password === password) {
         res.json("Success");
-      } else {
-        res.json('Password is incorrect');
       }
     } else {
-      res.json('User not found');
+      res.json('email o password non corrette');
     }
   } catch (error) {
     console.error(error);
