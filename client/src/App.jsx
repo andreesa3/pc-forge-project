@@ -25,10 +25,11 @@ import Builder from "./pages/Builder";
 import useDarkMode from "./features/darkmode";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Cart from "./pages/Cart";
 
 const App = () => {
   const { appClassName } = useDarkMode();
-  
+
   document.body.className = appClassName;
 
   return (
@@ -37,7 +38,7 @@ const App = () => {
         <Route path="/" element={<DefaultDisplay />}>
 
           <Route path="" element={<Home />} />
-          
+
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
 
@@ -65,6 +66,7 @@ const App = () => {
           <Route path="product/power/:id" element={<PowerDetail />} />
           <Route path="contact" element={<Contact />} />
           <Route path="builder" element={<Builder />} />
+          <Route path="cart" element={<Cart />} />
         </Route>
       </Routes>
     </div>
