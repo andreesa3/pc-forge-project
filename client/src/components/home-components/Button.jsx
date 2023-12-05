@@ -2,7 +2,7 @@ const Button = ({ text, theme, addToCart, removeFromCart }) => {
   return (
     <>
       {
-        text === 'Compra ora' ? (
+        text === 'Aggiungi al Carrello' ? (
           <button className={`btn ${theme}`} onClick={addToCart}>{text}</button>
         ) : (<button className={`btn ${theme}`} onClick={removeFromCart}>{text}</button>)
       }

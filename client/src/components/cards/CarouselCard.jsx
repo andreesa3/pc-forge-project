@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../home-components/Button'
 
-const CarouselCard = ({ text, price, img, productId, onClick }) => {
+const CarouselCard = ({ text, price, img, productId, onClick, addToCart }) => {
   const handleCardClick = () => {
     if (onClick) {
       onClick(productId.toString());
@@ -16,7 +16,7 @@ const CarouselCard = ({ text, price, img, productId, onClick }) => {
           <span className='priceCarouselCard'>€{price}</span>
         </div>
         <div className='btnCarouselCard'>
-          <Button text='Aggiungi al Carrello' theme='dark' />
+          <Button addToCart={addToCart} text='Aggiungi al Carrello' theme='dark' />
         </div>
       </div>
 

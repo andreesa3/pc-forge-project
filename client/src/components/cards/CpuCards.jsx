@@ -1,13 +1,27 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux"
 import mockfile from '/mockfile.json';
 import CarouselCard from './CarouselCard';
+import { useGetAllProductsQuery } from '../../features/ProductApi';
+import { addToCart } from '../../features/CartSlice';
 
 const CpuCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
-  const cpuArray = mockfile.cpu;
+  // const cpuArray = mockfile.cpu;
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
 
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching data: {error}</p>;
+  }
+
+  const cpuItems = response && response.cpu ? response.cpu : [];
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
   };
@@ -16,7 +30,13 @@ const CpuCards = () => {
     navigate(`/product/cpu/${cpuId}`);
   };
 
-  const sortedCpuArray = [...cpuArray].sort((a, b) => {
+  const handleAddToCart = (product) => {
+
+    dispatch(addToCart(product))
+
+  }
+
+  const sortedCpuArray = [...cpuItems].sort((a, b) => {
     return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
   });
 
@@ -30,8 +50,8 @@ const CpuCards = () => {
         </select>
         <div className='componentCards'>
           {sortedCpuArray.map((cpu) => (
-            <div key={cpu.id} onClick={() => handleCardClick(cpu.id)}>
-              <CarouselCard text={cpu.name} price={`${cpu.price}€`} img={cpu.img} />
+            <div key={cpu.id} >
+              <CarouselCard addToCart={() => handleAddToCart(cpu)} text={cpu.name} price={`${cpu.price}€`} img={cpu.img}  />
             </div>
           ))}
         </div>

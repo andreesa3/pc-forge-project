@@ -1,6 +1,8 @@
 import solitudine from '../assets/images/solitudine.jpeg'
+import { useGetAllProductsQuery } from '../features/ProductApi';
 
 const Cart = () => {
+  const {data, error, isLoading} = useGetAllProductsQuery()
 
   return (
     <section>
