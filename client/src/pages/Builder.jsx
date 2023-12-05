@@ -11,6 +11,8 @@ import cooler from "../assets/icons/cooler.webp"
 import SelectionWrapper from '../components/builder/SelectionWrapper'
 import BubbleAssistant from '../components/builder/bubbleAssistant'
 import logo from '../assets/icons/logo.svg'
+import Button from "../components/home-components/Button";
+import { useEffect } from 'react';
 
 
 
@@ -24,17 +26,41 @@ function Builder() {
     power: null,
     ssd: null,
     cooler: null,
-    case: null,
+    tower: null,
   });
+  const [showIncompatiblePopup, setShowIncompatiblePopup] = useState(false);
+ 
+  useEffect(() => {
+    setShowIncompatiblePopup(false);
+  }, [selectedItems.motherboard && selectedItems.motherboard.details.socket]);
+  
 
   const handleSelectionChange = (itemName) => (event) => {
     const selectedItemName = event.target.value;
     const itemData = mockData[itemName].find((item) => item.id === parseInt(selectedItemName));
+
+    if (itemName === 'cpu') {
+      const selectedMotherboard = selectedItems.motherboard; 
+      
+      if (selectedMotherboard && !isCompatibleCpu(itemData, selectedMotherboard)) {
+        console.log(selectedMotherboard.details.socket,);
+        setShowIncompatiblePopup(true);
+        return; 
+        
+      }
+    }
+
+
     setSelectedItems((prevSelectedItems) => ({
       ...prevSelectedItems,
       [itemName]: itemData,
     }));
   };
+
+  const isCompatibleCpu = (cpu, motherboard) => {
+    return cpu.socket === motherboard.details.socket;
+  };
+
 
   return (
     <section>
@@ -45,20 +71,28 @@ function Builder() {
          ecco perche abbiamo creato questo tool per permettervi di scegliere al meglio </span>,
          se avete domande basta andare sulla sezione F.A.Q per trovare delle risposte , oppure potete cheidere al nostro asssitente in basso a destra . </h3>
 
-    </div>
 
    
    <div className="builder wrapper">  
-       <SelectionWrapper imgSrc={cpu} options={mockData.cpu} onSelectChange={handleSelectionChange("cpu")} selectedData={selectedItems.cpu} name="cpu"/>
-       <SelectionWrapper imgSrc={gpu} options={mockData.gpu} onSelectChange={handleSelectionChange("gpu")} selectedData={selectedItems.gpu} name="gpu"/>
-       <SelectionWrapper imgSrc={ram} options={mockData.ram} onSelectChange={handleSelectionChange("ram")} selectedData={selectedItems.ram} name="ram"/>
-       <SelectionWrapper imgSrc={motherboard} options={mockData.motherboard} onSelectChange={handleSelectionChange("motherboard")} selectedData={selectedItems.motherboard} name="mobo"/>
-       <SelectionWrapper imgSrc={power} options={mockData.power} onSelectChange={handleSelectionChange("power")} selectedData={selectedItems.power} name="power"/>
-       <SelectionWrapper imgSrc={ssd} options={mockData.ssd} onSelectChange={handleSelectionChange("ssd")} selectedData={selectedItems.ssd} name="ssd"/>
-       <SelectionWrapper imgSrc={cooler} options={mockData.cooler} onSelectChange={handleSelectionChange("cooler")} selectedData={selectedItems.cooler} name="cooler"/>
-       <SelectionWrapper imgSrc={cases} options={mockData.case} onSelectChange={handleSelectionChange("case")} selectedData={selectedItems.case} name="case"/>
-   <BubbleAssistant/>
+       <SelectionWrapper imgSrc={motherboard} options={mockData.motherboard} onSelectChange={handleSelectionChange("motherboard")} selectedData={selectedItems.motherboard} data ={selectedItems.motherboard} type="motherboard" label="cpu" name="cpu"/>
+       <SelectionWrapper imgSrc={cpu} options={mockData.cpu} onSelectChange={handleSelectionChange("cpu")} selectedData={selectedItems.cpu} data ={selectedItems.cpu} type="cpu" name="cpu"/>
+       <SelectionWrapper imgSrc={gpu} options={mockData.gpu} onSelectChange={handleSelectionChange("gpu")} selectedData={selectedItems.gpu} data ={selectedItems.gpu} type="gpu" name="gpu"/>
+       <SelectionWrapper imgSrc={ram} options={mockData.ram} onSelectChange={handleSelectionChange("ram")} selectedData={selectedItems.ram} data ={selectedItems.ram} type="ram" name="ram"/>
+       <SelectionWrapper imgSrc={power} options={mockData.power} onSelectChange={handleSelectionChange("power")} selectedData={selectedItems.power} data ={selectedItems.power} type="power" name="power"/>
+       <SelectionWrapper imgSrc={ssd} options={mockData.ssd} onSelectChange={handleSelectionChange("ssd")} selectedData={selectedItems.ssd} data ={selectedItems.ssd} type="ssd" name="ssd"/>
+       <SelectionWrapper imgSrc={cooler} options={mockData.cooler} onSelectChange={handleSelectionChange("cooler")} selectedData={selectedItems.cooler} data ={selectedItems.cooler} type="cooler" name="cooler"/>
+       <SelectionWrapper imgSrc={cases} options={mockData.tower} onSelectChange={handleSelectionChange("tower")} selectedData={selectedItems.tower} data ={selectedItems.tower} type="tower" name="case" />
+       {showIncompatiblePopup === true && (
+        <div className="incompatibility-popup">
+          <p>Error: Selected CPU is not compatible with the motherboard.</p>
+          <button onClick={() => setShowIncompatiblePopup(false)}>Close</button>
+        </div>
+      )}
    </div>
+    <Button text="Compra ora" className="builder-btn" theme="dark" />
+  <Button text="Aggiungi al carrello" className="builder-btn" theme="light" />
+   <BubbleAssistant/>
+    </div>
     </section>
     
   )
