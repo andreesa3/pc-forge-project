@@ -84,12 +84,12 @@ const Login = () => {
           <div className="flex-row">
             <div style={{ display: 'flex', alignItems: 'center', gap: '.25rem', marginTop: '.5rem' }}>
               <input type="radio" />
-              <label>Ridordami</label>
+              <label>Ricordami</label>
             </div>
             <span className="span">Password dimenticata?</span>
           </div>
 
-          <button className="btn form-submit">Registra</button>
+          <button className="btn form-submit">Accedi</button>
 
           <p className="p">Non hai un account? <Link to='/register' className="span">Registrati</Link></p>
           <p className="p line">O accedi</p>
