@@ -10,11 +10,16 @@ const CartSlice = createSlice({
     initialState,
     reducers: {
       addToCart: (state, action) => {
-        return {
-          ...state,
-          cartItems: [...state.cartItems, action.payload],
-        };
-      },
+       const itemIndex = state.cartItems.findIndex(
+        (item) => item.id === action.payload.id
+        );
+        if(itemIndex >= 0){
+            state.cartItems[itemIndex].cartQuantity += 1
+        } else {
+          const tempProduct = { ...action.payload, cartQuantity: 1 };
+          state.cartItems.push(tempProduct)
+        }
+      }
     },
   });
   
