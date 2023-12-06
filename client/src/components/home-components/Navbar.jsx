@@ -153,7 +153,7 @@ const Navbar = ({ hamburger, event, toggle, closeSidebar }) => {
           </Link>
           <Link to="/cart" onClick={closeSidebar} onMouseEnter={handleMouseLeave} >
             <ShoppingCartIcon />
-            <span>{cartTotalQuantity}</span>
+            <span style={{fontSize:"0px"}}>{cartTotalQuantity}</span>
           </Link>
           <div className="hamburger">
             <input

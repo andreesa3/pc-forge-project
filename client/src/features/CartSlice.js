@@ -1,15 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { toast } from 'react-toastify'
+import { toast } from 'react-toastify';
+
+const getCartFromLocalStorage = () => {
+  const cartItems = localStorage.getItem("cartItems");
+  return cartItems ? JSON.parse(cartItems) : [];
+};
 
 const initialState = {
-  cartItems: [],
+  cartItems: getCartFromLocalStorage(),
   cartTotalQuantity: 0,
   cartTotalAmount: 0,
 };
+
 const CartSlice = createSlice({
-    name: "cart",
-    initialState,
-    reducers: {
+  name: "cart",
+  initialState,
+  reducers: {
       addToCart: (state, action) => {
        const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
@@ -97,7 +103,7 @@ const CartSlice = createSlice({
       },
     });
     
-    export const { addToCart, revomeFromCart, decreaseCart, clearCart } = CartSlice.actions;
+    export const { addToCart, revomeFromCart, decreaseCart, clearCart, getTotals } = CartSlice.actions;
     
     export default CartSlice.reducer;
   

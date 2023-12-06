@@ -1,22 +1,40 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import mockfile from '/mockfile.json';
+import { useDispatch } from "react-redux"
 import CarouselCard from './CarouselCard';
+import { useGetAllProductsQuery } from '../../features/ProductApi';
+import { addToCart } from '../../features/CartSlice';
 
 const GpuCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
-  const gpuArray = mockfile.gpu;
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching data: {error}</p>;
+  }
+
+  const gpuItems = response && response.gpu ? response.gpu : [];
 
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
   };
 
-  const handleCardClick = (gpuId) => {
-    navigate(`/product/gpu/${gpuId}`);
+  const handleCardClick = (productId) => {
+    navigate(`/product/gpu/${productId}`);
   };
 
-  const sortedGpuArray = [...gpuArray].sort((a, b) => {
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+
+  }
+
+  const sortedGpuArray = [...gpuItems].sort((a, b) => {
     return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
   });
 
@@ -30,8 +48,8 @@ const GpuCards = () => {
       </select>
       <div className='componentCards'>
         {sortedGpuArray.map((gpu) => (
-          <div key={gpu.id} onClick={() => handleCardClick(gpu.id)}>
-            <CarouselCard text={gpu.name} price={`${gpu.price}€`} img={gpu.img} />
+          <div key={gpu.id} >
+            <CarouselCard addToCart={() => handleAddToCart(gpu)} text={gpu.name} price={`${gpu.price}€`} img={gpu.img} detail={() => handleCardClick(gpu.id)} />
           </div>
         ))}
       </div>

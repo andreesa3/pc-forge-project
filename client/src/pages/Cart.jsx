@@ -2,12 +2,16 @@ import { useSelector, useDispatch } from "react-redux"
 import { useGetAllProductsQuery } from '../features/ProductApi';
 import { Link } from "react-router-dom";
 import Button from "../components/home-components/Button";
-import { addToCart, decreaseCart, revomeFromCart, clearCart } from "../features/CartSlice";
+import { addToCart, decreaseCart, revomeFromCart, clearCart, getTotals } from "../features/CartSlice";
 import { useEffect } from "react";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart)
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getTotals())
+  }, [cart, dispatch])
 
  
 

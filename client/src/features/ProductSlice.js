@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
 import mockfile from '/mockfile.json';
 
 const initialState = {
@@ -7,14 +6,12 @@ const initialState = {
   status: null,
 };
 
+
 export const productsFetch = createAsyncThunk(
   "products/productsFetch",
   async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/products"
-      );
-      return response.data;
+     return mockfile;
     } catch (error) {
       console.log(error);
     }

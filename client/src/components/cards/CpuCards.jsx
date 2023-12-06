@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux"
+
 import mockfile from '/mockfile.json';
 import CarouselCard from './CarouselCard';
 import { useGetAllProductsQuery } from '../../features/ProductApi';
@@ -31,7 +32,6 @@ const CpuCards = () => {
   };
 
   const handleAddToCart = (product) => {
-
     dispatch(addToCart(product))
 
   }
