@@ -89,8 +89,10 @@ function Builder() {
         </div>
       )}
    </div>
+   <div style={{display:"flex", flexDirection:"row", gap:"15px", alignSelf:"flex-start", marginTop:"20px"}}>
     <Button text="Compra ora" className="builder-btn" theme="dark" />
   <Button text="Aggiungi al carrello" className="builder-btn" theme="light" />
+  </div>
    <BubbleAssistant/>
     </div>
     </section>

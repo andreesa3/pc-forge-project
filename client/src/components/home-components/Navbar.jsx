@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 /* COMPONENTS */
@@ -19,6 +20,7 @@ import DarkMode from "../../features/darkmode";
 
 
 const Navbar = ({ hamburger, event, toggle, closeSidebar }) => {
+  const { cartTotalQuantity } = useSelector((state) => state.cart);
   const { appClassName, isDarkMode, toggleDarkMode } = DarkMode();
   // Stato per gestire la visibilità delle dropdown
   const [dropdownVisible, setDropdownVisible] = useState(null);
@@ -151,6 +153,7 @@ const Navbar = ({ hamburger, event, toggle, closeSidebar }) => {
           </Link>
           <Link to="/cart" onClick={closeSidebar} onMouseEnter={handleMouseLeave} >
             <ShoppingCartIcon />
+            <span>{cartTotalQuantity}</span>
           </Link>
           <div className="hamburger">
             <input

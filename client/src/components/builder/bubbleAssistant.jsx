@@ -17,9 +17,8 @@ function BubbleAssistant() {
 
   return (
    <>
-   
-   <img src={chatImage} onClick={openChat} className='bubbleAssistant-image'></img>
    {chat === true ? <Chat/> : null}
+   <img src={chatImage} onClick={openChat} className='bubbleAssistant-image'></img>
    </>
   )
 }

@@ -1,14 +1,100 @@
-import solitudine from '../assets/images/solitudine.jpeg'
+import { useSelector, useDispatch } from "react-redux"
 import { useGetAllProductsQuery } from '../features/ProductApi';
+import { Link } from "react-router-dom";
+import Button from "../components/home-components/Button";
+import { addToCart, decreaseCart, revomeFromCart, clearCart } from "../features/CartSlice";
+import { useEffect } from "react";
 
 const Cart = () => {
-  const {data, error, isLoading} = useGetAllProductsQuery()
+  const cart = useSelector((state) => state.cart)
+  const dispatch = useDispatch();
+
+ 
+
+  const handleRemoveFromCart = (cartItem) => {
+    dispatch(revomeFromCart(cartItem))
+  }
+
+  const handleDecreaseCart = (cartItem) => {
+    dispatch(decreaseCart(cartItem))
+  }
+
+  const handleIncrementCart = (cartItem) => {
+    dispatch(addToCart(cartItem))
+  } 
+
+  const handleClearCart = () => {
+    dispatch(clearCart())
+  } 
 
   return (
     <section>
-      <div className='wrapper' style={{textAlign: 'center'}}>
-        <h3 style={{lineHeight: '200%', marginBottom: '3rem'}}>Sistema di spedizione NON ancora disponibile nella tua zona, ci scusiamo per il disagio, stiamo lavorando per ampliare la nostra rete!</h3>
-        <img src={solitudine} alt="" />
+      <div className='wrapper cart-container'>
+        <h2>Carrello</h2>
+        {cart.cartItems.length === 0 ? (
+          <div className="cart-empty">
+            <p>Il tuo carrello è vuoto</p>
+            <Link to="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-left-short" viewBox="0 0 16 16">
+  <path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+</svg>
+              <span>Inizia ad acquistare</span>
+            </Link>
+          </div>
+        ): (
+          <div>
+          <div className="titles">
+            <h3 className="product-title">Prodotto</h3>
+            <h3 className="price">Prezzo</h3>
+            <h3 className="quantity">Quantità</h3>
+            <h3 className="total">Totale</h3>
+          </div>
+          <div className="cart-items">
+            {cart.cartItems?.map(cartItem => (
+              <div className="cart-item" key={cartItem.id}>
+                <div className="cart-product">
+                <img src={cartItem.img} alt={cartItem.name} />
+                <div>
+                  <h3>{cartItem.name}</h3>
+                  <p>{cartItem.desc}</p>
+                  <button onClick={() => handleRemoveFromCart(cartItem)}>Rimuovi</button>
+                  </div>
+                </div>
+                <div className="cart-product-price">
+                  ${cartItem.price}
+                </div>
+                <div className="cart-product-quantity">
+                  <button onClick={() => handleDecreaseCart(cartItem)}>-</button>
+                  <div className="count">{cartItem.cartQuantity}</div>
+                  <button onClick={() => handleIncrementCart(cartItem)}>+</button>
+                </div>
+                <div className="cart-product-total-price">
+                  ${cartItem.price * cartItem.cartQuantity}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="cart-summary">
+            <button className="clear-btn" onClick={() => handleClearCart()}>Rimuovi tutto</button>
+            <div className="cart-checkout">
+              <div className="subtotal">
+                <span>Totale</span>
+                <span className="amount">${cart.cartTotalAmount}</span>
+              </div>
+              <Button text="Check out"></Button>
+              <div className="continue-shopping">
+              <Link to="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-left-short" viewBox="0 0 16 16">
+  <path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+</svg>
+              <span>Continua ad acquistare</span>
+            </Link>
+              </div>
+            </div>
+          </div>
+          </div>
+        ) }
+        
       </div>
     </section>
   );

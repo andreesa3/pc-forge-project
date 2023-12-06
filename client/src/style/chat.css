@@ -1,14 +1,20 @@
 
 /* chat.jsx */
 .Chat {
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    max-height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    overflow-y:auto;
+    flex-wrap: nowrap;
     background: #A333FF;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin-bottom: 40px;
+    margin-right: 20px;
   }
   /* Conversations.jsx */
 
@@ -16,6 +22,7 @@
     width: 100%;
     height: 90%;
     display: flex;
+    overflow: auto;
     flex-direction: column;
     justify-content: flex-end;
     margin: 0 auto;
@@ -30,18 +37,26 @@
   }
   
   .builder-input-form {
-    width: 60%;
+    max-width: 270px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: white;
-    margin: auto;
+    color: white;
+    bottom:0;
+    right:0;
+    align-self: flex-end;
+    margin-bottom: 15px;
+    margin-right: 35px;
+    margin-top: 10px;
+    
   }
  /* input form.jsx */
   .builder-input-field {
     width: 90%;
     outline: none;
     padding: 20px;
+    color: white;
+    background: rgba(255, 255, 255);
     border: none;
   }
   
@@ -83,4 +98,22 @@
   .builder-ai .builder-bubble-content {
     background: white;
     color: black; 
+  }
+
+  .bubbleAssistant-image{
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin-bottom: 5px;
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .Chat{
+      display: none;
+    }
+
+    .bubbleAssistant-image{
+      display: none;
+    }
   }
