@@ -89,21 +89,17 @@
       
    }
    .imageComponent {
-      max-width: 80%;
-   }
- }@media screen and (max-width: 840px) {
-   .boxDetails{
-      display: flex;
-      flex-direction: column;
-           
-   }
-   .detailsComponent{
-      display: flex;
-      flex-direction: column;
-      align-self: center;
+      max-width: 60%;
       
    }
-   .imageComponent {
-      max-width: 80%;
+   .infoCompontent{
+      display: none;
    }
+
+   .typeComponent{
+      display: none;
+   }
+   
+
+   
  }

@@ -1,20 +1,24 @@
-.componentCards {
-  display: flex;
+.componentCards{
+  display: flex;  
   gap: 15px;
   flex-wrap: wrap;
   margin-top: 100px;
   justify-content: center;
+ 
 }
 
-.sortOrderSelect {
+.sortOrderSelect{
   width: 150px;
   margin-bottom: 10px;
+  border:none;
+  box-shadow: 5px 5px 5px grey;
 }
 
-.cardWrapper {
+
+.cardWrapper{
   display: flex;
-  flex-direction: column;
+  flex-direction: column;;
   margin-top: 100px;
-  gap: 8px;
-  margin: auto 0;
+  gap:8px;
+  margin: auto 0
 }

@@ -120,7 +120,7 @@
           "memory": "6GB GDDR6",
           "power": "160 W"
         },
-        "img": "https://asset.msi.com/resize/image/global/product/product_1684397602eb9f48f9a4cb8084634fb4ded7227345.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+        "img": "https://compumarkeg.com/wp-content/uploads/2023/08/gaming-4060ti.png"
       },
       {
         "id": 4,
@@ -248,7 +248,7 @@
           "supported_memory": "DDR5",
           "power": "40W"
         },
-        "img": "https://www.trippodo.com/714362-medium_default/gigabyte-x670e-aorus-master-rev-10-scheda-madre-amd-x670-socket-am5-atx.jpg"
+        "img": "https://static.gigabyte.com/StaticFile/Image/Global/69249850040c3c6176ca7cd603580052/Product/25445"
       }
     ],
   "ram": [
@@ -294,7 +294,7 @@
         "memoryType": "DDR4",
         "capacity": "8GB"
       },
-      "img": "https://daxstore.it/84029-large_default/memoria-ram-ddr4-crucial-ballistix-3600-kit-2-x-32gb-kit-64gb.jpg"
+      "img": "https://www.digitalcitizen.life/wp-content/uploads/2021/03/crucial_ballistix_ddr4_3600.png"
     },
     {
       "id": 5,
@@ -316,7 +316,7 @@
         "memoryType": "DDR4",
         "capacity": "32GB"
       },
-      "img": "https://m.media-amazon.com/images/I/71yyY+Y29WL._AC_SY300_SX300_.jpg"
+      "img": "https://www.elnekhelytechnology.com/image/cache/catalog/Rams/Team/team-t-force-delta-rgb-32gb-2%C3%9716-ddr4-5200-cl40-1000x1000.png"
     }
   ],
   "power": [
@@ -366,7 +366,7 @@
         "wattage": "850W",
         "modularity": "Fully Modular"
       },
-      "img": "https://immagini.trovaprezzi.it/galleria-prodotti/be_quiet_straight_power_11/637342227228954034.jpg"
+      "img": "/src/assets/images/bequiet.png"
     },
     {
       "id": 5,
@@ -431,7 +431,7 @@
         "color": "Black",
         "dimensions": "W: 210mm H: 440mm D: 395mm"
       },
-      "img": "https://www.fractal-design.com/app/uploads/2019/06/Meshify-C-TGL_1.jpg"
+      "img": "/src/assets/images/case3.png"
     },
     {
       "id": 4,
@@ -444,7 +444,7 @@
         "color": "Black",
         "dimensions": "W: 240mm H: 476mm D: 471mm"
       },
-      "img": "https://asset.conrad.com/media10/isa/160267/c1/-/it/002575617PI00/image.jpg?x=400&y=400&format=jpg&ex=400&ey=400&align=center"
+      "img": "/src/assets/images/case4.png"
     },
     {
       "id": 5,
@@ -470,7 +470,7 @@
         "color": "Black",
         "dimensions": "W: 210mm H: 465mm D: 470mm"
       },
-      "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.it%2FPhanteks-Eclipse-P400A-temperato-colore%2Fdp%2FB07TTDW9KV&psig=AOvVaw1irxTHYQPqc0I23NHcHy0N&ust=1701257659103000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOj9peXM5oIDFQAAAAAdAAAAABAE"
+      "img": "/src/assets/images/case5.png"
     }
   ],
   "ssd": [
@@ -500,7 +500,7 @@
         "formFactor": "2.5 inch",
         "speed": "Read up to 560 MB/s, Write up to 510 MB/s"
       },
-      "img": "https://www.bacom.it/9202-large_default/crucialmx5001tbct1000mx500ssd11tb.jpg"
+      "img": "https://it.crucial.com/content/dam/crucial/marketing-assets/china-etail/12_12/products/crucial-mx500-2-5inch-product-dynamic-2-v2-image.psd.transform/medium-png/img.png"
     },
     {
       "id": 3,
@@ -542,7 +542,7 @@
         "formFactor": "M.2 2280",
         "speed": "Read up to 3200 MB/s, Write up to 2900 MB/s"
       },
-      "img": "https://www.servethehome.com/wp-content/uploads/2020/06/Sabrent-Rocket-Q-2TB-Front.jpg"
+      "img": "/src/assets/images/rocketQ.png"
     },
     {
       "id": 6,
@@ -556,7 +556,7 @@
         "formFactor": "M.2 2280",
         "speed": "Read up to 3500 MB/s, Write up to 2300 MB/s"
       },
-      "img": "https://m.media-amazon.com/images/I/71XcJwTViCL.jpg"
+      "img": "/src/assets/images/sx8200.png"
     }
   ],
   "cooler": [
@@ -582,7 +582,7 @@
         "type": "Air Cooler",
         "fanSize": "120mm"
       },
-      "img": "https://media.ldlc.com/r1600/ld/products/00/04/88/85/LD0004888586_2.jpg"
+      "img": "/src/assets/images/bequietcooler.png"
     },
     {
       "id": 3,
@@ -594,7 +594,7 @@
         "type": "Liquid Cooler",
         "fanSize": "120mm"
       },
-      "img": "https://m.media-amazon.com/images/I/614QJbe08zL.jpg"
+      "img": "https://www.corsair.com/wp-content/uploads/2022/01/Press_11-01-18_01.png"
     },
     {
       "id": 4,
@@ -630,7 +630,7 @@
         "type": "Liquid Cooler",
         "fanSize": "140mm"
       },
-      "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arctic.de%2Fit%2FLiquid-Freezer-II-280%2FACFRE00066B&psig=AOvVaw0hLVLYiE-2u5EUC_Sx5fZI&ust=1701258511266000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKD00PvP5oIDFQAAAAAdAAAAABAE"
+      "img": "https://www.arctic.de/media/87/20/f3/1661427365/liquid-freezer-ii-280-argb-g00_Badge.png"
     }
   ],
   "prebuilder": [
