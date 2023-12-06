@@ -26,8 +26,8 @@ const CpuCards = () => {
     setSortOrder(e.target.value);
   };
 
-  const handleCardClick = (cpuId) => {
-    navigate(`/product/cpu/${cpuId}`);
+  const handleCardClick = (productId) => {
+    navigate(`/product/cpu/${productId}`);
   };
 
   const handleAddToCart = (product) => {
@@ -48,10 +48,10 @@ const CpuCards = () => {
           <option value="asc">Crescente</option>
           <option value="desc">Decrescente</option>
         </select>
-        <div className='componentCards'>
+        <div className='componentCards' >
           {sortedCpuArray.map((cpu) => (
             <div key={cpu.id} >
-              <CarouselCard addToCart={() => handleAddToCart(cpu)} text={cpu.name} price={`${cpu.price}€`} img={cpu.img}  />
+              <CarouselCard addToCart={() => handleAddToCart(cpu)} text={cpu.name} price={`${cpu.price}€`} img={cpu.img} detail={() => handleCardClick(cpu.id)}  />
             </div>
           ))}
         </div>

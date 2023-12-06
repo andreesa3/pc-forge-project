@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify'
 import DefaultDisplay from "./layout/DefaultDisplay";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
@@ -33,7 +34,9 @@ const App = () => {
   document.body.className = appClassName;
 
   return (
+    
     <div className={appClassName}>
+      
       <Routes>
         <Route path="/" element={<DefaultDisplay />}>
 

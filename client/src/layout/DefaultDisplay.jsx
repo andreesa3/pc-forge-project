@@ -4,6 +4,7 @@ import Navbar from "../components/home-components/Navbar";
 import Sidebar from "../components/home-components/Sidebar";
 import { useState, useEffect } from "react";
 import DarkModeComponent from "../components/home-components/DarkModeComponent";
+import { ToastContainer } from "react-toastify";
 
 const DefaultDisplay = () => {
   const [hamburger, setHamburger] = useState(false);
@@ -34,12 +35,14 @@ const DefaultDisplay = () => {
 
   return (
     <>
+    
       <Navbar hamburger={hamburger} event={handleHamburger} closeSidebar={closeSidebar} toggle={<DarkModeComponent/>} />
 
       <Sidebar hamburger={hamburger} event={handleHamburger} />
 
       <main>
         <Outlet />
+        <ToastContainer/>
       </main>
 
       <Footer />

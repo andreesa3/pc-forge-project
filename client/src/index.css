@@ -17,6 +17,7 @@
 @import url(./style/chat.css);
 @import url(./style/infoPcBuilder.css);
 @import url(./style/auth-user.css);
+@import url('react-toastify/dist/ReactToastify.css');
 
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;700&display=swap");
 

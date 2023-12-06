@@ -1,0 +1,74 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\FederiCA\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-toastify
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\FederiCA\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\Users\FederiCA\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\FederiCA\AppData\Local\Microsoft\WindowsApps;C:\Users\FederiCA\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\FederiCA\AppData\Roaming\npm;C:\Users\FederiCA\AppData\Local\GitHubDesktop\bin;C:\Users\FederiCA\AppData\Roaming\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-beta.26.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\FederiCA\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141517:19)
+      at Object.onceWrapper (node:events:627:28)
+      at ClientRequest.emit (node:events:513:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:848:9)
+      at Object.onceWrapper (node:events:627:28)
+      at TLSSocket.emit (node:events:525:35)
+      at Socket._onTimeout (node:net:570:8)
+      at listOnTimeout (node:internal/timers:569:17)
+      at process.processTimers (node:internal/timers:512:7)
+
+npm manifest: 
+  {
+    "name": "e-commerce",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "@chatscope/chat-ui-kit-react": "^1.10.1",
+      "@chatscope/chat-ui-kit-styles": "^1.4.0",
+      "@emotion/react": "^11.11.1",
+      "@emotion/styled": "^11.11.0",
+      "@mui/icons-material": "^5.14.18",
+      "@mui/joy": "^5.0.0-beta.15",
+      "@mui/material": "^5.14.18",
+      "axios": "^1.6.2",
+      "bootstrap": "^5.3.2",
+      "openai": "^4.20.0",
+      "react": "^18.2.0",
+      "react-bootstrap": "^2.9.1",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.20.0",
+      "react-toastify": "^9.1.3",
+      "react-toggle-dark-mode": "^1.1.1"
+    },
+    "devDependencies": {
+      "@types/react": "^18.2.15",
+      "@types/react-dom": "^18.2.7",
+      "@vitejs/plugin-react": "^4.0.3",
+      "eslint": "^8.55.0",
+      "eslint-plugin-react": "^7.32.2",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "eslint-plugin-react-refresh": "^0.4.3",
+      "vite": "^4.4.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
