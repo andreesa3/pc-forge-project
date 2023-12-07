@@ -1,14 +1,31 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux"
+import { useLocation } from 'react-router-dom';
 import mockfile from '/mockfile.json';
 import CarouselCard from './CarouselCard';
+import { useGetAllProductsQuery } from '../../features/ProductApi';
+import { addToCart } from '../../features/CartSlice';
+
 
 const PreBuilderCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
   const preBuilderArray = mockfile.prebuilder;
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch()
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
 
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching data: {error}</p>;
+  }
+
+  const prebuilderItems = response && response.prebuilder ? response.prebuilder : [];
+  
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
   };
@@ -17,7 +34,14 @@ const PreBuilderCards = () => {
     navigate(`/prebuilder/${preBuilderId}`);
   };
 
-  const sortedPrebuilderArray = [...preBuilderArray].sort((a, b) => {
+  
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+
+  }
+
+
+  const sortedPrebuilderArray = [...prebuilderItems].sort((a, b) => {
     return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
   });
 
@@ -49,8 +73,8 @@ const PreBuilderCards = () => {
         </select>
         <div className='componentCards'>
           {filteredPrebuilders.map((preBuilder) => (
-            <div key={preBuilder.id} onClick={() => handleCardClick(preBuilder.id)}>
-              <CarouselCard text={preBuilder.name} price={`${preBuilder.price}€`} img={preBuilder.img} />
+            <div key={preBuilder.id} >
+              <CarouselCard addToCart={() => handleAddToCart(preBuilder)} text={preBuilder.name} price={`${preBuilder.price}€`} img={preBuilder.img} detail={() => handleCardClick(preBuilder.id)} />
             </div>
           ))}
         </div>

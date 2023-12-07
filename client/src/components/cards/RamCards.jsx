@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux"
+
 import mockfile from '/mockfile.json';
 import CarouselCard from './CarouselCard';
+import { useGetAllProductsQuery } from '../../features/ProductApi';
+import { addToCart } from '../../features/CartSlice';
 
 const RamCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
-  const ramArray = mockfile.ram;
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
 
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);

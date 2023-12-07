@@ -1,12 +1,27 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux"
+
 import mockfile from '/mockfile.json';
 import CarouselCard from './CarouselCard';
+import { useGetAllProductsQuery } from '../../features/ProductApi';
+import { addToCart } from '../../features/CartSlice';
 
 const CoolerCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
-  const coolerArray = mockfile.cooler;
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching data: {error}</p>;
+  }
+
+  const coolerItems = response && response.cooler ? response.cooler : [];
 
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
@@ -16,7 +31,12 @@ const CoolerCards = () => {
     navigate(`/product/cooler/${coolerId}`);
   };
 
-  const sortedCoolerArray = [...coolerArray].sort((a, b) => {
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+
+  }
+
+  const sortedCoolerArray = [...coolerItems].sort((a, b) => {
     return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
   });
 
@@ -30,8 +50,8 @@ const CoolerCards = () => {
         </select>
         <div className='componentCards'>
           {sortedCoolerArray.map((cooler) => (
-            <div key={cooler.id} onClick={() => handleCardClick(cooler.id)}>
-              <CarouselCard text={cooler.name} price={`${cooler.price}€`} img={cooler.img} />
+            <div key={cooler.id} >
+              <CarouselCard addToCart={() => handleAddToCart(cooler)} text={cooler.name} price={`${cooler.price}€`} img={cooler.img} detail={() => handleCardClick(cooler.id)} />
             </div>
           ))}
         </div>

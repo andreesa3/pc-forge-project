@@ -9,7 +9,6 @@ import { addToCart } from '../../features/CartSlice';
 
 const CpuCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
-  // const cpuArray = mockfile.cpu;
   const navigate = useNavigate();
   const dispatch = useDispatch()
   const { data: response, error, isLoading } = useGetAllProductsQuery();

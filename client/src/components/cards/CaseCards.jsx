@@ -1,13 +1,27 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux"
+
 import mockfile from '/mockfile.json';
 import CarouselCard from './CarouselCard';
+import { useGetAllProductsQuery } from '../../features/ProductApi';
+import { addToCart } from '../../features/CartSlice';
 
 const CaseCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
-  const caseArray = mockfile.tower;
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
 
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching data: {error}</p>;
+  }
+
+  const towerItems = response && response.tower ? response.tower : [];
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
   };
@@ -16,7 +30,13 @@ const CaseCards = () => {
     navigate(`/product/case/${caseId}`);
   };
 
-  const sortedCaseArray = [...caseArray].sort((a, b) => {
+  
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+
+  }
+
+  const sortedCaseArray = [...towerItems].sort((a, b) => {
     return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
   });
 
@@ -30,8 +50,8 @@ const CaseCards = () => {
         </select>
         <div className='componentCards'>
           {sortedCaseArray.map((tower) => (
-            <div key={tower.id} onClick={() => handleCardClick(tower.id)}>
-              <CarouselCard text={tower.name} price={`${tower.price}€`} img={tower.img} />
+            <div key={tower.id} >
+              <CarouselCard addToCart={() => handleAddToCart(tower)} text={tower.name} price={`${tower.price}€`} img={tower.img} detail={() => handleCardClick(tower.id)} />
             </div>
           ))}
         </div>
