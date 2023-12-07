@@ -70,7 +70,7 @@ const PrebuildDetail = () => {
           </div>
         </div>
         <div>
-          {id === "1" ? (
+          {id === "49" ? (
             <InfoPcBuilder 
             backgroundDetail="rgba(0, 255, 0, 0.2)"
             textPc={mockfile.prebuilder[0].description}
@@ -80,7 +80,7 @@ const PrebuildDetail = () => {
             detail2={mockfile.gpu[2].description}
             imageDetail2={mockfile.gpu[2].img}
             />
-          ) : id === "2" ? (
+          ) : id === "50" ? (
             <InfoPcBuilder 
             backgroundDetail="rgba(0, 255, 0, 0.2)"
             textPc={mockfile.prebuilder[1].description}
@@ -90,7 +90,7 @@ const PrebuildDetail = () => {
             detail2={mockfile.gpu[2].description}
             imageDetail2={mockfile.gpu[2].img}
             />
-          ) : id === "3" ? (
+          ) : id === "51" ? (
             <InfoPcBuilder 
             backgroundDetail="rgba(124, 30, 255, 0.2)"
             textPc={mockfile.prebuilder[2].description}
@@ -100,7 +100,7 @@ const PrebuildDetail = () => {
             detail2={mockfile.gpu[1].description}
             imageDetail2={mockfile.gpu[1].img}
             />
-          ) : id === "4" ? (
+          ) : id === "52" ? (
             <InfoPcBuilder 
             backgroundDetail="rgba(124, 30, 255, 0.2)"
             textPc={mockfile.prebuilder[3].description}
@@ -110,7 +110,7 @@ const PrebuildDetail = () => {
             detail2={mockfile.gpu[4].description}
             imageDetail2={mockfile.gpu[4].img}
             />
-          ) : id === "5" ? (
+          ) : id === "53" ? (
             <InfoPcBuilder 
             backgroundDetail="rgb(163, 51, 255, 0.6)"
             textPc={mockfile.prebuilder[4].description}
@@ -120,7 +120,7 @@ const PrebuildDetail = () => {
             detail2={mockfile.gpu[0].description}
             imageDetail2={mockfile.gpu[0].img}
             />
-          ) : id === "6" ? (
+          ) : id === "54" ? (
             <InfoPcBuilder 
             backgroundDetail="rgb(163, 51, 255, 0.6)"
             textPc={mockfile.prebuilder[5].description}

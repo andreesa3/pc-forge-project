@@ -52,6 +52,7 @@
   padding: 50px;
   position: relative;
   gap: 2rem;
+  box-shadow: 0 9px 15px rgba(0, 0, 0, 1);
 }
 
 .row-container-down {
