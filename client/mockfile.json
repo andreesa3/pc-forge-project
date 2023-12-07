@@ -88,7 +88,7 @@
     ],
   "gpu": [
       {
-        "id": 1,
+        "id": 7,
         "name": "Nvidia RTX 4090",
         "price": 1400,
         "description": "Scheda grafica di fascia top con architettura Ampere, 24GB di memoria GDDR6X e prestazioni eccezionali per gaming ad alta risoluzione e rendering.",
@@ -100,7 +100,7 @@
         "img": "https://asset.msi.com/resize/image/global/product/product_1665552671c76199be0956de9b63d7e35b33b91acb.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
       },
       {
-        "id": 2,
+        "id": 8,
         "name": "Nvidia RTX 4070",
         "price": 527,
         "description": "Scheda grafica con architettura Ampere, 8GB di memoria GDDR6 e prestazioni di fascia alta per gaming fluido e rendering di alta qualità.",
@@ -112,7 +112,7 @@
         "img": "https://asset.msi.com/resize/image/global/product/product_16812916502ca0a14b6dfb5319c99da1d4ffb3a8ad.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
       },
       {
-        "id": 3,
+        "id": 9,
         "name": "Nvidia RTX 4060 Ti",
         "price": 350,
         "description": "Scheda grafica di fascia media con architettura Ampere, 6GB di memoria GDDR6 e ottimo rapporto prezzo-prestazioni per gaming e grafica.",
@@ -124,7 +124,7 @@
         "img": "https://asset.msi.com/resize/image/global/product/product_1684397602eb9f48f9a4cb8084634fb4ded7227345.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
       },
       {
-        "id": 4,
+        "id": 10,
         "name": "RX 7900 XT",
         "price": 791,
         "description": "Scheda grafica AMD con architettura RDNA3, 16GB di memoria GDDR6X e prestazioni adatte a gaming ad alta risoluzione e carichi di lavoro intensi.",
@@ -136,7 +136,7 @@
         "img": "https://static.gigabyte.com/StaticFile/Image/Global/868436ba12e23fc0d98e26322a618a2c/Product/32810/Png"
       },
       {
-        "id": 5,
+        "id": 11,
         "name": "RX 6800 XT",
         "price": 570,
         "description": "Scheda grafica AMD con architettura RDNA2, 16GB di memoria GDDR6 e prestazioni elevate per gaming fluido e rendering professionale.",
@@ -148,7 +148,7 @@
         "img": "https://static.gigabyte.com/StaticFile/Image/Global/c0bbcfc26864fe03dcc9b32d285d77d5/Product/26410/Png"
       },
       {
-        "id": 6,
+        "id": 12,
         "name": "AMD RX 6700 XT",
         "price": 300,
         "description": "Scheda grafica di fascia media con architettura RDNA2, 12GB di memoria GDDR6 e prestazioni eccezionali per gaming e rendering.",
@@ -162,7 +162,7 @@
     ],
   "motherboard": [
      {
-        "id": 1,
+        "id": 13,
         "name": "ASUS ROG Strix Z690-E Gaming WiFi",
         "price": 349.99,
         "description": "Scheda madre per processori Intel 1700, supporto Wi-Fi integrato, chipset Z690.",
@@ -177,7 +177,7 @@
         "img": "https://dlcdnwebimgs.asus.com/gain/293AC7FB-F2DB-4559-A749-9AD4A23598EF/w717/h525"
       },
       {
-        "id": 2,
+        "id": 14,
         "name": "GIGABYTE B660M DS3H",
         "price": 119.99,
         "description": "Scheda madre per processori Intel 1700, chipset B660, formato Micro-ATX.",
@@ -192,7 +192,7 @@
         "img": "https://static.gigabyte.com/StaticFile/Image/Global/4a4d59ed83404034feafbbf340b5c862/Product/30352/Png"
       },
       {
-        "id": 3,
+        "id": 15,
         "name": "MSI MAG B550 TOMAHAWK",
         "price": 150,
         "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen, chipset B550.",
@@ -207,7 +207,7 @@
         "img": "https://asset.msi.com/resize/image/global/product/product_160938336626fdb6ca106517e76e29ed491af5e8c7.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
       },
       {
-        "id": 4,
+        "id": 16,
         "name": "ASRock B450M PRO4",
         "price": 79.99,
         "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen di serie 3000, formato Micro-ATX.",
@@ -222,7 +222,7 @@
         "img": "https://www.asrock.com/mb/AMD/B450M%20Pro4%20R2.0/photo/B450M%20Pro4%20R2.0(M1).png"
       },
       {
-        "id": 5,
+        "id": 17,
         "name": "ASUS ROG STRIX B550-XE GAMING",
         "price": 330,
         "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen di serie 5000, formato ATX.",
@@ -237,7 +237,7 @@
         "img": "https://dlcdnwebimgs.asus.com/gain/369EA2C2-76F1-4B2B-8B38-D466CD4B059C/w1000/h732"
       },
       {
-        "id": 6,
+        "id": 18,
         "name": "GIGABYTE X570 AORUS Master",
         "price": 349.99,
         "description": "Scheda madre per socket AM5, supporta processori AMD Ryzen di nuova generazione, chipset X570.",
@@ -254,7 +254,7 @@
     ],
   "ram": [
     {
-      "id": 1,
+      "id": 19,
       "name": "Corsair DDR5 16GB",
       "price": 120,
       "description": "RAM DDR5 ad alta velocità per prestazioni elevate.",
@@ -265,7 +265,7 @@
       "img": "https://res.cloudinary.com/corsair-pwa/image/upload/f_auto,q_auto/v1/akamai/pdp/vengeance-ddr5-sodimm/sodimm_render.png"
     },
     {
-      "id": 2,
+      "id": 20,
       "name": "G.Skill Trident Z Neo DDR5 32GB",
       "price": 150,
       "description": "Altra opzione di RAM DDR5 con velocità e affidabilità migliorate.",
@@ -276,7 +276,7 @@
       "img": "https://www.gskill.com/_upload/images/166262200311.png"
     },
     {
-      "id": 3,
+      "id": 21,
       "name": "Kingston Fury Beast DDR5 64GB",
       "price": 180,
       "description": "RAM DDR5 di alta fascia per prestazioni estreme e multitasking.",
@@ -287,7 +287,7 @@
       "img": "https://ae01.alicdn.com/kf/S6a3a598387974313b3ba3a28b1240550c/Kingston-HyperX-FURY-memoria-ram-DDR4-2400MHz-8g-2666MHz-16g-3200MHz-32g-memoria-DIMM-memoria-interna.png"
     },
     {
-      "id": 4,
+      "id": 22,
       "name": "Crucial Ballistix DDR4 8GB",
       "price": 90,
       "description": "Affidabile RAM DDR4 per le esigenze informatiche quotidiane.",
@@ -298,7 +298,7 @@
       "img": "https://daxstore.it/84029-large_default/memoria-ram-ddr4-crucial-ballistix-3600-kit-2-x-32gb-kit-64gb.jpg"
     },
     {
-      "id": 5,
+      "id": 23,
       "name": "HyperX Predator DDR4 16GB",
       "price": 110,
       "description": "Altra opzione di RAM DDR4 con buone prestazioni ed efficienza.",
@@ -309,7 +309,7 @@
       "img": "https://www.nexthardware.com/recensioni/ram-memorie-flash/970/hyperx-predator-ddr4-3000mhz-16gb-kit/immagini/HyperX_Predator_3000MHz_16GB_Kit_intro.png"
     },
     {
-      "id": 6,
+      "id": 24,
       "name": "TeamGroup T-Force Delta RGB DDR4 32GB",
       "price": 130,
       "description": "RAM DDR4 con illuminazione RGB e capacità di 32GB.",
@@ -322,7 +322,7 @@
   ],
   "power": [
     {
-      "id": 1,
+      "id": 25,
       "name": "Corsair CX550M",
       "price": 60,
       "description": "Alimentatore con certificazione 80 PLUS Bronze e 550W.",
@@ -334,7 +334,7 @@
       "img": "https://assets.corsair.com/image/upload/f_auto,q_auto/v1/akamai/pdp/cxm-2021/images/cx550m_size.png"
     },
     {
-      "id": 2,
+      "id": 26,
       "name": "EVGA SuperNOVA 650 G5",
       "price": 100,
       "description": "Alimentatore modulare con certificazione 80 PLUS Gold e 650W.",
@@ -346,7 +346,7 @@
       "img": "https://images.evga.com/products/gallery/png/220-G5-0650-X2_LG_1.png"
     },
     {
-      "id": 3,
+      "id": 27,
       "name": "Seasonic Focus GX-750",
       "price": 150,
       "description": "Alimentatore con certificazione 80 PLUS Gold e 750W.",
@@ -358,7 +358,7 @@
       "img": "/src/assets/images/focus-gx-550.png"
     },
     {
-      "id": 4,
+      "id": 28,
       "name": "be quiet! Straight Power 11 850W",
       "price": 200,
       "description": "Alimentatore modulare con certificazione 80 PLUS Gold e 850W.",
@@ -370,7 +370,7 @@
       "img": "https://immagini.trovaprezzi.it/galleria-prodotti/be_quiet_straight_power_11/637342227228954034.jpg"
     },
     {
-      "id": 5,
+      "id": 29,
       "name": "Corsair AX1600i",
       "price": 400,
       "description": "Alimentatore completamente modulare con certificazione 80 PLUS Titanium e 1600W.",
@@ -382,7 +382,7 @@
       "img": "https://assets.corsair.com/image/upload/f_auto,q_auto/content/CP-9020087-NA-AX1600i-01.png"
     },
     {
-      "id": 6,
+      "id": 30,
       "name": "NZXT C Series 1000W",
       "price": 300,
       "description": "Alimentatore modulare con certificazione 80 PLUS Gold e 1000W.",
@@ -396,7 +396,7 @@
   ],
   "tower": [
     {
-      "id": 1,
+      "id": 31,
       "name": "NZXT H510",
       "price": 70,
       "description": "Case Mid-Tower con design elegante e buona gestione del flusso d'aria.",
@@ -409,7 +409,7 @@
       "img": "https://nzxt.com/assets/cms/34299/1617970872-h510-white-black-mainw-system.png?auto=format&fit=crop&h=1000&w=1000"
     },
     {
-      "id": 2,
+      "id": 32,
       "name": "Corsair iCUE 220T",
       "price": 90,
       "description": "Case Mid-Tower con pannello laterale in vetro temperato e illuminazione RGB.",
@@ -422,7 +422,7 @@
       "img": "https://pckatanaitaly.com/cdn/shop/products/Corsair_iCUE_220T_RGB_Airflow-removebg-preview.png?v=1656232554"
     },
     {
-      "id": 3,
+      "id": 33,
       "name": "Fractal Design Meshify C",
       "price": 100,
       "description": "Case Mid-Tower con design focato sul flusso d'aria e compatibilità con dissipatori ad alte prestazioni.",
@@ -435,7 +435,7 @@
       "img": "https://www.fractal-design.com/app/uploads/2019/06/Meshify-C-TGL_1.jpg"
     },
     {
-      "id": 4,
+      "id": 34,
       "name": "Lian Li Lancool II Mesh",
       "price": 120,
       "description": "Case Mid-Tower con pannelli in mesh per massima ventilazione e configurazione flessibile.",
@@ -448,7 +448,7 @@
       "img": "https://asset.conrad.com/media10/isa/160267/c1/-/it/002575617PI00/image.jpg?x=400&y=400&format=jpg&ex=400&ey=400&align=center"
     },
     {
-      "id": 5,
+      "id": 35,
       "name": "Cooler Master MasterBox TD500 Mesh",
       "price": 80,
       "description": "Case Mid-Tower con ampio supporto per ventilazione e design moderno.",
@@ -461,7 +461,7 @@
       "img": "https://shop.akinformatica.it/wp-content/uploads/2023/02/TD500-Mesh-v2-Regular-ARGB-light-600x600.png"
     },
     {
-      "id": 6,
+      "id": 36,
       "name": "Phanteks Eclipse P400A",
       "price": 110,
       "description": "Case Mid-Tower con pannelli in mesh per un'ottima ventilazione e illuminazione RGB.",
@@ -476,7 +476,7 @@
   ],
   "ssd": [
     {
-      "id": 1,
+      "id": 37,
       "name": "Samsung 860 EVO 500GB",
       "price": 70,
       "description": "SSD SATA con capacità di 500GB per prestazioni affidabili.",
@@ -490,7 +490,7 @@
       "img": "https://images.samsung.com/is/image/samsung/it-860-evo-sata-3-2-5-inch-ssd-mz-76e4t0b-eu-frontblack-87135064?$650_519_PNG$"
     },
     {
-      "id": 2,
+      "id": 38,
       "name": "Crucial MX500 1TB",
       "price": 110,
       "description": "SSD SATA con capacità di 1TB per archiviazione e prestazioni elevate.",
@@ -504,7 +504,7 @@
       "img": "https://www.bacom.it/9202-large_default/crucialmx5001tbct1000mx500ssd11tb.jpg"
     },
     {
-      "id": 3,
+      "id": 39,
       "name": "WD Blue SN550 500GB NVMe",
       "price": 80,
       "description": "SSD NVMe con velocità elevate, capacità 500GB.",
@@ -518,7 +518,7 @@
       "img": "https://www.westerndigital.com/content/dam/store/en-us/assets/products/internal-storage/wd-blue-sn550-nvme-ssd/gallery/500gb/wd-blue-sn550-nvme-ssd-front-500gb.png"
     },
     {
-      "id": 4,
+      "id": 40,
       "name": "Samsung 970 EVO Plus 1TB NVMe",
       "price": 180,
       "description": "SSD NVMe ad alte prestazioni, capacità di 1TB per applicazioni intensive.",
@@ -532,7 +532,7 @@
       "img": "https://images.samsung.com/is/image/samsung/p6pim/it/mz-v7s1t0bw/gallery/it-970-evoplus-nvme-m2-ssd-mz-v7s1t0bw-530364432?$650_519_PNG$"
     },
     {
-      "id": 5,
+      "id": 41,
       "name": "Sabrent Rocket Q 2TB NVMe",
       "price": 300,
       "description": "SSD NVMe con capacità massiccia di 2TB per archiviazione e velocità elevate.",
@@ -546,7 +546,7 @@
       "img": "https://www.servethehome.com/wp-content/uploads/2020/06/Sabrent-Rocket-Q-2TB-Front.jpg"
     },
     {
-      "id": 6,
+      "id": 42,
       "name": "ADATA XPG SX8200 Pro 512GB NVMe",
       "price": 95,
       "description": "SSD NVMe con capacità di 512GB per prestazioni elevate.",
@@ -562,7 +562,7 @@
   ],
   "cooler": [
     {
-      "id": 1,
+      "id": 43,
       "name": "Noctua NH-D15",
       "price": 90,
       "description": "Dissipatore ad aria premium per raffreddamento silenzioso ed efficiente.",
@@ -574,7 +574,7 @@
       "img": "https://www.nexthardware.com/recensioni/raffreddamento-aria/923/noctua-nh-d15/immagini/Noctua_NH_D15_prima.png"
     },
     {
-      "id": 2,
+      "id": 44,
       "name": "be quiet! Dark Rock Pro 4",
       "price": 80,
       "description": "Dissipatore ad aria di alta qualità con ventole silenziose e prestazioni elevate.",
@@ -586,7 +586,7 @@
       "img": "https://media.ldlc.com/r1600/ld/products/00/04/88/85/LD0004888586_2.jpg"
     },
     {
-      "id": 3,
+      "id": 45,
       "name": "Corsair H100i RGB Platinum",
       "price": 120,
       "description": "Sistema di raffreddamento a liquido con radiatore da 240mm e illuminazione RGB.",
@@ -598,7 +598,7 @@
       "img": "https://m.media-amazon.com/images/I/614QJbe08zL.jpg"
     },
     {
-      "id": 4,
+      "id": 46,
       "name": "NZXT Kraken X63",
       "price": 150,
       "description": "Sistema di raffreddamento a liquido con radiatore da 280mm e controlli avanzati.",
@@ -610,7 +610,7 @@
       "img": "https://nzxt.com/assets/cms/34299/1631819120-kraken-x63-rgb-white-keyshot.png?auto=format&fit=crop&h=1000&w=1000"
     },
     {
-      "id": 5,
+      "id": 47,
       "name": "Cooler Master MasterLiquid ML360R",
       "price": 180,
       "description": "Sistema di raffreddamento a liquido con radiatore da 360mm e illuminazione personalizzabile.",
@@ -622,7 +622,7 @@
       "img": "https://cdn.coolermaster.com/media/1001/ml360rrgb_g1-zoom.png"
     },
     {
-      "id": 6,
+      "id": 48,
       "name": "Arctic Liquid Freezer II 280",
       "price": 140,
       "description": "Sistema di raffreddamento a liquido con radiatore da 280mm e prestazioni notevoli.",
@@ -636,7 +636,7 @@
   ],
   "prebuilder": [
     {
-      "id": 1,
+      "id": 49,
       "name": "CREATOR",
       "description": "PC entry-level potente: Intel Core i3-13100, Nvidia RTX 4060 Ti, 8GB RAM, SSD 500GB NVMe. Ottimizzato per creatività e gaming moderato nel case NZXT H510. Prestazioni affidabili con be quiet! Dark Rock Pro 4 e EVGA SuperNOVA 650 G5. Ideale per iniziare efficientemente.",
       "img": "/src/assets/images/creator.png",
@@ -653,7 +653,7 @@
       "type": "entrylevel"
     },
     {
-      "id": 2,
+      "id": 50,
       "name": "CREATOR II",
       "description": "'CREATOR II': Configurazione avanzata con Ryzen 5 5600X, Nvidia RTX 4060 Ti, e ASRock B450M PRO4 per prestazioni elevate. RAM HyperX Predator DDR4 16GB, dissipatore be quiet! Dark Rock Pro 4 per fluidità e silenziosità. Case NZXT H510, SSD Samsung 860 EVO 500GB, alimentatore Corsair CX550M. Ideale per attività creative e gaming di livello medio.",
       "img": "/src/assets/images/creator2.png",
@@ -670,7 +670,7 @@
       "type" :"entrylevel"
     },
     {
-      "id": 3,
+      "id": 51,
       "name": "INNOVATOR",
       "description": "'INNOVATOR': PC di fascia media con Intel-Core i5-13600K, Nvidia RTX 4070, RAM HyperX Predator DDR4 16GB. Case Corsair iCUE 220T, SSD Crucial MX500 1TB per affidabilità. Dissipatore Noctua NH-D15, alimentatore EVGA SuperNOVA 650 G5 per prestazioni stabili e silenziose. Versatile per gaming e creazione di contenuti avanzata.",
       "img": "/src/assets/images/Innovator.png",
@@ -687,7 +687,7 @@
       "type" :"medium"
     },
     {
-      "id": 4,
+      "id": 52,
       "name": "INNOVATOR II",
       "description": "'INNOVATOR II': Sistema potente per gaming e creazione di contenuti. Intel-Core i5-13600K, GPU RX 6800 XT, RAM Corsair DDR5 16GB. Design moderno con Fractal Design Meshify C per raffreddamento efficiente. SSD Crucial MX500 1TB per storage affidabile. Alimentatore Seasonic Focus GX-750. Ideale per gaming avanzato e produzione multimediale.",
       "img": "/src/assets/images/innovatorII.png",
@@ -704,7 +704,7 @@
       "type" :"medium"
     },
     {
-      "id": 5,
+      "id": 53,
       "name": "FORGE MASTER",
       "description": "'FORGE MASTER': Concentrato di potenza per attività intensive e gaming ad altissime prestazioni. Intel-Core i7-13700K, Nvidia RTX 4090, ASUS ROG Strix Z690-E Gaming WiFi. 32GB RAM G.Skill Trident Z Neo DDR5, raffreddamento NZXT Kraken X63, case Fractal Design Meshify C. SSD Samsung 970 EVO Plus 1TB NVMe. Alimentatore be quiet! Straight Power 11 850W. Configurazione per prestazioni massime in attività avanzate e gaming di fascia alta.",
       "img": "/src/assets/images/ForgeMasterMarcio.png",
@@ -721,7 +721,7 @@
       "type" :"high"
     },
     {
-      "id": 6,
+      "id": 54,
       "name": "FORGE MASTER II",
       "description": "'FORGE MASTER II': Macchina potente per attività impegnative e gaming di fascia alta. Ryzen 9 7950X3D, Nvidia RTX 4090, ASUS ROG STRIX B550-XE GAMING WIFI. 64GB RAM Kingston Fury Beast DDR5, raffreddamento Cooler Master MasterLiquid ML360R, case Lian Li Lancool II Mesh. SSD Sabrent Rocket Q 2TB NVMe. Alimentatore be quiet! Straight Power 11 850W. Configurazione di eccellenza per massima potenza in attività avanzate e gaming di fascia alta.",
       "img": "/src/assets/images/ForgeMasterII.png",

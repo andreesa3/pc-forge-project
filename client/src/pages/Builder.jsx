@@ -67,9 +67,9 @@ function Builder() {
     <div className="builder-header wrapper">
 
       <h2><img src={logo} alt="logo" /><span className="purple">PC</span> Forge Builder</h2>
-      <h3>Assembla il pc dei tuoi sogni con il builder di pc Forge <span className="builder-gradient">In Pc Forge creadiamo nella liberta dei nostri clienti di scegliere il compputer adatto alle proprie esigenze,
-         ecco perche abbiamo creato questo tool per permettervi di scegliere al meglio </span>,
-         se avete domande basta andare sulla sezione F.A.Q per trovare delle risposte , oppure potete cheidere al nostro asssitente in basso a destra . </h3>
+      <span style={{fontSize:"25px", marginBottom:"15px"}}>Assembla il pc dei tuoi sogni con il builder di pc Forge In Pc Forge creadiamo nella liberta dei nostri clienti di scegliere il compputer adatto alle proprie esigenze,
+         ecco perche abbiamo creato questo tool per permettervi di scegliere al meglio,
+         se avete domande basta andare sulla sezione F.A.Q per trovare delle risposte , oppure potete cheidere al nostro asssitente in basso a destra .</span>
 
 
    

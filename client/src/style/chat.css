@@ -7,9 +7,8 @@
     flex-direction: column;
     overflow-y:auto;
     flex-wrap: nowrap;
-    background: #A333FF;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    background: rgba(0, 0, 139, 0.8);
+    border-radius: 8px;
     position:fixed;
     bottom:0;
     right:0;
@@ -26,7 +25,7 @@
     flex-direction: column;
     justify-content: flex-end;
     margin: 0 auto;
-    background: #A333FF;
+    background: rgba(0, 0, 139, 0.8);
     
   }
   
@@ -41,7 +40,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: white;
+    color: black;
     bottom:0;
     right:0;
     align-self: flex-end;
@@ -55,8 +54,9 @@
     width: 90%;
     outline: none;
     padding: 20px;
-    color: white;
+    color: black;
     background: rgba(255, 255, 255);
+    border-radius: 8px;
     border: none;
   }
   
@@ -65,7 +65,7 @@
     outline: none;
     padding: 20px;
     border: none;
-    background: #A333FF;
+    background: none;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -91,7 +91,7 @@
   }
   
   .builder-human .builder-bubble-content {
-    background: darkblue;
+    background: var(--clr-purple);
     color: white;
   }
   

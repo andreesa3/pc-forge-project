@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux"
-
-import mockfile from '/mockfile.json';
 import CarouselCard from './CarouselCard';
 import { useGetAllProductsQuery } from '../../features/ProductApi';
 import { addToCart } from '../../features/CartSlice';
@@ -13,6 +11,15 @@ const RamCards = () => {
   const dispatch = useDispatch()
   const { data: response, error, isLoading } = useGetAllProductsQuery();
 
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching data: {error}</p>;
+  }
+
+  const ramItems = response && response.ram ? response.ram : [];
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
   };
@@ -21,7 +28,12 @@ const RamCards = () => {
     navigate(`/product/ram/${ramId}`);
   };
 
-  const sortedRamArray = [...ramArray].sort((a, b) => {
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+
+  }
+
+  const sortedRamArray = [...ramItems].sort((a, b) => {
     return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
   });
 
@@ -35,8 +47,8 @@ const RamCards = () => {
       </select>
       <div className='componentCards'>
         {sortedRamArray.map((ram) => (
-          <div key={ram.id} onClick={() => handleCardClick(ram.id)}>
-            <CarouselCard text={ram.name} price={`${ram.price}€`} img={ram.img} />
+          <div key={ram.id} >
+            <CarouselCard addToCart={() => handleAddToCart(ram)} text={ram.name} price={`${ram.price}€`} img={ram.img} detail={() => handleCardClick(ram.id)} />
           </div>
         ))}
       </div>

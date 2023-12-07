@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux"
-
-import mockfile from '/mockfile.json';
 import CarouselCard from './CarouselCard';
 import { useGetAllProductsQuery } from '../../features/ProductApi';
 import { addToCart } from '../../features/CartSlice';
@@ -38,6 +36,8 @@ const CpuCards = () => {
   const sortedCpuArray = [...cpuItems].sort((a, b) => {
     return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
   });
+
+  
 
   return (
     <section>
