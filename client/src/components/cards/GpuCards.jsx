@@ -29,9 +29,12 @@ const GpuCards = () => {
     navigate(`/product/gpu/${productId}`);
   };
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product))
-
+  const handleAddToCart = (product, cardType) => {
+    const cartItem = {
+      id: `${cardType}-${product.id}`,
+      type: cardType,
+    };
+    dispatch(addToCart(cartItem));
   }
 
   const sortedGpuArray = [...gpuItems].sort((a, b) => {
@@ -49,7 +52,7 @@ const GpuCards = () => {
       <div className='componentCards'>
         {sortedGpuArray.map((gpu) => (
           <div key={gpu.id} >
-            <CarouselCard addToCart={() => handleAddToCart(gpu)} text={gpu.name} price={`${gpu.price}€`} img={gpu.img} detail={() => handleCardClick(gpu.id)} />
+            <CarouselCard addToCart={() => handleAddToCart(gpu, 'gpu')} text={gpu.name} price={`${gpu.price}€`} img={gpu.img} detail={() => handleCardClick(gpu.id)} />
           </div>
         ))}
       </div>

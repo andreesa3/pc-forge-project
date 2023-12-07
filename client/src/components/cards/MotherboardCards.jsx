@@ -1,22 +1,41 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import mockfile from '/mockfile.json';
+import { useDispatch } from "react-redux"
+
 import CarouselCard from './CarouselCard';
+import { useGetAllProductsQuery } from '../../features/ProductApi';
+import { addToCart } from '../../features/CartSlice';
 
 const MotherboardCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
-  const mbArray = mockfile.motherboard;
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
 
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching data: {error}</p>;
+  }
+
+  const mbItems = response && response.motherboard ? response.motherboard : [];
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
   };
 
-  const handleCardClick = (mbId) => {
-    navigate(`/product/mb/${mbId}`);
+  const handleCardClick = (productId) => {
+    navigate(`/product/mb/${productId}`);
   };
 
-  const sortedMbArray = [...mbArray].sort((a, b) => {
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+
+  }
+
+
+  const sortedMbArray = [...mbItems].sort((a, b) => {
     return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
   });
 
@@ -30,8 +49,8 @@ const MotherboardCards = () => {
       </select>
       <div className='componentCards'>
         {sortedMbArray.map((mb) => (
-          <div key={mb.id} onClick={() => handleCardClick(mb.id)}>
-            <CarouselCard text={mb.name} price={`${mb.price}`} img={mb.img} />
+          <div key={mb.id} >
+            <CarouselCard addToCart={() => handleAddToCart(mb)} text={mb.name} price={`${mb.price}`} img={mb.img} detail={() => handleCardClick(mb.id)} />
           </div>
         ))}
       </div>
