@@ -51,7 +51,7 @@ const PowerCards = () => {
       <div className='componentCards'>
         {sortedPowerArray.map((power) => (
           <div key={power.id} >
-            <CarouselCard addToCart={() => handleAddToCart(power)} text={power.name} price={`${power.price}€`} img={power.img} detail={() => handleCardClick(power.id)}/>
+            <CarouselCard addToCart={() => handleAddToCart(power)} text={power.name} price={`${power.price}`} img={power.img} detail={() => handleCardClick(power.id)}/>
           </div>
         ))}
       </div>

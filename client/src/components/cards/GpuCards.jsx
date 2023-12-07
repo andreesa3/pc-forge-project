@@ -49,7 +49,7 @@ const GpuCards = () => {
       <div className='componentCards'>
         {sortedGpuArray.map((gpu) => (
           <div key={gpu.id} >
-            <CarouselCard addToCart={() => handleAddToCart(gpu)} text={gpu.name} price={`${gpu.price}€`} img={gpu.img} detail={() => handleCardClick(gpu.id)} />
+            <CarouselCard addToCart={() => handleAddToCart(gpu)} text={gpu.name} price={`${gpu.price}`} img={gpu.img} detail={() => handleCardClick(gpu.id)} />
           </div>
         ))}
       </div>

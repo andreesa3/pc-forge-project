@@ -48,7 +48,7 @@ const RamCards = () => {
       <div className='componentCards'>
         {sortedRamArray.map((ram) => (
           <div key={ram.id} >
-            <CarouselCard addToCart={() => handleAddToCart(ram)} text={ram.name} price={`${ram.price}€`} img={ram.img} detail={() => handleCardClick(ram.id)} />
+            <CarouselCard addToCart={() => handleAddToCart(ram)} text={ram.name} price={`${ram.price}`} img={ram.img} detail={() => handleCardClick(ram.id)} />
           </div>
         ))}
       </div>

@@ -49,7 +49,7 @@ const SsdCards = () => {
         <div className='componentCards'>
           {sortedSsdArray.map((ssd) => (
             <div key={ssd.id} >
-              <CarouselCard addToCart={() => handleAddToCart(ssd)} text={ssd.name} price={`${ssd.price}€`} img={ssd.img} detail={() => handleCardClick(ssd.id)} />
+              <CarouselCard addToCart={() => handleAddToCart(ssd)} text={ssd.name} price={`${ssd.price}`} img={ssd.img} detail={() => handleCardClick(ssd.id)} />
             </div>
           ))}
         </div>

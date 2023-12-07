@@ -74,7 +74,7 @@ const PreBuilderCards = () => {
         <div className='componentCards'>
           {filteredPrebuilders.map((preBuilder) => (
             <div key={preBuilder.id} >
-              <CarouselCard addToCart={() => handleAddToCart(preBuilder)} text={preBuilder.name} price={`${preBuilder.price}€`} img={preBuilder.img} detail={() => handleCardClick(preBuilder.id)} />
+              <CarouselCard addToCart={() => handleAddToCart(preBuilder)} text={preBuilder.name} price={`${preBuilder.price}`} img={preBuilder.img} detail={() => handleCardClick(preBuilder.id)} />
             </div>
           ))}
         </div>

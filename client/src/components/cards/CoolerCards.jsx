@@ -51,7 +51,7 @@ const CoolerCards = () => {
         <div className='componentCards'>
           {sortedCoolerArray.map((cooler) => (
             <div key={cooler.id} >
-              <CarouselCard addToCart={() => handleAddToCart(cooler)} text={cooler.name} price={`${cooler.price}€`} img={cooler.img} detail={() => handleCardClick(cooler.id)} />
+              <CarouselCard addToCart={() => handleAddToCart(cooler)} text={cooler.name} price={`${cooler.price}`} img={cooler.img} detail={() => handleCardClick(cooler.id)} />
             </div>
           ))}
         </div>

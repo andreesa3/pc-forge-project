@@ -51,7 +51,7 @@ const CaseCards = () => {
         <div className='componentCards'>
           {sortedCaseArray.map((tower) => (
             <div key={tower.id} >
-              <CarouselCard addToCart={() => handleAddToCart(tower)} text={tower.name} price={`${tower.price}€`} img={tower.img} detail={() => handleCardClick(tower.id)} />
+              <CarouselCard addToCart={() => handleAddToCart(tower)} text={tower.name} price={`${tower.price}`} img={tower.img} detail={() => handleCardClick(tower.id)} />
             </div>
           ))}
         </div>

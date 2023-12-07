@@ -50,7 +50,7 @@ const CpuCards = () => {
         <div className='componentCards' >
           {sortedCpuArray.map((cpu) => (
             <div key={cpu.id} >
-              <CarouselCard addToCart={() => handleAddToCart(cpu)} text={cpu.name} price={`${cpu.price}€`} img={cpu.img} detail={() => handleCardClick(cpu.id)}  />
+              <CarouselCard addToCart={() => handleAddToCart(cpu)} text={cpu.name} price={`${cpu.price}`} img={cpu.img} detail={() => handleCardClick(cpu.id)}  />
             </div>
           ))}
         </div>
