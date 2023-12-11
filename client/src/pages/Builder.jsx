@@ -30,12 +30,14 @@ function Builder() {
   });
   const [showIncompatiblePopup, setShowIncompatiblePopup] = useState(false);
  
-  useEffect(() => {
+/*   useEffect(() => {
+    console.log("call use effect")
     setShowIncompatiblePopup(false);
-  }, [selectedItems.motherboard && selectedItems.motherboard.details.socket]);
-  
+  }, [selectedItems.motherboard , selectedItems.motherboard.details.socket,selectedItems.cpu ]);
+   */
 
   const handleSelectionChange = (itemName) => (event) => {
+    setShowIncompatiblePopup(false);
     const selectedItemName = event.target.value;
     const itemData = mockData[itemName].find((item) => item.id === parseInt(selectedItemName));
 
@@ -43,10 +45,7 @@ function Builder() {
       const selectedMotherboard = selectedItems.motherboard; 
       
       if (selectedMotherboard && !isCompatibleCpu(itemData, selectedMotherboard)) {
-        console.log(selectedMotherboard.details.socket,);
         setShowIncompatiblePopup(true);
-        return; 
-        
       }
     }
 
@@ -82,7 +81,7 @@ function Builder() {
        <SelectionWrapper imgSrc={ssd} options={mockData.ssd} onSelectChange={handleSelectionChange("ssd")} selectedData={selectedItems.ssd} data ={selectedItems.ssd} type="ssd" name="ssd"/>
        <SelectionWrapper imgSrc={cooler} options={mockData.cooler} onSelectChange={handleSelectionChange("cooler")} selectedData={selectedItems.cooler} data ={selectedItems.cooler} type="cooler" name="cooler"/>
        <SelectionWrapper imgSrc={cases} options={mockData.tower} onSelectChange={handleSelectionChange("tower")} selectedData={selectedItems.tower} data ={selectedItems.tower} type="tower" name="case" />
-       {showIncompatiblePopup === true && (
+       {showIncompatiblePopup  && (
         <div className="incompatibility-popup">
           <p>Error: Selected CPU is not compatible with the motherboard.</p>
           <button onClick={() => setShowIncompatiblePopup(false)}>Close</button>
