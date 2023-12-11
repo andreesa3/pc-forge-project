@@ -1,19 +1,20 @@
-// CarouselComponent.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockfile from '/mockfile.json';
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 import CarouselCard from '../cards/CarouselCard';
+
 
 const CoolerCarousel = () => {
   const [screenSize, setScreenSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
   const navigate = useNavigate();
-
+  const { handleAddToCart } = useCartActions();
   const handleCardClick = (cooler) => {
     navigate(`/product/cooler/${cooler}`);
   };
@@ -33,7 +34,7 @@ const CoolerCarousel = () => {
     };
   }, []);
 
-  const CoolerArray = mockfile.cooler;
+  const CoolerArray = response.cooler;
 
   const cardArray = (array, cardSize) => {
     const result = [];
@@ -71,7 +72,8 @@ const CoolerCarousel = () => {
                         price={`${cooler.price}€`}
                         img={cooler.img}
                         productId={cooler.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(cooler)}
+                        detail={() => handleCardClick(cooler.id)}
                       />
                     ))}
                   </div>
@@ -91,7 +93,8 @@ const CoolerCarousel = () => {
                         price={`${cooler.price}€`}
                         img={cooler.img}
                         productId={cooler.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(cooler)}
+                        detail={() => handleCardClick(cooler.id)}
                       />
                     ))}
                   </div>
@@ -111,7 +114,8 @@ const CoolerCarousel = () => {
                         price={`${cooler.price}€`}
                         img={cooler.img}
                         productId={cooler.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(cooler)}
+                        detail={() => handleCardClick(cooler.id)}
                       />
                     ))}
                   </div>

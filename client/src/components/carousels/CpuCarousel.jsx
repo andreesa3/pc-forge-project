@@ -1,10 +1,9 @@
-// CarouselComponent.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockfile from '/mockfile.json';
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 import CarouselCard from '../cards/CarouselCard';
 
 const CpuCarousel = () => {
@@ -12,7 +11,9 @@ const CpuCarousel = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
   const navigate = useNavigate();
+  const { handleAddToCart } = useCartActions();
 
   const handleCardClick = (cpu) => {
     navigate(`/product/cpu/${cpu}`);
@@ -33,7 +34,7 @@ const CpuCarousel = () => {
     };
   }, []);
 
-  const CpuArray = mockfile.cpu;
+  const CpuArray = response.cpu;
 
   const cardArray = (array, cardSize) => {
     const result = [];
@@ -71,7 +72,8 @@ const CpuCarousel = () => {
                         price={`${cpu.price}€`}
                         img={cpu.img}
                         productId={cpu.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(cpu)}
+                        detail={() => handleCardClick(cpu.id)}
                       />
                     ))}
                   </div>
@@ -91,7 +93,8 @@ const CpuCarousel = () => {
                         price={`${cpu.price}€`}
                         img={cpu.img}
                         productId={cpu.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(cpu)}
+                        detail={() => handleCardClick(cpu.id)}
                       />
                     ))}
                   </div>
@@ -111,7 +114,8 @@ const CpuCarousel = () => {
                         price={`${cpu.price}€`}
                         img={cpu.img}
                         productId={cpu.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(cpu)}
+                        detail={() => handleCardClick(cpu.id)}
                       />
                     ))}
                   </div>

@@ -1,10 +1,9 @@
-// CarouselComponent.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockfile from '/mockfile.json';
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 import CarouselCard from '../cards/CarouselCard';
 
 const SsdCarousel = () => {
@@ -12,7 +11,9 @@ const SsdCarousel = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
   const navigate = useNavigate();
+  const { handleAddToCart } = useCartActions();
 
   const handleCardClick = (ssd) => {
     navigate(`/product/ssd/${ssd}`);
@@ -33,7 +34,7 @@ const SsdCarousel = () => {
     };
   }, []);
 
-  const SsdArray = mockfile.ssd;
+  const SsdArray = response.ssd;
 
   const cardArray = (array, cardSize) => {
     const result = [];
@@ -71,7 +72,8 @@ const SsdCarousel = () => {
                         price={`${ssd.price}€`}
                         img={ssd.img}
                         productId={ssd.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(ssd)}
+                        detail={() => handleCardClick(ssd.id)}
                       />
                     ))}
                   </div>
@@ -91,7 +93,8 @@ const SsdCarousel = () => {
                         price={`${ssd.price}€`}
                         img={ssd.img}
                         productId={ssd.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(ssd)}
+                        detail={() => handleCardClick(ssd.id)}
                       />
                     ))}
                   </div>
@@ -111,7 +114,8 @@ const SsdCarousel = () => {
                         price={`${ssd.price}€`}
                         img={ssd.img}
                         productId={ssd.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(ssd)}
+                        detail={() => handleCardClick(ssd.id)}
                       />
                     ))}
                   </div>

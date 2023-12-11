@@ -42,7 +42,10 @@ const DefaultDisplay = () => {
 
       <main>
         <Outlet />
-        <ToastContainer/>
+        <ToastContainer 
+        limit={3}
+        autoClose={2500}
+        />
       </main>
 
       <Footer />

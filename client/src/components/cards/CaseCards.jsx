@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch } from "react-redux"
-
-import mockfile from '/mockfile.json';
-import CarouselCard from './CarouselCard';
-import { useGetAllProductsQuery } from '../../features/ProductApi';
-import { addToCart } from '../../features/CartSlice';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import CarouselCard from "./CarouselCard";
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 
 const CaseCards = () => {
-  const [sortOrder, setSortOrder] = useState('asc');
+  const [sortOrder, setSortOrder] = useState("asc");
   const navigate = useNavigate();
-  const dispatch = useDispatch()
   const { data: response, error, isLoading } = useGetAllProductsQuery();
+  const { handleAddToCart } = useCartActions();
+
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -21,7 +19,7 @@ const CaseCards = () => {
     return <p>Error fetching data: {error}</p>;
   }
 
-  const towerItems = response && response.tower ? response.tower : [];
+  const towerItems = response.tower;
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
   };
@@ -30,34 +28,42 @@ const CaseCards = () => {
     navigate(`/product/case/${caseId}`);
   };
 
-  
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product))
-
-  }
-
   const sortedCaseArray = [...towerItems].sort((a, b) => {
-    return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
+    return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
   });
 
   return (
     <section>
-      <div className='cardWrapper wrapper'>
+      <div className="cardWrapper wrapper">
         <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
-        <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
-          <option className='options' value="asc">Crescente</option>
-          <option className='options' value="desc">Decrescente</option>
+        <select
+          className="sortOrderSelect"
+          value={sortOrder}
+          onChange={handleSortOrderChange}
+        >
+          <option className="options" value="asc">
+            Crescente
+          </option>
+          <option className="options" value="desc">
+            Decrescente
+          </option>
         </select>
-        <div className='componentCards'>
+        <div className="componentCards">
           {sortedCaseArray.map((tower) => (
-            <div key={tower.id} >
-              <CarouselCard addToCart={() => handleAddToCart(tower)} text={tower.name} price={`${tower.price}`} img={tower.img} detail={() => handleCardClick(tower.id)} />
+            <div key={tower.id}>
+              <CarouselCard
+                addToCart={() => handleAddToCart(tower)}
+                text={tower.name}
+                price={`${tower.price}`}
+                img={tower.img}
+                detail={() => handleCardClick(tower.id)}
+              />
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default CaseCards;

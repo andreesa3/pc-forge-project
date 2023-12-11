@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from "react-redux"
 import { useLocation } from 'react-router-dom';
-import mockfile from '/mockfile.json';
 import CarouselCard from './CarouselCard';
 import { useGetAllProductsQuery } from '../../features/ProductApi';
-import { addToCart } from '../../features/CartSlice';
+import { useCartActions } from "../../utilities/CartUtility"
 
 
 const PreBuilderCards = () => {
   const [sortOrder, setSortOrder] = useState('asc');
-  const preBuilderArray = mockfile.prebuilder;
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
+  // const preBuilderArray = response.prebuilder;
   const navigate = useNavigate();
   const location = useLocation();
-  const dispatch = useDispatch()
-  const { data: response, error, isLoading } = useGetAllProductsQuery();
+  const { handleAddToCart } = useCartActions();
+  
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -24,8 +23,8 @@ const PreBuilderCards = () => {
     return <p>Error fetching data: {error}</p>;
   }
 
-  const prebuilderItems = response && response.prebuilder ? response.prebuilder : [];
-  
+  const prebuilderItems = response.prebuilder;
+
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
   };
@@ -34,11 +33,6 @@ const PreBuilderCards = () => {
     navigate(`/prebuilder/${preBuilderId}`);
   };
 
-  
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product))
-
-  }
 
 
   const sortedPrebuilderArray = [...prebuilderItems].sort((a, b) => {
@@ -46,21 +40,19 @@ const PreBuilderCards = () => {
   });
 
 
-  const type = (() => {
+  const type = () => {
     const pathSegments = location.pathname.split('/');
     return pathSegments[pathSegments.length - 1];
-  })();
+  };
+  
 
   const filteredPrebuilders = sortedPrebuilderArray.filter((preBuilder) => {
-    if (type === 'creator') {
-      return preBuilder.type === 'entrylevel';
-    } else if (type === 'innovator') {
-      return preBuilder.type === 'medium';
-    } else if (type === 'forgemaster') {
-      return preBuilder.type === 'high';
-    } else {
-      return true;
-    }
+    if (type() === 'creator' && preBuilder.type === 'entrylevel') return true;
+    if (type() === 'innovator' && preBuilder.type === 'medium') return true;
+    if (type() === 'forgemaster' && preBuilder.type === 'high') return true;
+    if (type() !== 'creator' && type() !== 'innovator' && type() !== 'forgemaster') return true;
+  
+    return false;
   });
 
   return (

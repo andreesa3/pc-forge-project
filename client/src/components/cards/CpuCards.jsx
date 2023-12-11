@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch } from "react-redux"
-import CarouselCard from './CarouselCard';
-import { useGetAllProductsQuery } from '../../features/ProductApi';
-import { addToCart } from '../../features/CartSlice';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import CarouselCard from "./CarouselCard";
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 
 const CpuCards = () => {
-  const [sortOrder, setSortOrder] = useState('asc');
+  const [sortOrder, setSortOrder] = useState("asc");
   const navigate = useNavigate();
-  const dispatch = useDispatch()
   const { data: response, error, isLoading } = useGetAllProductsQuery();
+  const { handleAddToCart } = useCartActions();
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -19,7 +18,7 @@ const CpuCards = () => {
     return <p>Error fetching data: {error}</p>;
   }
 
-  const cpuItems = response && response.cpu ? response.cpu : [];
+  const cpuItems = response.cpu;
   const handleSortOrderChange = (e) => {
     setSortOrder(e.target.value);
   };
@@ -28,35 +27,39 @@ const CpuCards = () => {
     navigate(`/product/cpu/${productId}`);
   };
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product))
-
-  }
 
   const sortedCpuArray = [...cpuItems].sort((a, b) => {
-    return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
+    return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
   });
-
-  
 
   return (
     <section>
-      <div className='cardWrapper wrapper'>
+      <div className="cardWrapper wrapper">
         <label htmlFor="sortOrderLabel">Ordina per prezzo:</label>
-        <select className="sortOrderSelect" value={sortOrder} onChange={handleSortOrderChange}>
+        <select
+          className="sortOrderSelect"
+          value={sortOrder}
+          onChange={handleSortOrderChange}
+        >
           <option value="asc">Crescente</option>
           <option value="desc">Decrescente</option>
         </select>
-        <div className='componentCards' >
+        <div className="componentCards">
           {sortedCpuArray.map((cpu) => (
-            <div key={cpu.id} >
-              <CarouselCard addToCart={() => handleAddToCart(cpu)} text={cpu.name} price={`${cpu.price}`} img={cpu.img} detail={() => handleCardClick(cpu.id)}  />
+            <div key={cpu.id}>
+              <CarouselCard
+                addToCart={() => handleAddToCart(cpu)}
+                text={cpu.name}
+                price={`${cpu.price}`}
+                img={cpu.img}
+                detail={() => handleCardClick(cpu.id)}
+              />
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default CpuCards;

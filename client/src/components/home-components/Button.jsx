@@ -1,11 +1,7 @@
-const Button = ({ text, theme, addToCart, removeFromCart }) => {
+const Button = ({ text, theme, onClickFunction }) => {
   return (
     <>
-      {
-        text === 'Aggiungi al Carrello' ? (
-          <button className={`btn ${theme}`} onClick={addToCart}>{text}</button>
-        ) : (<button className={`btn ${theme}`} onClick={removeFromCart}>{text}</button>)
-      }
+     <button className={`btn ${theme}`} onClick={onClickFunction}>{text}</button>       
     </>
   )
 }

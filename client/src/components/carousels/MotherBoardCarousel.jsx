@@ -1,10 +1,9 @@
-// CarouselComponent.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockfile from '/mockfile.json';
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 import CarouselCard from '../cards/CarouselCard';
 
 const MotherBoardCarousel = () => {
@@ -17,7 +16,8 @@ const MotherBoardCarousel = () => {
   const handleCardClick = (motherboard) => {
     navigate(`/product/mb/${motherboard}`);
   };
-
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
+  const { handleAddToCart } = useCartActions();
   useEffect(() => {
     const handleResize = () => {
       setScreenSize({
@@ -33,7 +33,7 @@ const MotherBoardCarousel = () => {
     };
   }, []);
 
-  const MoboArray = mockfile.motherboard;
+  const MoboArray = response.motherboard;
 
   const cardArray = (array, cardSize) => {
     const result = [];
@@ -71,7 +71,8 @@ const MotherBoardCarousel = () => {
                         price={`${motherboard.price}€`}
                         img={motherboard.img}
                         productId={motherboard.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(motherboard)}
+                        detail={() => handleCardClick(motherboard.id)}
                       />
                     ))}
                   </div>
@@ -91,7 +92,8 @@ const MotherBoardCarousel = () => {
                         price={`${motherboard.price}€`}
                         img={motherboard.img}
                         productId={motherboard.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(motherboard)}
+                        detail={() => handleCardClick(motherboard.id)}
                       />
                     ))}
                   </div>
@@ -111,7 +113,8 @@ const MotherBoardCarousel = () => {
                         price={`${motherboard.price}€`}
                         img={motherboard.img}
                         productId={motherboard.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(motherboard)}
+                        detail={() => handleCardClick(motherboard.id)}
                       />
                     ))}
                   </div>

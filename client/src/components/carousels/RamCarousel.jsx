@@ -1,10 +1,9 @@
-// CarouselComponent.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockfile from '/mockfile.json';
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 import CarouselCard from '../cards/CarouselCard';
 
 const RamCarousel = () => {
@@ -12,7 +11,9 @@ const RamCarousel = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
   const navigate = useNavigate();
+  const { handleAddToCart } = useCartActions();
 
   const handleCardClick = (ram) => {
     navigate(`/product/ram/${ram}`);
@@ -33,7 +34,7 @@ const RamCarousel = () => {
     };
   }, []);
 
-  const RamArray = mockfile.ram;
+  const RamArray = response.ram;
 
   const cardArray = (array, cardSize) => {
     const result = [];
@@ -71,7 +72,8 @@ const RamCarousel = () => {
                         price={`${ram.price}€`}
                         img={ram.img}
                         productId={ram.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(ram)}
+                        detail={() => handleCardClick(ram.id)}
                       />
                     ))}
                   </div>
@@ -91,7 +93,8 @@ const RamCarousel = () => {
                         price={`${ram.price}€`}
                         img={ram.img}
                         productId={ram.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(ram)}
+                        detail={() => handleCardClick(ram.id)}
                       />
                     ))}
                   </div>
@@ -111,7 +114,8 @@ const RamCarousel = () => {
                         price={`${ram.price}€`}
                         img={ram.img}
                         productId={ram.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(ram)}
+                        detail={() => handleCardClick(ram.id)}
                       />
                     ))}
                   </div>

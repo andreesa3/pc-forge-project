@@ -1,6 +1,6 @@
 {/*per scrollare in alto ad ogni cambio route */}
-import {Routes, Route, BrowserRouter as Router, useLocation} from 'react-router-dom';
-import {useLayoutEffect} from 'react';
+import { useLocation } from 'react-router-dom';
+import { useLayoutEffect } from 'react';
 
 const ScrollTop = ({children}) => {
     const location = useLocation();

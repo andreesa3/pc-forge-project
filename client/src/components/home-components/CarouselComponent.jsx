@@ -1,10 +1,9 @@
-// CarouselComponent.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockfile from '/mockfile.json';
+import { useGetAllProductsQuery } from "../../features/ProductApi"
+import { useCartActions } from "../../utilities/CartUtility"
 import CarouselCard from '../cards/CarouselCard';
 
 const CarouselComponent = () => {
@@ -13,7 +12,10 @@ const CarouselComponent = () => {
     height: window.innerHeight,
   });
   const [key, setKey] = useState(0);
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
+  console.log(response);
   const navigate = useNavigate();
+  const { handleAddToCart } = useCartActions();
 
   const handleCardClick = (preBuilderId) => {
     navigate(`/prebuilder/${preBuilderId}`);
@@ -35,7 +37,8 @@ const CarouselComponent = () => {
     };
   }, []);
 
-  const preBuilderArray = mockfile.prebuilder;
+  const preBuilderArray = response && response.prebuilder ? response.prebuilder : [];
+
 
   const cardArray = (array, cardSize) => {
     const result = [];
@@ -74,7 +77,8 @@ const CarouselComponent = () => {
                         price={`${preBuilder.price}€`}
                         img={preBuilder.img}
                         productId={preBuilder.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(preBuilder)}
+                        detail={() => handleCardClick(preBuilder.id)}
                       />
                     ))}
                   </div>
@@ -94,7 +98,8 @@ const CarouselComponent = () => {
                         price={`${preBuilder.price}€`}
                         img={preBuilder.img}
                         productId={preBuilder.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(preBuilder)}
+                        detail={() => handleCardClick(preBuilder.id)}
                       />
                     ))}
                   </div>
@@ -114,7 +119,8 @@ const CarouselComponent = () => {
                         price={`${preBuilder.price}€`}
                         img={preBuilder.img}
                         productId={preBuilder.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(preBuilder)}
+                        detail={() => handleCardClick(preBuilder.id)}
                       />
                     ))}
                   </div>

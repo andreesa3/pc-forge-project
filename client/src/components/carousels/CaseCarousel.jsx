@@ -1,10 +1,9 @@
-// CarouselComponent.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockfile from '/mockfile.json';
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 import CarouselCard from '../cards/CarouselCard';
 
 const CaseCarousel = () => {
@@ -12,7 +11,9 @@ const CaseCarousel = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
   const navigate = useNavigate();
+  const { handleAddToCart } = useCartActions();
 
   const handleCardClick = (tower) => {
     navigate(`/product/case/${tower}`);
@@ -33,7 +34,7 @@ const CaseCarousel = () => {
     };
   }, []);
 
-  const CaseArray = mockfile.tower;
+  const CaseArray = response.tower;
 
   const cardArray = (array, cardSize) => {
     const result = [];
@@ -63,7 +64,7 @@ const CaseCarousel = () => {
             <Carousel data-bs-theme="dark" style={{ margin: '0 auto' }}>
               {groupedCaseArray.map((group, index) => (
                 <Carousel.Item key={index}>
-                  <div className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+                  <div  className="carousel-images" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
                     {group.map((tower) => (
                       <CarouselCard
                         key={tower.id}
@@ -71,7 +72,9 @@ const CaseCarousel = () => {
                         price={`${tower.price}€`}
                         img={tower.img}
                         productId={tower.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(tower)}
+                        detail={() => handleCardClick(tower.id)}
+                        
                       />
                     ))}
                   </div>
@@ -91,7 +94,8 @@ const CaseCarousel = () => {
                         price={`${tower.price}€`}
                         img={tower.img}
                         productId={tower.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(tower)}
+                        detail={() => handleCardClick(tower.id)}
                       />
                     ))}
                   </div>
@@ -111,7 +115,8 @@ const CaseCarousel = () => {
                         price={`${tower.price}€`}
                         img={tower.img}
                         productId={tower.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(tower)}
+                        detail={() => handleCardClick(tower.id)}
                       />
                     ))}
                   </div>

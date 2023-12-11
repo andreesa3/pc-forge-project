@@ -16,7 +16,7 @@ const CarouselCard = ({ text, price, img, productId, onClick, addToCart, detail 
           <span className='priceCarouselCard'>€{price}</span>
         </div>
         <div className='btnCarouselCard'>
-          <Button addToCart={addToCart} text='Aggiungi al Carrello' theme='dark' />
+          <Button onClickFunction={addToCart} text='Aggiungi al Carrello' theme='dark' />
         </div>
       </div>
 

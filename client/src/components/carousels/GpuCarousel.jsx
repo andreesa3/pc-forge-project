@@ -1,10 +1,9 @@
-// CarouselComponent.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockfile from '/mockfile.json';
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 import CarouselCard from '../cards/CarouselCard';
 
 const GpuCarousel = () => {
@@ -13,10 +12,11 @@ const GpuCarousel = () => {
     height: window.innerHeight,
   });
   const navigate = useNavigate();
-
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
   const handleCardClick = (gpu) => {
     navigate(`/product/gpu/${gpu}`);
   };
+  const { handleAddToCart } = useCartActions();
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,7 +33,7 @@ const GpuCarousel = () => {
     };
   }, []);
 
-  const GpuArray = mockfile.gpu;
+  const GpuArray = response.gpu;
 
   const cardArray = (array, cardSize) => {
     const result = [];
@@ -71,7 +71,8 @@ const GpuCarousel = () => {
                         price={`${gpu.price}€`}
                         img={gpu.img}
                         productId={gpu.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(gpu)}
+                        detail={() => handleCardClick(gpu.id)}
                       />
                     ))}
                   </div>
@@ -91,7 +92,8 @@ const GpuCarousel = () => {
                         price={`${gpu.price}€`}
                         img={gpu.img}
                         productId={gpu.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(gpu)}
+                        detail={() => handleCardClick(gpu.id)}
                       />
                     ))}
                   </div>
@@ -111,7 +113,8 @@ const GpuCarousel = () => {
                         price={`${gpu.price}€`}
                         img={gpu.img}
                         productId={gpu.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(gpu)}
+                        detail={() => handleCardClick(gpu.id)}
                       />
                     ))}
                   </div>

@@ -1,10 +1,9 @@
-// CarouselComponent.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockfile from '/mockfile.json';
+import { useGetAllProductsQuery } from "../../features/ProductApi";
+import { useCartActions } from "../../utilities/CartUtility"
 import CarouselCard from '../cards/CarouselCard';
 
 const PowerCarousel = () => {
@@ -12,7 +11,9 @@ const PowerCarousel = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const { data: response, error, isLoading } = useGetAllProductsQuery();
   const navigate = useNavigate();
+  const { handleAddToCart } = useCartActions();
 
   const handleCardClick = (power) => {
     navigate(`/product/power/${power}`);
@@ -33,7 +34,7 @@ const PowerCarousel = () => {
     };
   }, []);
 
-  const PowerArray = mockfile.power;
+  const PowerArray = response.power;
 
   const cardArray = (array, cardSize) => {
     const result = [];
@@ -71,7 +72,8 @@ const PowerCarousel = () => {
                         price={`${power.price}€`}
                         img={power.img}
                         productId={power.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(power)}
+                        detail={() => handleCardClick(power.id)}
                       />
                     ))}
                   </div>
@@ -91,7 +93,8 @@ const PowerCarousel = () => {
                         price={`${power.price}€`}
                         img={power.img}
                         productId={power.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(power)}
+                        detail={() => handleCardClick(power.id)}
                       />
                     ))}
                   </div>
@@ -111,7 +114,8 @@ const PowerCarousel = () => {
                         price={`${power.price}€`}
                         img={power.img}
                         productId={power.id}
-                        onClick={handleCardClick}
+                        addToCart={() => handleAddToCart(power)}
+                        detail={() => handleCardClick(power.id)}
                       />
                     ))}
                   </div>
