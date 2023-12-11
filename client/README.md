@@ -14,6 +14,8 @@ npm i openai
 
 npm install @chatscope/chat-ui-kit-styles (per css chat)
 
-npm i react-redux yarn add react-redux
+npm i react-redux 
 
-npm i react-toastify or yarn add react-toastify
+npm i  @reduxjs/toolkit
+
+npm i react-toastify 
