@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from 'axios';
 import { Link, useNavigate } from "react-router-dom";
 import Button from '../components/home-components/Button';
-
+import { toast } from "react-toastify";
 import emailIcon from '../assets/icons/login-register/email.svg';
 import passwordIcon from '../assets/icons/login-register/password.svg';
 import googleIcon from '../assets/icons/login-register/google.svg';
@@ -12,20 +12,31 @@ const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3050/register', { first_name: name, email, password })
-      .then(result => {
-        console.log(result)
-        if (result.status === 201) {
-          navigate('/login');
-        } else {
-          console.error('User not created!');
+
+    if (password !== confirmPassword) {
+      toast.error(
+        `La password non corrisponde alla conferma password`,
+        {
+          position: "bottom-left",
         }
-      })
-      .catch(err => console.error(err.response.data));  // Logga il messaggio di errore dal server
+      );
+    } else {
+      axios.post('http://localhost:3050/register', { first_name: name, email, password })
+        .then(result => {
+          console.log(result)
+          if (result.status === 201) {
+            navigate('/login');
+          } else {
+            console.error('User not created!');
+          }
+        })
+        .catch(err => console.error(err.response.data));  // Logga il messaggio di errore dal server
+    }
   };
 
 
@@ -100,17 +111,17 @@ const Register = () => {
 
               <input
                 type="password"
-                name="password"
+                name="confirmPassword"
                 className="form-input-auth"
                 placeholder="Conferma password"
-                value={password}
+                value={confirmPassword}
                 minLength={8}
-                onChange={(e) => setPassword(e.target.value)} required
+                onChange={(e) => setConfirmPassword(e.target.value)} required
               />
             </div>
           </div>
 
-          <button className="btn form-submit">Registra</button>
+          <button  className="btn form-submit">Registra</button>
 
           <p className="p">Hai già un account? <Link to='/login' className="span">Login</Link></p>
         </form>
@@ -118,5 +129,6 @@ const Register = () => {
     </section>
   )
 }
+
 
 export default Register;
