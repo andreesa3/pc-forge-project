@@ -1,10 +1,20 @@
-const Select = ({ options, onSelectChange, label,name }) => {
+const Select = ({ options, onSelectChange, label, name, defaultValue }) => {
   if (options === undefined) {
     return null; 
   }
+
   const defaultLabel = `Select ${name}`;
+
   return (
-    <select className="builder-select" onChange={onSelectChange} aria-label={defaultLabel}>
+    <select
+      className="builder-select"
+      onChange={onSelectChange}
+      aria-label={defaultLabel}
+      value={defaultValue}
+    >
+      <option value="DEFAULT" disabled>
+        Seleziona il componente
+      </option>
       <option value="none" disabled hidden>
         {label}
       </option>

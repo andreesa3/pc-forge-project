@@ -61,20 +61,37 @@ function Builder() {
     return cpu.socket === motherboard.details.socket;
   };
 
+  const totalPrice=()=>{
+    const cpuPrice = selectedItems.cpu ? selectedItems.cpu.price : 0;
+    const gpuPrice = selectedItems.gpu ? selectedItems.gpu.price : 0;
+    const motherboardPrice = selectedItems.motherboard ? selectedItems.motherboard.price : 0;
+    const ramPrice = selectedItems.ram ? selectedItems.ram.price : 0;
+    const powerPrice = selectedItems.power ? selectedItems.power.price : 0;
+    const ssdPrice = selectedItems.ssd ? selectedItems.ssd.price : 0;
+    const coolerPrice = selectedItems.cooler ? selectedItems.cooler.price : 0;
+    const towerPrice = selectedItems.tower ? selectedItems.tower.price : 0;
+    
+
+    const total = cpuPrice +gpuPrice+motherboardPrice+ramPrice+powerPrice+ssdPrice+coolerPrice+towerPrice;
+
+    console.log(total)
+    return total;
+  }
+
 
   return (
     <section>
     <div className="builder-header wrapper">
 
       <h2><img src={logo} alt="logo" /><span className="purple">PC</span> Forge Builder</h2>
-      <span style={{fontSize:"25px", marginBottom:"15px"}}>Assembla il pc dei tuoi sogni con il builder di pc Forge In Pc Forge creadiamo nella liberta dei nostri clienti di scegliere il compputer adatto alle proprie esigenze,
+      <span  className="builder-intro ">Assembla il pc dei tuoi sogni con il builder di pc Forge In Pc Forge creadiamo nella liberta dei nostri clienti di scegliere il compputer adatto alle proprie esigenze,
          ecco perche abbiamo creato questo tool per permettervi di scegliere al meglio,
          se avete domande basta andare sulla sezione F.A.Q per trovare delle risposte , oppure potete cheidere al nostro asssitente in basso a destra .</span>
 
 
    
    <div className="builder wrapper">  
-       <SelectionWrapper imgSrc={motherboard} options={mockData.motherboard} onSelectChange={handleSelectionChange("motherboard")} selectedData={selectedItems.motherboard} data ={selectedItems.motherboard} type="motherboard" label="cpu" name="cpu"/>
+       <SelectionWrapper imgSrc={motherboard} options={mockData.motherboard} onSelectChange={handleSelectionChange("motherboard")} selectedData={selectedItems.motherboard} data ={selectedItems.motherboard} type="motherboard" label="cpu" />
        <SelectionWrapper imgSrc={cpu} options={mockData.cpu} onSelectChange={handleSelectionChange("cpu")} selectedData={selectedItems.cpu} data ={selectedItems.cpu} type="cpu" name="cpu"/>
        <SelectionWrapper imgSrc={gpu} options={mockData.gpu} onSelectChange={handleSelectionChange("gpu")} selectedData={selectedItems.gpu} data ={selectedItems.gpu} type="gpu" name="gpu"/>
        <SelectionWrapper imgSrc={ram} options={mockData.ram} onSelectChange={handleSelectionChange("ram")} selectedData={selectedItems.ram} data ={selectedItems.ram} type="ram" name="ram"/>
@@ -82,6 +99,7 @@ function Builder() {
        <SelectionWrapper imgSrc={ssd} options={mockData.ssd} onSelectChange={handleSelectionChange("ssd")} selectedData={selectedItems.ssd} data ={selectedItems.ssd} type="ssd" name="ssd"/>
        <SelectionWrapper imgSrc={cooler} options={mockData.cooler} onSelectChange={handleSelectionChange("cooler")} selectedData={selectedItems.cooler} data ={selectedItems.cooler} type="cooler" name="cooler"/>
        <SelectionWrapper imgSrc={cases} options={mockData.tower} onSelectChange={handleSelectionChange("tower")} selectedData={selectedItems.tower} data ={selectedItems.tower} type="tower" name="case" />
+       <p className='builder-price'>Totale: {totalPrice()} €</p>
        {showIncompatiblePopup === true && (
         <div className="incompatibility-popup">
           <p>Error: Selected CPU is not compatible with the motherboard.</p>
@@ -90,9 +108,9 @@ function Builder() {
       )}
    </div>
    <div style={{display:"flex", flexDirection:"row", gap:"15px", alignSelf:"flex-start", marginTop:"20px"}}>
+  </div>
     <Button text="Compra ora" className="builder-btn" theme="dark" />
   <Button text="Aggiungi al carrello" className="builder-btn" theme="light" />
-  </div>
    <BubbleAssistant/>
     </div>
     </section>

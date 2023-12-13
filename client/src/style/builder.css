@@ -15,11 +15,12 @@
   margin-left: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 1000px;
   min-width: 800px;
   color: #ffffff;
-  background-color: #8a00fb;
+  background-color: rgba(0, 0, 139);
+  border-radius: 5px;
 }
 
 .bubbleAssistant-image {
@@ -68,4 +69,22 @@
 }
 .selected-details-p {
   padding: 4px;
+}
+
+.builder-intro{
+  font-size:25px;
+ margin-bottom: 15px;
+ font-weight:100;
+}
+
+.builder-price{
+display: flex;
+justify-content: flex-end;
+font-weight: bold;
+padding-right: 30px;
+}
+
+.builder-btn{
+  display: flex;
+  justify-content: flex-end;
 }

@@ -163,7 +163,7 @@
   "motherboard": [
      {
         "id": 13,
-        "name": "ASUS ROG Strix Z690-E Gaming WiFi",
+        "name": "ASUS ROG Strix Z690-E  WiFi",
         "price": 349.99,
         "description": "Scheda madre per processori Intel 1700, supporto Wi-Fi integrato, chipset Z690.",
         "details": {
@@ -223,7 +223,7 @@
       },
       {
         "id": 17,
-        "name": "ASUS ROG STRIX B550-XE GAMING",
+        "name": "ASUS ROG STRIX B550-XE ",
         "price": 330,
         "description": "Scheda madre per socket AM4, supporta processori AMD Ryzen di serie 5000, formato ATX.",
         "details": {
@@ -255,7 +255,7 @@
   "ram": [
     {
       "id": 19,
-      "name": "Corsair DDR5 16GB",
+      "name": "Corsair DDR5 ",
       "price": 120,
       "description": "RAM DDR5 ad alta velocità per prestazioni elevate.",
       "details": {
@@ -266,7 +266,7 @@
     },
     {
       "id": 20,
-      "name": "G.Skill Trident Z Neo DDR5 32GB",
+      "name": "G.Skill Trident Z Neo ",
       "price": 150,
       "description": "Altra opzione di RAM DDR5 con velocità e affidabilità migliorate.",
       "details": {
@@ -277,7 +277,7 @@
     },
     {
       "id": 21,
-      "name": "Kingston Fury Beast DDR5 64GB",
+      "name": "Kingston Fury Beast ",
       "price": 180,
       "description": "RAM DDR5 di alta fascia per prestazioni estreme e multitasking.",
       "details": {
@@ -288,7 +288,7 @@
     },
     {
       "id": 22,
-      "name": "Crucial Ballistix DDR4 8GB",
+      "name": "Crucial Ballistix ",
       "price": 90,
       "description": "Affidabile RAM DDR4 per le esigenze informatiche quotidiane.",
       "details": {
@@ -299,7 +299,7 @@
     },
     {
       "id": 23,
-      "name": "HyperX Predator DDR4 16GB",
+      "name": "HyperX Predator ",
       "price": 110,
       "description": "Altra opzione di RAM DDR4 con buone prestazioni ed efficienza.",
       "details": {
@@ -310,7 +310,7 @@
     },
     {
       "id": 24,
-      "name": "TeamGroup T-Force Delta RGB DDR4 32GB",
+      "name": "TeamGroup T-Force Delta RGB ",
       "price": 130,
       "description": "RAM DDR4 con illuminazione RGB e capacità di 32GB.",
       "details": {
@@ -477,7 +477,7 @@
   "ssd": [
     {
       "id": 37,
-      "name": "Samsung 860 EVO 500GB",
+      "name": "Samsung 860 EVO ",
       "price": 70,
       "description": "SSD SATA con capacità di 500GB per prestazioni affidabili.",
       "details": {
@@ -491,7 +491,7 @@
     },
     {
       "id": 38,
-      "name": "Crucial MX500 1TB",
+      "name": "Crucial MX500 ",
       "price": 110,
       "description": "SSD SATA con capacità di 1TB per archiviazione e prestazioni elevate.",
       "details": {
@@ -505,7 +505,7 @@
     },
     {
       "id": 39,
-      "name": "WD Blue SN550 500GB NVMe",
+      "name": "WD Blue SN550 ",
       "price": 80,
       "description": "SSD NVMe con velocità elevate, capacità 500GB.",
       "details": {
@@ -519,7 +519,7 @@
     },
     {
       "id": 40,
-      "name": "Samsung 970 EVO Plus 1TB NVMe",
+      "name": "Samsung 970 EVO Plus ",
       "price": 180,
       "description": "SSD NVMe ad alte prestazioni, capacità di 1TB per applicazioni intensive.",
       "details": {
@@ -533,7 +533,7 @@
     },
     {
       "id": 41,
-      "name": "Sabrent Rocket Q 2TB NVMe",
+      "name": "Sabrent Rocket Q ",
       "price": 300,
       "description": "SSD NVMe con capacità massiccia di 2TB per archiviazione e velocità elevate.",
       "details": {
@@ -547,7 +547,7 @@
     },
     {
       "id": 42,
-      "name": "ADATA XPG SX8200 Pro 512GB NVMe",
+      "name": "ADATA XPG SX8200 Pro ",
       "price": 95,
       "description": "SSD NVMe con capacità di 512GB per prestazioni elevate.",
       "details": {
@@ -611,7 +611,7 @@
     },
     {
       "id": 47,
-      "name": "Cooler Master MasterLiquid ML360R",
+      "name": "Cooler Master Liquid ML360R",
       "price": 180,
       "description": "Sistema di raffreddamento a liquido con radiatore da 360mm e illuminazione personalizzabile.",
       "details": {
