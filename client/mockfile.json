@@ -171,7 +171,7 @@
           "chipset": "Z690",
           "form_factor": "ATX",
           "memory_slots": 4,
-          "supported_memory": "DDR4/DDR5",
+          "supported_memory": "DDR5",
           "power": "40W"
         },
         "img": "https://dlcdnwebimgs.asus.com/gain/293AC7FB-F2DB-4559-A749-9AD4A23598EF/w717/h525"

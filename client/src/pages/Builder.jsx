@@ -49,6 +49,26 @@ function Builder() {
         
       }
     }
+   
+    if (itemName === 'ram') {
+      const selectedMotherboard = selectedItems.motherboard;
+
+      if (selectedMotherboard && !isCompatibleRam(itemData, selectedMotherboard)) {
+        setShowIncompatiblePopup(true);
+        return;
+      }
+    }
+ if (itemName === 'power') {
+    const selectedCpu = selectedItems.cpu;
+    const selectedGpu = selectedItems.gpu;
+    const selectedMotherboard = selectedItems.motherboard;
+
+    if (selectedCpu && selectedGpu && selectedMotherboard && !isCompatiblePower(itemData, selectedGpu, selectedMotherboard, selectedCpu)) {
+      setShowIncompatiblePopup(true);
+      return;
+    }
+  }
+   
 
 
     setSelectedItems((prevSelectedItems) => ({
@@ -58,8 +78,17 @@ function Builder() {
   };
 
   const isCompatibleCpu = (cpu, motherboard) => {
-    return cpu.socket === motherboard.details.socket;
+    return cpu.socket === motherboard.details.socket 
   };
+  const isCompatibleRam = (ram, motherboard) => {
+    return ram.details.memoryType === motherboard.details.supported_memory;
+  };
+  
+
+  const isCompatiblePower= (power,gpu,motherboard,cpu)=>{
+    const powerTotal = cpu.details.power+gpu.details.power+motherboard.details.price+150
+    return power.wattage > powerTotal
+  }
 
   const totalPrice=()=>{
     const cpuPrice = selectedItems.cpu ? selectedItems.cpu.price : 0;
