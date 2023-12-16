@@ -26,8 +26,11 @@ import useDarkMode from "./features/darkmode";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
+import { useState } from "react";
 
 const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const { appClassName } = useDarkMode();
 
   document.body.className = appClassName;
@@ -37,12 +40,12 @@ const App = () => {
     <div className={appClassName}>
       
       <Routes>
-        <Route path="/" element={<DefaultDisplay />}>
+        <Route path="/" element={<DefaultDisplay isLoggedIn={isLoggedIn}/>}>
 
           <Route path="" element={<Home />} />
 
           <Route path="register" element={<Register />} />
-          <Route path="login" element={<Login />} />
+          <Route path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
 
           <Route path="prebuilder" element={<PreBuilderCard />} />
           <Route path="products/creator" element={<PreBuilderCard />} />

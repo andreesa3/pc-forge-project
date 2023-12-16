@@ -19,7 +19,7 @@ import coolerIcon from "../../assets/icons/componentsIcon/cooler-icon.svg";
 import DarkMode from "../../features/darkmode";
 
 
-const Navbar = ({ hamburger, event, toggle, closeSidebar }) => {
+const Navbar = ({ hamburger, event, toggle, closeSidebar, isLoggedIn }) => {
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   const { appClassName, isDarkMode, toggleDarkMode } = DarkMode();
   // Stato per gestire la visibilità delle dropdown
@@ -148,12 +148,15 @@ const Navbar = ({ hamburger, event, toggle, closeSidebar }) => {
 
         <div className="nav-right">
           {toggle}
-          <Link to="/login" onClick={closeSidebar} onMouseEnter={handleMouseLeave} >
-            <PersonIcon />
-          </Link>
+
+          {
+            isLoggedIn ? <PersonIcon /> : (
+              <Link to="/login" onClick={closeSidebar} onMouseEnter={handleMouseLeave} >
+                <p style={{ color: 'white', fontSize: '16px', margin: '0' }}>Login</p>
+              </Link>
+            )}
           <Link to="/cart" onClick={closeSidebar} onMouseEnter={handleMouseLeave} >
             <ShoppingCartIcon />
-            <span style={{fontSize:"0px"}}>{cartTotalQuantity}</span>
           </Link>
           <div className="hamburger">
             <input

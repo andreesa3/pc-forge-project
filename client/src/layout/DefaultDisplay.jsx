@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import DarkModeComponent from "../components/home-components/DarkModeComponent";
 import { ToastContainer } from "react-toastify";
 
-const DefaultDisplay = () => {
+const DefaultDisplay = ({isLoggedIn}) => {
   const [hamburger, setHamburger] = useState(false);
 
   const handleHamburger = () => {
@@ -36,7 +36,7 @@ const DefaultDisplay = () => {
   return (
     <>
     
-      <Navbar hamburger={hamburger} event={handleHamburger} closeSidebar={closeSidebar} toggle={<DarkModeComponent/>} />
+      <Navbar isLoggedIn={isLoggedIn} hamburger={hamburger} event={handleHamburger} closeSidebar={closeSidebar} toggle={<DarkModeComponent/>} />
 
       <Sidebar hamburger={hamburger} event={handleHamburger} />
 

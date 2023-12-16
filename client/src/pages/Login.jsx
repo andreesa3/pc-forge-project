@@ -10,7 +10,7 @@ import googleIcon from '../assets/icons/login-register/google.svg';
 import appleIcon from '../assets/icons/login-register/apple.svg';
 
 
-const Login = () => {
+const Login = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -21,7 +21,10 @@ const Login = () => {
     axios.post('http://localhost:3050/login', { email, password })
       .then(result => {
         if (result.data === "Success") {
-          navigate('/');
+          setTimeout(() => {
+            setIsLoggedIn(true);
+            navigate('/');
+          }, 1500);
         } else {
           setError(result.data);
         }
@@ -57,7 +60,7 @@ const Login = () => {
                 required
               />
             </div>
-            {error && <p style={{ color: 'red', fontSize: '12px'}}>{error}</p>}
+            {error && <p style={{ color: 'red', fontSize: '12px' }}>{error}</p>}
           </div>
 
           <div className="flex-column">
