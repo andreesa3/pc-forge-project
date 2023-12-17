@@ -27,6 +27,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import { useState } from "react";
+import ThanksForBuy from "./pages/ThanksForBuy";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
 
+          <Route path="thanksForBuy" element={<ThanksForBuy />} />
           <Route path="prebuilder" element={<PreBuilderCard />} />
           <Route path="products/creator" element={<PreBuilderCard />} />
           <Route path="products/innovator" element={<PreBuilderCard />} />
