@@ -16,11 +16,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1000px;
+  width: 950px;
   min-width: 800px;
   color: #ffffff;
   background-color: rgba(0, 0, 139);
   border-radius: 5px;
+  height: 44px
 }
 
 .bubbleAssistant-image {
@@ -87,4 +88,8 @@ padding-right: 30px;
 .builder-btn{
   display: flex;
   justify-content: flex-end;
+}
+
+.builder-selected-titles{
+  font-weight: bolder;
 }

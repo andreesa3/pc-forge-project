@@ -101,7 +101,7 @@
       },
       {
         "id": 8,
-        "name": "Nvidia RTX 4070",
+        "name": "Nvidia RTX 4070 Ti",
         "price": 527,
         "description": "Scheda grafica con architettura Ampere, 8GB di memoria GDDR6 e prestazioni di fascia alta per gaming fluido e rendering di alta qualità.",
         "details": {
@@ -179,7 +179,7 @@
       {
         "id": 14,
         "name": "GIGABYTE B660M DS3H",
-        "price": 119.99,
+        "price": 119,
         "description": "Scheda madre per processori Intel 1700, chipset B660, formato Micro-ATX.",
         "details": {
           "socket": "Intel  1700",
@@ -270,7 +270,7 @@
       "price": 150,
       "description": "Altra opzione di RAM DDR5 con velocità e affidabilità migliorate.",
       "details": {
-        "memoryType": "DDR5",
+        "memoryType": "DDR4",
         "capacity": "32GB"
       },
       "img": "https://www.gskill.com/_upload/images/166262200311.png"
@@ -335,7 +335,7 @@
     },
     {
       "id": 26,
-      "name": "EVGA SuperNOVA 650 G5",
+      "name": "EVGA SuperNOVA 650 ",
       "price": 100,
       "description": "Alimentatore modulare con certificazione 80 PLUS Gold e 650W.",
       "details": {
@@ -491,7 +491,7 @@
     },
     {
       "id": 38,
-      "name": "Crucial MX500 ",
+      "name": "Crucial MX5001 TBC",
       "price": 110,
       "description": "SSD SATA con capacità di 1TB per archiviazione e prestazioni elevate.",
       "details": {
@@ -575,7 +575,7 @@
     },
     {
       "id": 44,
-      "name": "be quiet! Dark Rock Pro 4",
+      "name": "be quiet! Dark Rock  4",
       "price": 80,
       "description": "Dissipatore ad aria di alta qualità con ventole silenziose e prestazioni elevate.",
       "details": {

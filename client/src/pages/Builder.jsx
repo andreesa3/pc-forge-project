@@ -58,7 +58,7 @@ function Builder() {
         return;
       }
     }
- if (itemName === 'power') {
+/*  if (itemName === 'power') {
     const selectedCpu = selectedItems.cpu;
     const selectedGpu = selectedItems.gpu;
     const selectedMotherboard = selectedItems.motherboard;
@@ -67,7 +67,7 @@ function Builder() {
       setShowIncompatiblePopup(true);
       return;
     }
-  }
+  } */
    
 
 
@@ -85,10 +85,10 @@ function Builder() {
   };
   
 
-  const isCompatiblePower= (power,gpu,motherboard,cpu)=>{
+/*   const isCompatiblePower= (power,gpu,motherboard,cpu)=>{
     const powerTotal = cpu.details.power+gpu.details.power+motherboard.details.price+150
     return power.wattage > powerTotal
-  }
+  } */
 
   const totalPrice=()=>{
     const cpuPrice = selectedItems.cpu ? selectedItems.cpu.price : 0;

@@ -13,10 +13,9 @@ const CarouselComponent = () => {
   });
   const [key, setKey] = useState(0);
   const { data: response, error, isLoading } = useGetAllProductsQuery();
-  console.log(response);
+
   const navigate = useNavigate();
   const { handleAddToCart } = useCartActions();
-
   const handleCardClick = (preBuilderId) => {
     navigate(`/prebuilder/${preBuilderId}`);
   };
